@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>sjsgz--PPS测试报告( *  * )</title>
+    <title>yqlfc--quick测试报告( *  * )</title>
     <meta name="generator" content="HTMLTestRunner 0.8.2"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     
@@ -188,10 +188,10 @@ function showOutput(id, name) {
 --></script>
 
 <div class='heading'>
-<h1>sjsgz--PPS测试报告( *  * )</h1>
-<p class='attribute'><strong>Start Time:</strong> 2017-11-07 11:19:56</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:53.799000</p>
-<p class='attribute'><strong>Status:</strong> Error 1</p>
+<h1>yqlfc--quick测试报告( *  * )</h1>
+<p class='attribute'><strong>Start Time:</strong> 2017-11-08 15:40:10</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:44.145000</p>
+<p class='attribute'><strong>Status:</strong> Pass 1</p>
 
 <p class='description'>用例执行情况：</p>
 </div>
@@ -221,53 +221,34 @@ function showOutput(id, name) {
     <td>View</td>
 </tr>
 
-<tr class='errorClass'>
+<tr class='passClass'>
     <td>main.Test</td>
     <td>1</td>
-    <td>0</td>
-    <td>0</td>
     <td>1</td>
+    <td>0</td>
+    <td>0</td>
     <td><a href="javascript:showClassDetail('c1',1)">Detail</a></td>
 </tr>
 
-<tr id='ft1.1' class='none'>
-    <td class='errorCase'><div class='testcase'>test01</div></td>
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test01</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
-        error</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
+        pass</a>
 
-    <div id='div_ft1.1' class="popup_window">
+    <div id='div_pt1.1' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft1.1: 2017-11-07 11:19:59.342 INFO  [main:  20] 测试开始
-2017-11-07 11:20:14.827 INFO  [atx.drivers.mixin: 504] click image: Pattern(name: ./game/sjsgz_images/game_update_01.1920x1080.png, offset: None)
-.sleep 1s, left  1s
-
-2017-11-07 11:20:28.227 INFO  [game.sjsgz:  15] 更新成功
-Traceback (most recent call last):
-  File "F:\workspace\ATX\main.py", line 54, in test01
-    self.dy_IsNotNone(self.driver, channel.login(self.driver), '360_login')
-  File "F:\workspace\ATX\channel\PPS.py", line 27, in login
-    if self.wait_gone_images(driver, 'login.1920x1080.png'):
-  File "F:\workspace\ATX\public\methods.py", line 173, in wait_gone_images
-    images= self.driver.wait_gone('./'+way_name+'/' + game_name + '_images/' + images,timeout,safe)
-  File "C:\Python27\lib\site-packages\atx\drivers\mixin.py", line 171, in wait_gone
-    ret = self.exists(pattern, **match_kwargs)
-  File "C:\Python27\lib\site-packages\atx\drivers\mixin.py", line 150, in exists
-    ret = self.match(pattern, **match_kwargs)
-  File "C:\Python27\lib\site-packages\atx\drivers\mixin.py", line 248, in match
-    pattern = self.pattern_open(pattern)
-  File "C:\Python27\lib\site-packages\atx\drivers\mixin.py", line 119, in pattern_open
-    return Pattern(path, image=self._open_image_file(path))
-  File "C:\Python27\lib\site-packages\atx\drivers\mixin.py", line 105, in _open_image_file
-    raise IOError('file not found: {}'.format(path))
-IOError: file not found: ./game/sjsgz_images/login.1920x1080.png
+pt1.1: 2017-11-08 15:40:10.894 INFO  [main:  20] 测试开始
+2017-11-08 15:40:43.317 INFO  [game.yqlfc: 463] 游戏中退出按钮
+2017-11-08 15:40:54.905 INFO  [game.yqlfc: 476] 游戏中退出按钮
+2017-11-08 15:40:54.907 INFO  [main:  47] 测试结束
 
 
         </pre>
@@ -280,9 +261,9 @@ IOError: file not found: ./game/sjsgz_images/login.1920x1080.png
 <tr id='total_row'>
     <td>Total</td>
     <td>1</td>
-    <td>0</td>
-    <td>0</td>
     <td>1</td>
+    <td>0</td>
+    <td>0</td>
     <td>&nbsp;</td>
 </tr>
 </table>

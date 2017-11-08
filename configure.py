@@ -16,7 +16,7 @@ device_name = ''
 game_name = 'yqlfc'
 channel_name = 'quick'
 activity_name = 'com.wyd.fc.activity.SplashActivity'
-package_name = 'com.wyd.ddfc.quick' #爱奇艺
+package_name = 'com.wyd.ddfc.quick'
 
 #quick
 '''

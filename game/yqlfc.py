@@ -8,6 +8,9 @@ log = logutils.getLogger(__name__)
 import threading
 
 class Game(public.Methods):
+    def __init__(self):
+        pass
+
     def game_update(self,driver):
         sleep(30)
         driver.click(500,500)
@@ -31,7 +34,6 @@ class Game(public.Methods):
             return None
         
     def guide(self,driver):
-        '''引导开始'''
         if self.images_or_none(driver,'guide_002.1920x1080.png'):
             self.click_images(driver,"guide_001.1920x1080.png")
             self.click_images(driver,"guide_002.1920x1080.png")
@@ -72,29 +74,29 @@ class Game(public.Methods):
                 t.start()
             threads1 = []
             t3 = threading.Thread(target=long3)
-            threads.append(t3)
+            threads1.append(t3)
             t4 = threading.Thread(target=long4)
-            threads.append(t4)
+            threads1.append(t4)
             sleep(1)
             for t in threads1:
                 t.start()
             threads2 = []
             t1 = threading.Thread(target=long1)
-            threads1.append(t1)
+            threads2.append(t1)
             t2 = threading.Thread(target=long2)
-            threads1.append(t2)
+            threads2.append(t2)
             for t in threads2:
                 t.start()
             sleep(1)
             threads3 = []
             t3 = threading.Thread(target=long3)
-            threads1.append(t3)
+            threads3.append(t3)
             t4 = threading.Thread(target=long4)
-            threads1.append(t4)
+            threads3.append(t4)
             for t in threads3:
                 t.start()
             sleep(1)
-            threads4 = []
+            threads2 = []
             t3 = threading.Thread(target=long1)
             threads2.append(t3)
             t4 = threading.Thread(target=long2)
@@ -149,6 +151,18 @@ class Game(public.Methods):
             for t in threads2:
                 t.start()
             sleep(2)
+            threads3 = []
+            t3 = threading.Thread(target=long1)
+            threads3.append(t3)
+            t4 = threading.Thread(target=long2)
+            threads3.append(t4)
+            t5 = threading.Thread(target=long3)
+            threads3.append(t5)
+            t6 = threading.Thread(target=long4)
+            threads3.append(t6)
+            for t in threads3:
+                t.start()
+            sleep(2)
             driver.long_click(1000,500)
             '''氮气'''
             self.click_images(driver,"guide_004.1920x1080.png")
@@ -165,7 +179,7 @@ class Game(public.Methods):
             self.images_or_none(driver,'guide_008.1920x1080.png')
             driver.swipe(1846,597,1846,597,10)
             driver.swipe(1230,393,1230,393,10)
-            #self.click_images(driver,"guide_008.1920x1080.png")
+            # self.click_images(driver,"guide_008.1920x1080.png")
             self.click_images(driver,"guide_009.1920x1080.png")
             self.click_images(driver,"guide_010.1920x1080.png")
             driver.click(0.5,0.5)
@@ -195,35 +209,103 @@ class Game(public.Methods):
             return None
         
 
+
     def basicFunction(self,driver):
-        self.click_images(driver,"basic_001.1920x1080.png")
-        self.click_images(driver,"basic_002.1920x1080.png")
-        self.click_images(driver,"basic_003.1920x1080.png")
-        self.click_images(driver,"basic_004.1920x1080.png")
-        self.click_images(driver,"basic_005.1920x1080.png")
-        self.click_images(driver,"basic_004.1920x1080.png")
-        self.click_images(driver,"basic_006.1920x1080.png")
-        self.click_images(driver,"basic_007.1920x1080.png")
-        self.click_images(driver,"basic_004.1920x1080.png")
-        self.click_images(driver,"basic_008.1920x1080.png")
-        self.click_images(driver,"basic_009.1920x1080.png")
-        self.click_images(driver,"basic_010.1920x1080.png")
-        self.click_images(driver,"basic_011.1920x1080.png")
-        self.click_images(driver,"basic_012.1920x1080.png")
-        self.click_images(driver,"basic_004.1920x1080.png")
-        self.click_images(driver,"basic_013.1920x1080.png")
-        self.click_images(driver,"basic_004.1920x1080.png")
-        self.click_images(driver,"basic_014.1920x1080.png")
-        self.click_images(driver,"basic_002.1920x1080.png")
+        driver.click(1300,1030)  # 商城
+        sleep(2)
+        driver.click(50,40)  # 返回
+        sleep(2)
+        driver.click(1058,1030)  # 宠物
+        sleep(2)
+        driver.click(50,40)  # 返回
+        sleep(2)
+        driver.click(830,1030)  # 车库
+        sleep(2)
+        driver.click(50,40)  # 返回
+        sleep(2)
+        driver.click(580,1030)  # 赛事
+        sleep(2)
+        driver.click(50,40)  # 返回
+        sleep(2)
+        driver.click(350,1030)  # 车队
+        sleep(2)
+        driver.click(100,1030)  # 社交
+        sleep(2)
+        driver.click(50,40)  # 返回
+        sleep(2)
+        driver.click(65,400)  # 转盘
+        sleep(2)
+        driver.click(50,40)  # 返回
+        sleep(2)
+        driver.click(65,250)  # 活动
+        sleep(2)
+        driver.click(1700,150)  # 关闭
+        sleep(2)
+        driver.click(580,60)  # 充值
+        sleep(2)
+        driver.click(50,40)  # 返回
+        sleep(2)
+        driver.click(700,60)  # 首充
+        sleep(2)
+        driver.click(50,40)  # 返回
+        sleep(2)
+        driver.click(1688,45)  # 邮件
+        sleep(2)
+        driver.click(1700,100)  # 关闭
+        sleep(2)
+        driver.click(1780,45)  # 设置
+        sleep(2)
+        driver.click(50,40)  # 返回
+        sleep(2)
+        driver.click(1750,500)  # 背包
+        sleep(2)
+        driver.click(50,40)  # 返回
+        sleep(2)
+        driver.click(1750,688)  # 成长
+        sleep(2)
+        driver.click(50,40)  # 返回
+        sleep(2)
+        driver.swipe(1850,400,1850,400,10)  # 排行
+        sleep(2)
+        driver.click(50,40)  # 返回
+        sleep(2)
+        driver.swipe(1850,600,1850,600,10)  # 任务
+        sleep(2)
+        driver.click(50,40)  # 返回
+        sleep(2)
+        # self.click_images(driver,"basic_001.1920x1080.png")
+        # self.click_images(driver,"basic_002.1920x1080.png")
+        # self.click_images(driver,"basic_003.1920x1080.png")
+        # self.click_images(driver,"basic_004.1920x1080.png")
+        # self.click_images(driver,"basic_005.1920x1080.png")
+        # self.click_images(driver,"basic_004.1920x1080.png")
+        # self.click_images(driver,"basic_006.1920x1080.png")
+        # self.click_images(driver,"basic_007.1920x1080.png")
+        # self.click_images(driver,"basic_004.1920x1080.png")
+        # self.click_images(driver,"basic_008.1920x1080.png")
+        # self.click_images(driver,"basic_009.1920x1080.png")
+        # self.click_images(driver,"basic_010.1920x1080.png")
+        # self.click_images(driver,"basic_011.1920x1080.png")
+        # self.click_images(driver,"basic_012.1920x1080.png")
+        # self.click_images(driver,"basic_004.1920x1080.png")
+        # self.click_images(driver,"basic_013.1920x1080.png")
+        # self.click_images(driver,"basic_004.1920x1080.png")
+        # self.click_images(driver,"basic_014.1920x1080.png")
+        # self.click_images(driver,"basic_002.1920x1080.png")
         if self.wait_gone_images(driver, 'basic_002.1920x1080.png'):
             return 'ok'
         else:
             return None
         
-    '''飞车祈福'''   
+    '''飞车祈愿'''
     def live(self,driver):
-        self.click_images(driver,"live_001.1920x1080.png")
-        self.click_images(driver,"live_002.1920x1080.png")
+        sleep(2)
+        driver.click(60,550)  # 祈愿
+        sleep(2)
+        driver.click(1669,1018)  # 关闭
+        sleep(2)
+        # self.click_images(driver,"live_001.1920x1080.png")
+        # self.click_images(driver,"live_002.1920x1080.png")
         if self.wait_gone_images(driver, 'live_002.1920x1080.png'):
             return 'ok'
         else:
@@ -231,20 +313,35 @@ class Game(public.Methods):
         
     '''飞车社区'''   
     def gonglue(self,driver):
-        self.click_images(driver,"gonglue_01.1920x1080.png")
-        self.click_images(driver,"gonglue_02.1920x1080.png")
-        self.click_images(driver,"gonglue_03.1920x1080.png")
-        self.click_images(driver,"gonglue_04.1920x1080.png")
-        self.click_images(driver,"gonglue_05.1920x1080.png")
-        if self.wait_gone_images(driver, 'gonglue_01.1920x1080.png'):
+        sleep(2)
+        driver.click(1755,300)  # 社区
+        sleep(5)
+        driver.click(85,335)  # 红人
+        sleep(2)
+        driver.click(85,580)  # 攻略
+        sleep(2)
+        driver.click(85,820)  # 个人
+        sleep(2)
+        driver.click(1669,1018)  # 关闭
+        sleep(2)
+        # self.click_images(driver,"gonglue_01.1920x1080.png")
+        # self.click_images(driver,"gonglue_02.1920x1080.png")
+        # self.click_images(driver,"gonglue_03.1920x1080.png")
+        # self.click_images(driver,"gonglue_04.1920x1080.png")
+        # self.click_images(driver,"gonglue_05.1920x1080.png")
+        if self.wait_gone_images(driver, 'gonglue_02.1920x1080.png'):
             return 'ok'
         else:
             return None
         
     '''飞车特惠 '''
     def store(self,driver):
-        driver.swipe(1846,785,1846,785,10)
-        driver.swipe(1230,520,1230,520,10)
+        sleep(2)
+        driver.swipe(1846,785,1846,785,10)  # 特惠1920*1080
+        # driver.swipe(1230,520,1230,520,10)  # 特惠1280*720
+        sleep(2)
+        driver.click(1669,1018)  # 关闭
+        sleep(2)
         self.click_images(driver,"store_02.1920x1080.png")
         if self.wait_gone_images(driver, 'store_02.1920x1080.png'):
             return 'ok'
@@ -253,84 +350,115 @@ class Game(public.Methods):
         
     '''飞车邀请'''   
     def lingzuan(self,driver):
-        driver.swipe(1846,230,1846,230,10)
-        driver.swipe(1230,150,1230,150,10)
         sleep(2)
-        driver(className="android.view.View",description='每日成功分享（0/1）').click()
-        self.click_images(driver,"lingzuan_04.1920x1080.png")
+        driver.swipe(1846,230,1846,230,10)  # 邀请1920*1080
+        # driver.swipe(1230,150,1230,150,10)  # 邀请1280*720
         sleep(2)
-        driver(className="android.widget.GridView",index=0).child(className="android.widget.LinearLayout",index=0).click() 
-        self.click_images(driver,"lingzuan_02.1920x1080.png")
+        driver.click(1669,1018)  # 关闭
         sleep(2)
-        driver(className="android.view.View",description='每日成功分享（0/1）').click()
-        self.click_images(driver,"lingzuan_04.1920x1080.png")
-        sleep(2)
-        driver(className="android.widget.GridView",index=0).child(className="android.widget.LinearLayout",index=1).click() 
-        self.click_images(driver,"lingzuan_02.1920x1080.png")
-        sleep(2)
-        driver(className="android.view.View",description='每日成功分享（0/1）').click()
-        self.click_images(driver,"lingzuan_04.1920x1080.png")
-        sleep(2)
-        driver(className="android.widget.GridView",index=0).child(className="android.widget.LinearLayout",index=2).click() 
-        sleep(2)
-        driver.press.back()
-        sleep(2)
-        driver(className="android.view.View",description='每日成功分享（0/1）').click()
-        self.click_images(driver,"lingzuan_04.1920x1080.png")
-        self.click_images(driver,"lingzuan_01.1920x1080.png")
-        sleep(3)
-        driver.press.back()
-        sleep(2)
-        driver(className="android.view.View",description='每日成功分享（0/1）').click()
-        self.click_images(driver,"lingzuan_04.1920x1080.png")
-        sleep(2)
-        driver(className="android.widget.GridView",index=0).child(className="android.widget.LinearLayout",index=4).click()  
-        sleep(2)
-        driver.press.back()
-        driver.press.back()
-        sleep(1)
-        driver(className="android.widget.TextView",text="不保存").click()
-        self.click_images(driver,"lingzuan_03.1920x1080.png")
-        if self.wait_gone_images(driver, 'lingzuan_03.1920x1080.png'):
+        # driver(className="android.view.View",description='每日成功分享（0/1）').click()
+        # self.click_images(driver,"lingzuan_04.1920x1080.png")
+        # sleep(2)
+        # driver(className="android.widget.GridView",index=0).child(className="android.widget.LinearLayout",index=0).click()
+        # self.click_images(driver,"lingzuan_02.1920x1080.png")
+        # sleep(2)
+        # driver(className="android.view.View",description='每日成功分享（0/1）').click()
+        # self.click_images(driver,"lingzuan_04.1920x1080.png")
+        # sleep(2)
+        # driver(className="android.widget.GridView",index=0).child(className="android.widget.LinearLayout",index=1).click()
+        # self.click_images(driver,"lingzuan_02.1920x1080.png")
+        # sleep(2)
+        # driver(className="android.view.View",description='每日成功分享（0/1）').click()
+        # self.click_images(driver,"lingzuan_04.1920x1080.png")
+        # sleep(2)
+        # driver(className="android.widget.GridView",index=0).child(className="android.widget.LinearLayout",index=2).click()
+        # sleep(2)
+        # driver.press.back()
+        # sleep(2)
+        # driver(className="android.view.View",description='每日成功分享（0/1）').click()
+        # self.click_images(driver,"lingzuan_04.1920x1080.png")
+        # self.click_images(driver,"lingzuan_01.1920x1080.png")
+        # sleep(3)
+        # driver.press.back()
+        # sleep(2)
+        # driver(className="android.view.View",description='每日成功分享（0/1）').click()
+        # self.click_images(driver,"lingzuan_04.1920x1080.png")
+        # sleep(2)
+        # driver(className="android.widget.GridView",index=0).child(className="android.widget.LinearLayout",index=4).click()
+        # sleep(2)
+        # driver.press.back()
+        # driver.press.back()
+        # sleep(1)
+        # driver(className="android.widget.TextView",text="不保存").click()
+        # self.click_images(driver,"lingzuan_03.1920x1080.png")
+        if self.wait_gone_images(driver, 'lingzuan_04.1920x1080.png'):
             return 'ok'
         else:
             return None
 
     '''飞车任务'''    
     def saishi(self,driver):
-        driver.swipe(1846,597,1846,597,10)
-        driver.swipe(1230,393,1230,393,10)
-        self.click_images(driver,"saishi_02.1920x1080.png") 
-        self.click_images(driver,"saishi_03.1920x1080.png") 
-        self.click_images(driver,"saishi_04.1920x1080.png") 
-        self.click_images(driver,"saishi_05.1920x1080.png") 
-        self.click_images(driver,"saishi_06.1920x1080.png") 
-        self.click_images(driver,"saishi_07.1920x1080.png") 
+        sleep(2)
+        driver.swipe(1846,597,1846,597,10)  # 任务1920*1080
+        # driver.swipe(1230,393,1230,393,10)  # 任务1280*760
+        sleep(2)
+        driver.click(150,350)  # 成就任务
+        sleep(2)
+        driver.click(150,350)  # 日常任务
+        sleep(2)
+        driver.click(150,510)  # 车队任务
+        sleep(2)
+        driver.click(150,820)  # 情侣任务
+        sleep(2)
+        driver.click(150,960)  # 王爵任务
+        sleep(2)
+        driver.click(50,40)  # 返回
+        sleep(2)
+        # self.click_images(driver,"saishi_02.1920x1080.png")
+        # self.click_images(driver,"saishi_03.1920x1080.png")
+        # self.click_images(driver,"saishi_04.1920x1080.png")
+        # self.click_images(driver,"saishi_05.1920x1080.png")
+        # self.click_images(driver,"saishi_06.1920x1080.png")
+        # self.click_images(driver,"saishi_07.1920x1080.png")
         if self.wait_gone_images(driver, 'saishi_07.1920x1080.png'):
             return 'ok'
         else:
             return None
         
     def talking(self,driver):
-        self.click_images(driver,"talking_01.1920x1080.png")
-        self.click_images(driver,"talking_02.1920x1080.png")
-        sleep(1)
+        # self.click_images(driver,"talking_01.1920x1080.png")
+        # self.click_images(driver,"talking_02.1920x1080.png")
+        sleep(2)
+        driver.click(138,858)  # 对话
+        sleep(2)
+        driver.click(330,1000)  # 对话框
+        sleep(2)
         driver(className='android.widget.EditText',index=0).click()
-        driver.type(u"毛泽东法轮功江泽民") 
-        driver(className='android.widget.Button',index=1).click()
-        self.click_images(driver,"talking_03.1920x1080.png")
-        self.click_images(driver,"talking_04.1920x1080.png")
-
+        driver.type(u"毛泽东法轮功江泽民")
+        sleep(2)
+        driver.click(1700,912)  # 输入框确定说
+        # driver(className='android.widget.Button',index=1).click()
+        sleep(2)
+        driver.click(750,1000)  # 发送
+        sleep(5)
+        driver.click(930,530)  # 关闭对话框
+        sleep(2)
+        # self.click_images(driver,"talking_03.1920x1080.png")
+        # self.click_images(driver,"talking_04.1920x1080.png")
         if self.wait_gone_images(driver, 'talking_04.1920x1080.png'):
             return 'ok'
         else:
             return None
         
     def setting(self,driver):
-        self.click_images(driver,"setting_01.1920x1080.png")
-        sleep(1)
-        driver.click(1170,115)
-        self.click_images(driver,"setting_02.1920x1080.png")
+        # self.click_images(driver,"setting_01.1920x1080.png")
+        sleep(2)
+        driver.click(1776,49)  # 设置1920*1080
+        # driver.click(1170,115)  # 设置1280*760
+        sleep(2)
+        driver.click(50,40)  # 返回
+        sleep(2)
+        # self.click_images(driver,"setting_02.1920x1080.png")
         if self.wait_gone_images(driver, 'setting_02.1920x1080.png'):
             log.info('游戏中退出按钮')
             return 'ok'
@@ -339,8 +467,11 @@ class Game(public.Methods):
         
         
     def exitgame(self,driver):
-        driver.press.back()
-        self.click_images(driver,"exitgame_01.1920x1080.png")
+        sleep(2)
+        driver.press.back()  # 返回键
+        sleep(2)
+        driver.click(1130,700)  # 确定
+        # self.click_images(driver,"exitgame_01.1920x1080.png")
         if self.wait_gone_images(driver, 'exitgame_01.1920x1080.png'):
             log.info('游戏中退出按钮')
             return 'ok'
