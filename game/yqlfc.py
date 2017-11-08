@@ -472,8 +472,7 @@ class Game(public.Methods):
             return 'ok'
         else:
             return None
-        
-        
+
     def exitgame(self,driver):
         sleep(2)
         driver.press.back()  # 返回键
