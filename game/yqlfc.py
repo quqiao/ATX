@@ -302,7 +302,9 @@ class Game(public.Methods):
         sleep(2)
         driver.click(60,550)  # 祈愿
         sleep(2)
-        driver.click(1669,1018)  # 关闭
+        driver.click(1669,1018)  # 关闭有虚拟硬件
+        sleep(1)
+        driver.click(1791,1022)  # 关闭没有虚拟硬件
         sleep(2)
         # self.click_images(driver,"live_001.1920x1080.png")
         # self.click_images(driver,"live_002.1920x1080.png")
@@ -322,7 +324,9 @@ class Game(public.Methods):
         sleep(2)
         driver.click(85,820)  # 个人
         sleep(2)
-        driver.click(1669,1018)  # 关闭
+        driver.click(1669,1018)  # 关闭有虚拟硬件
+        sleep(1)
+        driver.click(1791,1022)  # 关闭没有虚拟硬件
         sleep(2)
         # self.click_images(driver,"gonglue_01.1920x1080.png")
         # self.click_images(driver,"gonglue_02.1920x1080.png")
@@ -340,7 +344,9 @@ class Game(public.Methods):
         driver.swipe(1846,785,1846,785,10)  # 特惠1920*1080
         # driver.swipe(1230,520,1230,520,10)  # 特惠1280*720
         sleep(2)
-        driver.click(1669,1018)  # 关闭
+        driver.click(1669,1018)  # 关闭有虚拟硬件
+        sleep(1)
+        driver.click(1791,1022)  # 关闭没有虚拟硬件
         sleep(2)
         self.click_images(driver,"store_02.1920x1080.png")
         if self.wait_gone_images(driver, 'store_02.1920x1080.png'):
@@ -354,7 +360,9 @@ class Game(public.Methods):
         driver.swipe(1846,230,1846,230,10)  # 邀请1920*1080
         # driver.swipe(1230,150,1230,150,10)  # 邀请1280*720
         sleep(2)
-        driver.click(1669,1018)  # 关闭
+        driver.click(1669,1018)  # 关闭有虚拟硬件
+        sleep(1)
+        driver.click(1791,1022)  # 关闭没有虚拟硬件
         sleep(2)
         # driver(className="android.view.View",description='每日成功分享（0/1）').click()
         # self.click_images(driver,"lingzuan_04.1920x1080.png")
