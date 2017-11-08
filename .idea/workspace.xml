@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72c852c7-c514-4c94-891f-065f3eb0b20c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/Administrator.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result/2017-11-07/result.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/configure.py" afterPath="$PROJECT_DIR$/configure.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game/yqlfc.py" afterPath="$PROJECT_DIR$/game/yqlfc.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
-    </list>
+    <list default="true" id="72c852c7-c514-4c94-891f-065f3eb0b20c" name="Default" comment="" />
     <ignored path="ATX.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,8 +24,8 @@
       <file leaf-file-name="yqlfc.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/game/yqlfc.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6409214">
-              <caret line="437" column="16" selection-start-line="437" selection-start-column="16" selection-end-line="437" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.8468835">
+              <caret line="445" column="62" selection-start-line="445" selection-start-column="62" selection-end-line="445" selection-end-column="62" />
               <folding>
                 <element signature="e#1016#7649#0" expanded="false" />
                 <element signature="e#7705#10656#0" expanded="false" />
@@ -365,8 +356,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/game/yqlfc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6409214">
-          <caret line="437" column="16" selection-start-line="437" selection-start-column="16" selection-end-line="437" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.8468835">
+          <caret line="445" column="62" selection-start-line="445" selection-start-column="62" selection-end-line="445" selection-end-column="62" />
           <folding>
             <element signature="e#1016#7649#0" expanded="false" />
             <element signature="e#7705#10656#0" expanded="false" />
