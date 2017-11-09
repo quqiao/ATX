@@ -1,37 +1,24 @@
 # coding=utf-8
 
-#import os
-#import unittest
-#import atx
 from time import sleep, strftime
 import public.methods as public
-#import configure
 from public import logutils
 log = logutils.getLogger(__name__)
-
-####################
-channel_shiming_activity = u'com.qihoo.gamecenter.sdk.activity.ContainerActivity'
-channel_pay_activity = u'com.baidu.platformsdk.CashierDeskActivity'
-channel_announcement_activity = u'com.game2345.account.floating.EventActivity'
-wechat = u'com.tencent.mm'
-alipay =u'com.alipay.sdk.app.H5PayActivity'
-unionpay = u'com.unionpay.uppay.PayActivity'
-#####################
 
 class Channel(public.Methods):
     def login(self, driver):
         u'''渠道login'''
         if self.images_or_none(driver, 'idInput.1920x1080.png',way_name='channel'):
-            self.click_images(driver,u"idInput.1920x1080.png",way_name='channel')
+            self.click_images(driver,"idInput.1920x1080.png",way_name='channel')
             sleep(1)
             driver.type("sg774988pgq") 
-            self.click_images(driver,u"pswInput.1920x1080.png",way_name='channel')
+            self.click_images(driver,"pswInput.1920x1080.png",way_name='channel')
             sleep(1)
             driver.type("123456")
-            self.click_images(driver,u"login.1920x1080.png",way_name='channel')
-            self.click_images(driver,u"login_shiming_close.1920x1080.png",way_name='channel')
+            self.click_images(driver,"login.1920x1080.png",way_name='channel')
+            self.click_images(driver,"login_shiming_close.1920x1080.png",way_name='channel')
         else:
-            self.click_images(driver,u"login_shiming_close.1920x1080.png",way_name='channel')
+            self.click_images(driver,"login_shiming_close.1920x1080.png",way_name='channel')
         if self.wait_gone_images(driver, 'login_shiming_close.1920x1080.png',way_name='channel'):
                 log.info('登录成功')
                 return 'ok'

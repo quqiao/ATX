@@ -1,24 +1,10 @@
 #!/usr/bin/env python
 # coding=utf-8
 
-
-#import os
-#import unittest
-#import atx
-from time import sleep, strftime
 import public.methods as public
-#import configure
+from time import sleep
 from public import logutils
 log = logutils.getLogger(__name__)
-
-####################
-channel_shiming_activity = u'com.qihoo.gamecenter.sdk.activity.ContainerActivity'
-channel_login_activity = u'com.crisisfire.android.sy37.UnityPlayerNativeActivity'
-channel_announcement_activity = u'com.game2345.account.floating.EventActivity'
-wechat = u'com.tencent.mm'
-alipay =u'com.alipay.sdk.app.H5PayActivity'
-unionpay = u'com.unionpay.uppay.PayActivity'
-#####################
 
 class Channel(public.Methods):
     def login(self, driver):
@@ -35,13 +21,13 @@ class Channel(public.Methods):
             self.click_images(driver,"login_bangding_back.1920x1080.png",way_name='channel')
             self.click_images(driver,"login_shiming_close.1920x1080.png",way_name='channel')
             '''
-            #driver(className="android.widget.EditText").sibling(className="android.widget.ImageView").click()
+            # driver(className="android.widget.EditText").sibling(className="android.widget.ImageView").click()
             driver.click(850,230)
             driver.clear_text() 
             driver.type("15198139230",next=True)
             driver.type("a123123")
             driver.click(950,610)
-            #driver(className="android.widget.Button",index=0).sibling(className="android.widget.LinearLayout",index=1).click()
+            # driver(className="android.widget.Button",index=0).sibling(className="android.widget.LinearLayout",index=1).click()
             image = self.wait_gone_images(driver, 'login_shiming_close.1920x1080.png',timeout=40,way_name='channel')
             if image:
                 log.info('登录成功')
@@ -114,9 +100,7 @@ class Channel(public.Methods):
         else:
             return None
         
-            
-        
-        
+
     def wechat(self,driver):
         u"微信支付"
         self.click_images(driver,"close_shiming.1920x1080.png",way_name='channel')
@@ -190,13 +174,12 @@ class Channel(public.Methods):
         
         
     def exitGame(self,driver):
-        self.click_images(driver,"setting.1920x1080.png",way_name='channel')
-        self.click_images(driver,"exitGame_01.1920x1080.png",way_name='channel')
-        self.click_images(driver,"exitGame_02_close.1920x1080.png",way_name='channel')
-        self.click_images(driver,"exitGame_01.1920x1080.png",way_name='channel')
-        self.click_images(driver,"exitGame_01_huodong.1920x1080.png",way_name='channel')
-        self.click_images(driver,"exitGame_01_huodong_close.1920x1080.png",way_name='channel')
-        self.click_images(driver,"exitGame_01.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"exitGame_01.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"exitGame_02_close.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"exitGame_01.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"exitGame_01_huodong.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"exitGame_01_huodong_close.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"exitGame_01.1920x1080.png",way_name='channel')
         self.click_images(driver,"exitGame_02.1920x1080.png",way_name='channel')
         if self.wait_gone_images(driver, 'exitGame_02.1920x1080.png',way_name='channel'):
             log.info('退出游戏成功')

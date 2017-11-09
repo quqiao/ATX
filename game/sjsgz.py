@@ -9,8 +9,10 @@ log = logutils.getLogger(__name__)
 
 class Game(public.Methods):
     def game_update(self,driver):
-        sleep(15)
-        self.click_images(driver,"game_update_01.1920x1080.png")
+        sleep(20)
+        self.images_or_none(driver,"game_update_01.1920x1080.png")
+        sleep(2)
+        driver.click(950,890)  # 知道啦
         if self.wait_gone_images(driver,'game_update_01.1920x1080.png'):
             log.info('更新成功')
             return 'ok'
@@ -19,7 +21,9 @@ class Game(public.Methods):
             return None
                
     def game_pre(self,driver):
-        self.click_images(driver,"game_pre_01.1920x1080.png")
+        sleep(5)
+        driver.click(880,910)  # 进入游戏
+        # self.click_images(driver,"game_pre_01.1920x1080.png")
         if self.wait_gone_images(driver,'game_pre_01.1920x1080.png'):
             log.info('更新成功')
             return 'ok'
@@ -31,6 +35,8 @@ class Game(public.Methods):
         '''开始引导'''
         if self.images_or_none(driver,'guide_001.1920x1080.png'):
             # self.images_or_none(driver,'guide_001.1920x1080.png')#对话
+            sleep(1)
+            driver.swipe(55,55,55,800,50)  # 移动浮标
             sleep(2)
             driver.swipe(1820,930,1820,930,10)#故事剧情
             '''关卡1'''
@@ -419,10 +425,10 @@ class Game(public.Methods):
         else:
             print "引导已完成"
         if self.wait_gone_images(driver,'guide_001.1920x1080.png'):
-            log.info('游戏更新成功')
+            log.info('游戏引导成功')
             return 'ok'
         else:
-            log.info('游戏更新失败')
+            log.info('游戏引导失败')
             return None
 
     def basicFunction(self,driver):
@@ -484,50 +490,47 @@ class Game(public.Methods):
         driver.click(50,39)#返回
         sleep(2)
         if self.images_or_none(driver, 'basicFunction_01.1920x1080.png'):
+            log.info('基本功能检查成功')
             return 'ok'
         else:
+            log.info('基本功能检查失败')
             return None
 
     def store(self,driver):
         if self.wait_gone_images(driver, 'exitgame_01.1920x1080.png'):
-            log.info('游戏中确定退出')
+            log.info('暂时没有store')
             return 'ok'
         else:
             return None
-        print "暂时没有"
 
     def live(self,driver):
         if self.wait_gone_images(driver, 'exitgame_01.1920x1080.png'):
-            log.info('游戏中确定退出')
+            log.info('暂时没有live')
             return 'ok'
         else:
             return None
-        print "暂时没有"
 
 
     def gonglue(self,driver):
         if self.wait_gone_images(driver, 'exitgame_01.1920x1080.png'):
-            log.info('游戏中确定退出')
+            log.info('暂时没有gonglue')
             return 'ok'
         else:
             return None
-        print "暂时没有"
          
     def saishi(self,driver):
         if self.wait_gone_images(driver, 'exitgame_01.1920x1080.png'):
-            log.info('游戏中确定退出')
+            log.info('暂时没有赛事')
             return 'ok'
         else:
             return None
-        print "暂时没有"
         
     def lingzuan(self,driver):
         if self.wait_gone_images(driver, 'exitgame_01.1920x1080.png'):
-            log.info('游戏中确定退出')
+            log.info('暂时没有领钻')
             return 'ok'
         else:
             return None
-        print "暂时没有"
         
     def talking(self,driver):
         sleep(2)
@@ -545,9 +548,10 @@ class Game(public.Methods):
         driver.click(930,530)#关闭对话框
         sleep(2)
         if self.images_or_none(driver, 'talking_01.1920x1080.png'):
-            log.info('游戏中退出按钮')
+            log.info('谈话检查成功')
             return 'ok'
         else:
+            log.info('谈话检查失败')
             return None
 
     def setting(self,driver):
@@ -558,16 +562,18 @@ class Game(public.Methods):
         sleep(2)
         driver.click(960,760)#退出游戏
         if self.wait_gone_images(driver, 'setting_01.1920x1080.png'):
-            log.info('游戏中退出按钮')
+            log.info('设置检查成功')
             return 'ok'
         else:
             return None
+            log.info('设置检查失败')
   
     def exitgame(self,driver):
         sleep(2)
         driver.click(1200,720)#确定退出游戏
         if self.wait_gone_images(driver, 'exitgame_01.1920x1080.png'):
-            log.info('游戏中确定退出')
+            log.info('游戏退出成功')
             return 'ok'
         else:
+            log.info('游戏退出失败')
             return None

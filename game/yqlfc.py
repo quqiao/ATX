@@ -15,7 +15,9 @@ class Game(public.Methods):
         sleep(30)
         driver.click(500,500)
         sleep(20)
-        self.click_images(driver,"game_update_01.1920x1080.png")
+        self.images_or_none(driver,"game_update_01.1920x1080.png")
+        sleep(1)
+        driver.click(960,990)  # 确定
         if self.wait_gone_images(driver,'game_update_01.1920x1080.png'):
             log.info('游戏更新成功')
             return 'ok'
@@ -24,8 +26,13 @@ class Game(public.Methods):
             return None
         
     def game_pre(self,driver):
-        self.click_images(driver,"game_pre_01.1920x1080.png")
-        self.click_images(driver,"game_pre_02.1920x1080.png")
+        self.images_or_none(driver,"game_pre_01.1920x1080.png")
+        sleep(1)
+        driver.click(955,858)  # 确定
+        sleep(2)
+        driver.click(950,890)  # 开始
+        sleep(1)
+        # self.click_images(driver,"game_pre_02.1920x1080.png")
         if self.wait_gone_images(driver,'game_pre_02.1920x1080.png'):
             log.info('进入游戏前准备成功')
             return 'ok'
@@ -39,9 +46,11 @@ class Game(public.Methods):
             self.click_images(driver,"guide_002.1920x1080.png")
             sleep(8)
             self.images_or_none(driver,'guide_003.1920x1080.png')
+            sleep(1)
             driver.click(0.5,0.5)
             sleep(2)
             self.images_or_none(driver,'guide_003.1920x1080.png')
+            sleep(1)
             driver.click(0.5,0.5)
             '''右转'''
             sleep(5)
@@ -50,9 +59,11 @@ class Game(public.Methods):
             '''左转'''
             driver.swipe(400,500,400,500,40)
             self.images_or_none(driver,'guide_003.1920x1080.png')
+            sleep(1)
             driver.click(0.5,0.5)
             sleep(2)
             self.images_or_none(driver,'guide_003.1920x1080.png')
+            sleep(1)
             driver.click(0.5,0.5)
             sleep(3)
             '''左漂移'''
@@ -299,7 +310,7 @@ class Game(public.Methods):
     def live(self,driver):
         sleep(2)
         driver.click(60,550)  # 祈愿
-        sleep(2)
+        sleep(6)
         driver.click(1669,1018)  # 关闭有虚拟硬件
         sleep(1)
         driver.click(1791,1022)  # 关闭没有虚拟硬件
@@ -341,7 +352,7 @@ class Game(public.Methods):
         sleep(2)
         driver.swipe(1846,785,1846,785,10)  # 特惠1920*1080
         # driver.swipe(1230,520,1230,520,10)  # 特惠1280*720
-        sleep(2)
+        sleep(5)
         driver.click(1669,1018)  # 关闭有虚拟硬件
         sleep(1)
         driver.click(1791,1022)  # 关闭没有虚拟硬件

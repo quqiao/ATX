@@ -10,7 +10,6 @@ class Channel(public.Methods):
     def login(self, driver):
         u'''渠道login'''
         if self.images_or_none(driver, 'login.1920x1080.png',way_name='channel'):
-        #self.get_view_info(driver) == channel_login_activity:
             self.click_images(driver,u"idInput.1920x1080.png",way_name='channel')
             sleep(1)
             driver.type("15198139230") 

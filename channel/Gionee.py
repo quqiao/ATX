@@ -78,7 +78,6 @@ class Channel(public.Methods):
         sleep(3)
         driver(className='android.widget.LinearLayout',index=0).child(className="android.widget.ImageView",index=0).click() #退出微信
         driver(className='android.widget.RelativeLayout',index=0).child(className="android.widget.ImageView",index=0).click() #支付退出确定
-       
         if self.wait_gone_images(driver, 'exists_02.1920x1080.png',way_name='channel'):
             log.info('微信支付成功')
             return "OK"
@@ -90,6 +89,12 @@ class Channel(public.Methods):
         #sleep(1)      
         #driver(className='android.widget.Button',index=1).click()
         self.click_images(driver,"exitGame_01.1920x1080.png",way_name='channel')
+        if self.wait_gone_images(driver, 'exitGame_01.1920x1080.png',way_name='channel'):
+            log.info('微信支付成功')
+            return "OK"
+        else:
+            log.info('微信支付失败')
+            return None
     
         
         

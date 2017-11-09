@@ -1,23 +1,11 @@
 # coding=utf-8
 
 
-#import os
-#import unittest
-#import atx
 from time import sleep, strftime
 import public.methods as public
-#import configure
 from public import logutils
 log = logutils.getLogger(__name__)
 
-####################
-channel_shiming_activity = u'com.qihoo.gamecenter.sdk.activity.ContainerActivity'
-channel_pay_activity = u'com.baidu.platformsdk.CashierDeskActivity'
-channel_announcement_activity = u'com.game2345.account.floating.EventActivity'
-wechat = u'com.tencent.mm'
-alipay =u'com.alipay.sdk.app.H5PayActivity'
-unionpay = u'com.unionpay.uppay.PayActivity'
-#####################
 
 class Channel(public.Methods):
     def login(self, driver):

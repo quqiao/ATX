@@ -1,13 +1,8 @@
 #!/usr/bin/env python
 # coding=utf-8
 
-
-#import os
-#import unittest
-#import atx
 from time import sleep, strftime
 import public.methods as public
-#import configure
 from public import logutils
 log = logutils.getLogger(__name__)
 

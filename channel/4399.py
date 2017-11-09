@@ -1,54 +1,36 @@
 # coding=utf-8
-
 #!/usr/bin/env python
 
 
-#import os
-#import unittest
-#import atx
+
 from time import sleep, strftime
 import public.methods as public
-#import configure
 from public import logutils
 log = logutils.getLogger(__name__)
 
-####################
-channel_shiming_activity = u'com.qihoo.gamecenter.sdk.activity.ContainerActivity'
-channel_login_activity = u'cn.m4399.operate.ui.activity.LoginActivity'
-channel_announcement_activity = u'com.game2345.account.floating.EventActivity'
-wechat = u'com.tencent.mm'
-alipay =u'com.alipay.sdk.app.H5PayActivity'
-unionpay = u'com.unionpay.uppay.PayActivity'
-#####################
 
 class Channel(public.Methods):
     def login(self, driver):
         u'''渠道login'''
-        """
-        if self.get_view_info(driver) == channel_login_activity:
-        """
-        self.click_images(driver,"idInput.1920x1080.png",way_name='channel')
-        sleep(1)
-        driver.type("1682930949") 
-        self.click_images(driver,"pswInput.1920x1080.png",way_name='channel')
-        sleep(1)
-        driver.type("123456")
-        self.click_images(driver,"login.1920x1080.png",way_name='channel')
-        image = self.wait_gone_images(driver, 'login.1920x1080.png',way_name='channel',timeout=40)
-        if image:
+        if self.images_or_none(driver,"idInput.1920x1080.png",way_name='channel'):
+            self.click_images(driver,"idInput.1920x1080.png",way_name='channel')
+            sleep(1)
+            driver.type("1682930949")
+            self.click_images(driver,"pswInput.1920x1080.png",way_name='channel')
+            sleep(1)
+            driver.type("123456")
+            self.click_images(driver,"login.1920x1080.png",way_name='channel')
+        else:
+            sleep(6)
+            log.info('自动登录成功')
+            return 'ok'
+        if self.wait_gone_images(driver, 'login.1920x1080.png',way_name='channel',timeout=40):
             log.info('登录成功')
             return 'ok'
         else:
             log.info('登录失败')
             return None
-        """
-        else:
-            image = self.images_or_none(driver, 'login_success.1920x1080.png')
-            if image:
-                log.info('自动登录成功')
-                return 'ok'
-        """
-        
+
     def fubiao(self,driver):
         self.click_images(driver,"fubiao_01.1920x1080.png",way_name='channel')
         self.click_images(driver,"fubiao_02.1920x1080.png",way_name='channel')
@@ -71,7 +53,6 @@ class Channel(public.Methods):
             return 'ok'
         else:
             return None  
-              
 
     def ali(self,driver):
         u"支付宝支付"
@@ -83,9 +64,7 @@ class Channel(public.Methods):
             return 'ok'
         else:
             return None
-            
-    
-        
+
     def wechat(self,driver):
         u"微信支付"
         self.click_images(driver,"wechat.1920x1080.png",way_name='channel')
@@ -118,13 +97,13 @@ class Channel(public.Methods):
             self.click_images(driver,"4399_pay_close.1920x1080.png",way_name='channel')
             
     def exitGame(self,driver):
-        self.click_images(driver,"setting.1920x1080.png",way_name='channel')
-        self.click_images(driver,"exitGame.1920x1080.png",way_name='channel')
-        self.click_images(driver,"exitGame_01.1920x1080.png",way_name='channel')
-        self.click_images(driver,"exitGame.1920x1080.png",way_name='channel')
-        self.click_images(driver,"exitGame_02.1920x1080.png",way_name='channel')
-        self.click_images(driver,"exitGame_03.1920x1080.png",way_name='channel')
-        self.click_images(driver,"exitGame_01.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"setting.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"exitGame.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"exitGame_01.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"exitGame.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"exitGame_02.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"exitGame_03.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"exitGame_01.1920x1080.png",way_name='channel')
         self.click_images(driver,"exitGame_04.1920x1080.png",way_name='channel')
         if self.wait_gone_images(driver, 'exitGame_04.1920x1080.png',way_name='channel'):
             log.info('退出游戏成功')

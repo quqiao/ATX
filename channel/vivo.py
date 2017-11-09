@@ -99,7 +99,7 @@ class Channel(public.Methods):
             return None
         
     def exitGame(self,driver):
-        sleep(1)      
+        sleep(2)
         driver(resourceId='com.vivo.sdkplugin:id/vivo_app_exit_dialog_confirm_btn',index=0).click()
         if self.wait_gone_images(driver, 'ali_pay_back.1920x1080.png',way_name='channel'):
             log.info('微信支付成功')

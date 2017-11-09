@@ -87,6 +87,12 @@ class Channel(public.Methods):
             return None
         
     def exitGame(self,driver):
-        sleep(1)      
-        driver(className='android.widget.TextView',index=1).click()  
+        sleep(2)
+        driver(className='android.widget.TextView',index=1).click()
+        if self.wait_gone_images(driver, 'exists_02.1920x1080.png',way_name='channel'):
+            log.info('微信支付成功')
+            return "OK"
+        else:
+            log.info('微信支付失败')
+            return None
     

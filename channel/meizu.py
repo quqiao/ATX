@@ -58,7 +58,7 @@ class Channel(public.Methods):
             return None
         
     def exitGame(self,driver):
-        sleep(1)      
+        sleep(2)
         driver(className="android.widget.LinearLayout").child(text=u"离开游戏").click()
         if self.wait_gone_images(driver, 'exists_03.1920x1080.png',way_name='channel'):
             log.info('退出游戏成功')

@@ -2,12 +2,8 @@
 # coding=utf-8
 
 
-#import os
-#import unittest
-#import atx
 from time import sleep, strftime
 import public.methods as public
-#import configure
 from public import logutils
 log = logutils.getLogger(__name__)
 
@@ -29,6 +25,4 @@ class Channel(public.Methods):
         else:
             log.info('登录失败')
             return None
-        
-        
         

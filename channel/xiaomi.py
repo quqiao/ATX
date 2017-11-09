@@ -10,6 +10,7 @@ class Channel(public.Methods):
         u'''渠道login'''
         if self.images_or_none(driver, 'exists_02.1920x1080.png',way_name='channel',timeout=10):
             self.click_images(driver,"shiming_close.1920x1080.png",way_name='channel')
+            sleep(2)
             driver(className='android.widget.RelativeLayout',index=1).child(className="android.widget.TextView",index=2).click()
             image = self.wait_gone_images(driver, 'exists_01.1920x1080.png',timeout=40,way_name='channel')
             if image:
@@ -81,4 +82,3 @@ class Channel(public.Methods):
         else:
             log.info('退出游戏失败')
             return None
-        

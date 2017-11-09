@@ -2,23 +2,10 @@
 # coding=utf-8
 
 
-#import os
-#import unittest
-#import atx
 from time import sleep, strftime
 import public.methods as public
-#import configure
 from public import logutils
 log = logutils.getLogger(__name__)
-
-####################
-channel_shiming_activity = u'com.qihoo.gamecenter.sdk.activity.ContainerActivity'
-channel_login_activity = u'.UnityPlayerNativeActivity'
-channel_announcement_activity = u'com.game2345.account.floating.EventActivity'
-wechat = u'com.tencent.mm'
-alipay =u'com.alipay.sdk.app.H5PayActivity'
-unionpay = u'com.unionpay.uppay.PayActivity'
-#####################
 
 class Channel(public.Methods):
     def login(self, driver):
@@ -29,24 +16,23 @@ class Channel(public.Methods):
             driver.clear_text()
             sleep(1)
             driver.type("wan279378792", next=True) 
-            #self.click_images(driver,"pswInput.1920x1080.png",way_name='channel')
+            # self.click_images(driver,"pswInput.1920x1080.png",way_name='channel')
             sleep(1)
             driver.clear_text()
             sleep(1)
             driver.type("981298")
             self.click_images(driver,"login.1920x1080.png",way_name='channel')
-            image = self.wait_gone_images(driver, 'login.1920x1080.png',timeout=40,way_name='channel')
-            if image:
+
+        else:
+            self.wait_gone_images(driver, 'login.1920x1080.png',timeout=40,way_name='channel')
+            log.info('自动登录成功')
+
+        if self.wait_gone_images(driver, 'login.1920x1080.png',timeout=40,way_name='channel'):
                 log.info('登录成功')
                 return 'ok'
-            else:
-                log.info('登录失败')
-                return None
         else:
-            image = self.wait_gone_images(driver, 'login.1920x1080.png',timeout=40,way_name='channel')
-            if image:
-                log.info('自动登录成功')
-                return 'ok'
+            log.info('登录失败')
+            return None
             
     def fubiao(self,driver):
         u'浮标操作'
@@ -74,6 +60,14 @@ class Channel(public.Methods):
         else:
             return None          
 
+    def exitGame(self,driver):
+        log.info('没有内容')
+        if self.wait_gone_images(driver, 'fubiao_09.1920x1080.png',way_name='channel'):
+            log.info('浮标已关闭')
+            return 'ok'
+        else:
+            return None
+
     def ali(self,driver):
         u"支付宝支付"
         self.click_images(driver,"37_pay.1920x1080.png",way_name='channel')
@@ -85,8 +79,7 @@ class Channel(public.Methods):
             return 'ok'
         else:
             return None
-     
-        
+
     def wangshangyinhang(self,driver):
         u"网上银行"
         self.click_images(driver,"37_pay.1920x1080.png",way_name='channel')

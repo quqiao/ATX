@@ -20,35 +20,34 @@ class Channel(public.Methods):
         else:
             log.info('浮标检查失败')
             return None
-        '''
-        if self.images_or_none(driver, 'exists_01.1920x1080.png',way_name='channel'):
-            driver(index=0, resourceId="com.oppo.usercenter:id/multi_autocomple_text").click()
-            driver.clear_text()
-            driver.type("17713623912")
-            driver(index=0, resourceId="com.oppo.usercenter:id/edit_input_content").click()
-            driver.clear_text()
-            driver.type("test123")
-            driver(index=4, resourceId="com.oppo.usercenter:id/btn_login").click()
-            driver(index=0, resourceId="com.nearme.game.service:id/btn_nav").click()
-            image = self.wait_gone_images(driver, 'exists_01.1920x1080.png',timeout=40,way_name='channel')
-            if image:
-                log.info('登录成功')
-                return 'ok'
-            else:
-                log.info('登录失败')
-                return None
-        else:
-            driver(index=0, resourceId="com.nearme.game.service:id/btn_nav").click()
-            image = self.wait_gone_images(driver, 'exists_01.1920x1080.png',way_name='channel')
-            if image:
-                log.info('自动登录成功')
-                return 'ok'
-        '''
+        # if self.images_or_none(driver, 'exists_01.1920x1080.png',way_name='channel'):
+        #     driver(index=0, resourceId="com.oppo.usercenter:id/multi_autocomple_text").click()
+        #     driver.clear_text()
+        #     driver.type("17713623912")
+        #     driver(index=0, resourceId="com.oppo.usercenter:id/edit_input_content").click()
+        #     driver.clear_text()
+        #     driver.type("test123")
+        #     driver(index=4, resourceId="com.oppo.usercenter:id/btn_login").click()
+        #     driver(index=0, resourceId="com.nearme.game.service:id/btn_nav").click()
+        #     image = self.wait_gone_images(driver, 'exists_01.1920x1080.png',timeout=40,way_name='channel')
+        #     if image:
+        #         log.info('登录成功')
+        #         return 'ok'
+        #     else:
+        #         log.info('登录失败')
+        #         return None
+        # else:
+        #     driver(index=0, resourceId="com.nearme.game.service:id/btn_nav").click()
+        #     image = self.wait_gone_images(driver, 'exists_01.1920x1080.png',way_name='channel')
+        #     if image:
+        #         log.info('自动登录成功')
+        #         return 'ok'
+
     def fanhui(self,driver):
         sleep(3)
         driver(resourceId='com.nearme.atlas:id/btn_back',index=0).click()
         self.click_images(driver,"exit_pay_yes.1920x1080.png",way_name='channel')
-        #driver(resourceId='com.nearme.atlas:id/dialog_standard_bt_yes',index=1).click()
+        # driver(resourceId='com.nearme.atlas:id/dialog_standard_bt_yes',index=1).click()
         if self.wait_gone_images(driver, 'exists_02.1920x1080.png',way_name='channel'):
             log.info('微信支付成功')
             return "OK"
@@ -117,6 +116,12 @@ class Channel(public.Methods):
             return None
         
     def exitGame(self,driver):
-        sleep(1)      
-        driver(resourceIdclassName='com.nearme.game.service:id/exit_btn',index=1).click()  
-    
+        sleep(2)
+        driver(resourceIdclassName='com.nearme.game.service:id/exit_btn',index=1).click()
+        sleep(2)
+        if self.wait_gone_images(driver, 'exists_02.1920x1080.png',way_name='channel'):
+            log.info('微信支付成功')
+            return "OK"
+        else:
+            log.info('微信支付失败')
+            return None

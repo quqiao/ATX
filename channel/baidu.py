@@ -30,7 +30,13 @@ class Channel(public.Methods):
             log.info('登录失败')
             return None
     def fubiao(self,driver):
-        print ''
+        log.info('暂时没有浮标')
+        if self.wait_gone_images(driver, 'login.1920x1080.png',way_name='channel'):
+            log.info('登录成功')
+            return 'ok'
+        else:
+            log.info('登录失败')
+            return None
 
     def ali(self,driver):
         u"支付宝支付"
@@ -55,4 +61,3 @@ class Channel(public.Methods):
         self.click_images(driver,"baidu_pay_return_game.1920x1080.png",way_name='channel')
     
 
-            
