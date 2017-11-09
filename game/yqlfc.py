@@ -207,8 +207,6 @@ class Game(public.Methods):
         else:
             log.info('游戏更新失败')
             return None
-        
-
 
     def basicFunction(self,driver):
         driver.click(1300,1030)  # 商城

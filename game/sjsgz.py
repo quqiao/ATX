@@ -30,9 +30,9 @@ class Game(public.Methods):
     def guide(self,driver):
         '''开始引导'''
         if self.images_or_none(driver,'guide_001.1920x1080.png'):
-            #self.images_or_none(driver,'guide_001.1920x1080.png')#对话
+            # self.images_or_none(driver,'guide_001.1920x1080.png')#对话
             sleep(2)
-            driver.click(1820,930)#故事剧情
+            driver.swipe(1820,930,1820,930,10)#故事剧情
             '''关卡1'''
             sleep(3)
             driver.click(250,355)#关卡1
@@ -98,9 +98,9 @@ class Game(public.Methods):
             sleep(2)
             driver.click(955,687)#确定
             sleep(2)
-            driver.click(1820,930)#故事剧情
+            driver.swipe(1820,930,1820,930,10)#故事剧情
             sleep(2)
-            driver.click(1820,930)#故事剧情
+            driver.swipe(1820,930,1820,930,10)#故事剧情
             '''关卡3'''
             sleep(2)
             driver.click(794,700)#关卡3
@@ -221,9 +221,9 @@ class Game(public.Methods):
             sleep(2)
             driver.click(125,45)#武将管理
             sleep(2)
-            driver.click(1820,930)#故事剧情
+            driver.swipe(1820,930,1820,930,10)#故事剧情
             sleep(2)
-            driver.click(1820,930)#故事剧情
+            driver.swipe(1820,930,1820,930,10)#故事剧情
             '''关卡7'''
             sleep(2)
             driver.click(300,490)#关卡7
@@ -336,9 +336,9 @@ class Game(public.Methods):
             sleep(2)
             driver.click(125,45)#武将管理
             sleep(1)
-            driver.click(1820,930)#故事剧情
+            driver.swipe(1820,930,1820,930,10)#故事剧情
             sleep(1)
-            driver.click(1820,930)#故事剧情
+            driver.swipe(1820,930,1820,930,10)#故事剧情
             '''关卡10'''
             sleep(2)
             driver.click(1085,680)#关卡10
@@ -413,7 +413,7 @@ class Game(public.Methods):
             sleep(3)
             driver.click(958,703)#确定获得道具
             sleep(2)
-            driver.click(1820,930)#故事剧情
+            driver.swipe(1820,930,1820,930,10)#故事剧情
             sleep(2)
             driver.click(125,45)#返回
         else:
@@ -443,7 +443,7 @@ class Game(public.Methods):
         sleep(2)
         driver.click(50,39)#返回
         sleep(2)
-        driver.click(1860,150)#活动
+        driver.swipe(1860,150,1860,150,10)#活动
         sleep(3)
         driver.click(50,39)#返回
         sleep(3)

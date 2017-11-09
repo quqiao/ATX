@@ -13,10 +13,10 @@ print b
 '''
 
 device_name = ''
-game_name = 'yqlfc'
+game_name = 'sjsgz'
 channel_name = 'quick'
-activity_name = 'com.wyd.fc.activity.SplashActivity'
-package_name = 'com.wyd.ddfc.quick'
+package_name = 'mobi.xy3d.tstd'   #生煎三国志
+activity_name = 'mobi.xy3d.tstd.SplashActivity'    #生煎三国志
 
 #quick
 '''
