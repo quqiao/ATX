@@ -20,7 +20,7 @@ activity_name = 'mobi.xy3d.tstd.SplashActivity'    #生煎三国志
 
 #quick
 '''
-channel_name = 'quick'
+#channel_name = 'quick'
 #package_name = 'com.crisisfire.cmgeQ' #全民枪战
 #activity_name = 'com.crisisfire.cmgeQ.SplashActivity'    #全民枪战
 #package_name = 'com.fengniao.games.HZ.aSkymoon'   #巅峰战舰
@@ -29,8 +29,8 @@ channel_name = 'quick'
 #activity_name = 'com.tqyouxi.sdk.SplashActivity'    #三生问道
 #package_name = 'com.wyd.ddfc.quick'   #一起来飞车
 #activity_name = 'com.wyd.fc.activity.SplashActivity'    #一起来飞车
-package_name = 'com.taiyouxi.ifsg.quick'   #极无双
-activity_name = 'com.taiyouxi.a3k.SplashActivity'    #极无双
+#package_name = 'com.taiyouxi.ifsg.quick'   #极无双
+#activity_name = 'com.taiyouxi.a3k.SplashActivity'    #极无双
 #package_name = 'com.yingxiong.jiujian.Android'   #九剑魔龙传
 #activity_name = 'com.YouYiFang.NewGame.SplashActivity'    #九剑魔龙传
 #package_name = 'com.fengniao.games.QTDL.aSkymoon'   #抢滩登陆
