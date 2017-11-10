@@ -14,7 +14,7 @@ class Game(public.Methods):
     def game_update(self,driver):
         sleep(30)
         driver.click(500,500)
-        sleep(20)
+        sleep(30)
         self.images_or_none(driver,"game_update_01.1920x1080.png")
         sleep(1)
         driver.click(960,990)  # 确定
@@ -213,21 +213,21 @@ class Game(public.Methods):
             driver.swipe(1846,597,1846,597,10)
             driver.swipe(1230,393,1230,393,10)
             # self.click_images(driver,"guide_008.1920x1080.png")
-            sleep(2)
+            sleep(3)
             driver.click(1690,260)  # 领取
-            sleep(2)
+            sleep(3)
             driver.click(960,955)  # 确认
             sleep(3)
             driver.click(960,955)  # 任意
-            sleep(2)
-            driver.click(960,955)  # 领取2
-            sleep(2)
-            driver.click(50,40)  # 返回
             sleep(3)
+            driver.click(960,955)  # 领取2
+            sleep(3)
+            driver.click(50,40)  # 返回
+            sleep(4)
             driver.click(960,955)  # 确认
-            sleep(2)
+            sleep(4)
             driver.click(1710,130)  # 关闭
-            sleep(2)
+            sleep(3)
             driver.click(960,955)  # 任意
             # self.click_images(driver,"guide_009.1920x1080.png")
             # self.click_images(driver,"guide_010.1920x1080.png")
@@ -254,11 +254,15 @@ class Game(public.Methods):
             # self.click_images(driver,"guide_017.1920x1080.png")
         
         else:
-            driver.click(0.5,0.5)
-            self.click_images(driver,"guide_015.1920x1080.png")
-            self.click_images(driver,"guide_016.1920x1080.png")
-            self.click_images(driver,"guide_017.1920x1080.png")
-            self.click_images(driver,"guide_017.1920x1080.png") 
+            sleep(2)
+            driver.click(1660,960)  # 开始游戏
+            sleep(2)
+            driver.click(760,990)  # 剧情模式
+            sleep(2)
+            driver.click(50,40)  # 返回
+            sleep(2)
+            driver.click(50,40)  # 返回
+            sleep(2)
         if self.wait_gone_images(driver,'guide_017.1920x1080.png'):
             log.info('游戏更新成功')
             return 'ok'
@@ -529,7 +533,7 @@ class Game(public.Methods):
         sleep(2)
         driver.press.back()  # 返回键
         sleep(2)
-        driver.click(1130,700)  # 确定
+        driver.click(1150,700)
         # self.click_images(driver,"exitgame_01.1920x1080.png")
         if self.wait_gone_images(driver, 'exitgame_01.1920x1080.png'):
             log.info('游戏中退出按钮')

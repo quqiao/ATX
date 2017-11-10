@@ -60,11 +60,11 @@ class Test(unittest.TestCase,public.Methods):
         self.dy_IsNotNone(self.driver,game.saishi(self.driver),'360_saishi')
         self.dy_IsNotNone(self.driver,game.lingzuan(self.driver),'360_lingzuan')
         self.dy_IsNotNone(self.driver,game.store(self.driver),'360_store')
-        # self.dy_IsNotNone(self.driver,channel.fubiao(self.driver),'360_fubiao')
+        self.dy_IsNotNone(self.driver,channel.fubiao(self.driver),'360_fubiao')
         self.dy_IsNotNone(self.driver,game.talking(self.driver),'360_talking')
         self.dy_IsNotNone(self.driver,game.setting(self.driver),'360_setting')
         self.dy_IsNotNone(self.driver,game.exitgame(self.driver),'360_exitgame')
-        # self.dy_IsNotNone(self.driver,channel.exitGame(self.driver),'360_exitGame')
+        self.dy_IsNotNone(self.driver,channel.exitGame(self.driver),'360_exitGame')
     
     
 if __name__ == '__main__':

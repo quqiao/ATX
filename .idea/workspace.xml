@@ -2,12 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72c852c7-c514-4c94-891f-065f3eb0b20c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result/2017-11-09/result.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result/2017-11-09/screencap/360_live.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game/yqlfc_images/guide_002.1920x1080.png" afterPath="$PROJECT_DIR$/game/yqlfc_images/guide_002.1920x1080.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game/yqlfc_images/guide_003.1920x1080.png" afterPath="$PROJECT_DIR$/game/yqlfc_images/guide_003.1920x1080.png" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/channel/kaopu_images/update_01.1920x1080.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/channel/kaopu_images/update_02.1920x1080.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/channel/yingyonghui_images/login_success.1920x1080.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/channel/yingyonghui_images/yingyonghui_change_login.1920x1080.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/360.py" afterPath="$PROJECT_DIR$/channel/360.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/kaopu.py" afterPath="$PROJECT_DIR$/channel/kaopu.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/telecom.py" afterPath="$PROJECT_DIR$/channel/telecom.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/yingyonghui.py" afterPath="$PROJECT_DIR$/channel/yingyonghui.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/configure.py" afterPath="$PROJECT_DIR$/configure.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game/yqlfc.py" afterPath="$PROJECT_DIR$/game/yqlfc.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
     </list>
     <ignored path="ATX.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,8 +38,16 @@
         <entry file="file://$PROJECT_DIR$/configure.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="18" />
-              <folding />
+              <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
+              <folding>
+                <element signature="e#404#1756#1" expanded="false" />
+                <element signature="e#1763#2001#1" expanded="false" />
+                <element signature="e#2008#2873#1" expanded="false" />
+                <element signature="e#2882#4436#1" expanded="false" />
+                <element signature="e#4443#4565#1" expanded="false" />
+                <element signature="e#4574#4724#1" expanded="false" />
+                <element signature="e#4734#5695#1" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -48,23 +62,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="yqlfc.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="yqlfc.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game/yqlfc.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.63821137">
-              <caret line="237" column="65" selection-start-line="237" selection-start-column="65" selection-end-line="237" selection-end-column="65" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
               <folding>
-                <element signature="e#287#661#0" expanded="false" />
-                <element signature="e#710#1152#0" expanded="false" />
-                <element signature="e#9592#12543#0" expanded="false" />
-                <element signature="e#12603#13019#0" expanded="false" />
-                <element signature="e#13085#13854#0" expanded="false" />
-                <element signature="e#13916#14351#0" expanded="false" />
-                <element signature="e#14418#16704#0" expanded="false" />
-                <element signature="e#16762#17733#0" expanded="false" />
-                <element signature="e#17781#18636#0" expanded="false" />
-                <element signature="e#18684#19142#0" expanded="false" />
-                <element signature="e#19183#19509#0" expanded="false" />
+                <element signature="e#1198#9521#0" expanded="false" />
+                <element signature="e#9567#12518#0" expanded="false" />
+                <element signature="e#12578#12994#0" expanded="false" />
+                <element signature="e#13060#13829#0" expanded="false" />
+                <element signature="e#13891#14326#0" expanded="false" />
+                <element signature="e#14393#16679#0" expanded="false" />
+                <element signature="e#16737#17708#0" expanded="false" />
+                <element signature="e#17756#18611#0" expanded="false" />
+                <element signature="e#18659#19117#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -74,7 +86,17 @@
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="45" column="53" selection-start-line="45" selection-start-column="53" selection-end-line="45" selection-end-column="53" />
+              <caret line="66" column="46" selection-start-line="66" selection-start-column="46" selection-end-line="66" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="kaopu.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/channel/kaopu.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6178862">
+              <caret line="26" column="65" selection-start-line="26" selection-start-column="65" selection-end-line="26" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -90,7 +112,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/channel/37wan.py" />
-        <option value="$PROJECT_DIR$/channel/360.py" />
         <option value="$PROJECT_DIR$/channel/4399.py" />
         <option value="$PROJECT_DIR$/channel/anzhi.py" />
         <option value="$PROJECT_DIR$/channel/baidu.py" />
@@ -101,7 +122,6 @@
         <option value="$PROJECT_DIR$/channel/Gionee.py" />
         <option value="$PROJECT_DIR$/channel/guanfang.py" />
         <option value="$PROJECT_DIR$/channel/guopan.py" />
-        <option value="$PROJECT_DIR$/channel/kaopu.py" />
         <option value="$PROJECT_DIR$/channel/kugou.py" />
         <option value="$PROJECT_DIR$/channel/Lenovo.py" />
         <option value="$PROJECT_DIR$/channel/meizu.py" />
@@ -109,22 +129,24 @@
         <option value="$PROJECT_DIR$/channel/oppo.py" />
         <option value="$PROJECT_DIR$/channel/sina.py" />
         <option value="$PROJECT_DIR$/channel/sougou.py" />
-        <option value="$PROJECT_DIR$/channel/telecom.py" />
         <option value="$PROJECT_DIR$/channel/UC.py" />
         <option value="$PROJECT_DIR$/channel/unicom.py" />
         <option value="$PROJECT_DIR$/channel/vivo.py" />
         <option value="$PROJECT_DIR$/channel/wandoujia.py" />
         <option value="$PROJECT_DIR$/channel/xiaomi.py" />
         <option value="$PROJECT_DIR$/channel/yingyongbao.py" />
-        <option value="$PROJECT_DIR$/channel/yingyonghui.py" />
         <option value="$PROJECT_DIR$/channel/youketianxia.py" />
         <option value="$PROJECT_DIR$/channel/youku.py" />
         <option value="$PROJECT_DIR$/channel/zhangyue.py" />
         <option value="$PROJECT_DIR$/game/sjsgz.py" />
         <option value="$PROJECT_DIR$/channel/quick.py" />
-        <option value="$PROJECT_DIR$/configure.py" />
+        <option value="$PROJECT_DIR$/channel/360.py" />
+        <option value="$PROJECT_DIR$/channel/telecom.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/game/yqlfc.py" />
+        <option value="$PROJECT_DIR$/channel/yingyonghui.py" />
+        <option value="$PROJECT_DIR$/configure.py" />
+        <option value="$PROJECT_DIR$/channel/kaopu.py" />
       </list>
     </option>
   </component>
@@ -373,7 +395,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -408,7 +430,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="8" />
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -426,17 +448,15 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#287#661#0" expanded="false" />
-            <element signature="e#710#1152#0" expanded="false" />
-            <element signature="e#9592#12543#0" expanded="false" />
-            <element signature="e#12603#13019#0" expanded="false" />
-            <element signature="e#13085#13854#0" expanded="false" />
-            <element signature="e#13916#14351#0" expanded="false" />
-            <element signature="e#14418#16704#0" expanded="false" />
-            <element signature="e#16762#17733#0" expanded="false" />
-            <element signature="e#17781#18636#0" expanded="false" />
-            <element signature="e#18684#19142#0" expanded="false" />
-            <element signature="e#19183#19509#0" expanded="false" />
+            <element signature="e#1198#9521#0" expanded="false" />
+            <element signature="e#9567#12518#0" expanded="false" />
+            <element signature="e#12578#12994#0" expanded="false" />
+            <element signature="e#13060#13829#0" expanded="false" />
+            <element signature="e#13891#14326#0" expanded="false" />
+            <element signature="e#14393#16679#0" expanded="false" />
+            <element signature="e#16737#17708#0" expanded="false" />
+            <element signature="e#17756#18611#0" expanded="false" />
+            <element signature="e#18659#19117#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -453,7 +473,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#404#1756#1" expanded="false" />
+            <element signature="e#1763#2001#1" expanded="false" />
+            <element signature="e#2008#2873#1" expanded="false" />
+            <element signature="e#2882#4436#1" expanded="false" />
+            <element signature="e#4443#4565#1" expanded="false" />
+            <element signature="e#4574#4724#1" expanded="false" />
+            <element signature="e#4734#5695#1" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -461,6 +489,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -476,7 +505,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="58" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="58" />
-          <folding />
+          <folding>
+            <element signature="e#404#1756#1" expanded="false" />
+            <element signature="e#1763#2001#1" expanded="false" />
+            <element signature="e#2008#2873#1" expanded="false" />
+            <element signature="e#2882#4436#1" expanded="false" />
+            <element signature="e#4443#4565#1" expanded="false" />
+            <element signature="e#4574#4724#1" expanded="false" />
+            <element signature="e#4734#5695#1" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -484,6 +521,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -499,13 +537,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/channel/360.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25745258">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -600,13 +631,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/channel/kaopu.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="81" selection-start-line="11" selection-start-column="81" selection-end-line="11" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/channel/kugou.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -684,13 +708,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/channel/telecom.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38617885">
-          <caret line="69" column="13" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/channel/unicom.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.41192412">
@@ -719,13 +736,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/channel/zhangyue.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20596206">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/channel/youku.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.7208672">
@@ -740,24 +750,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/channel/yingyonghui.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.3387534">
-          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/channel/yingyongbao.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.76829267">
           <caret line="46" column="10" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/sjsgz.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56639564">
-          <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -769,39 +765,97 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/game/sjsgz.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/channel/360.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="184" column="37" selection-start-line="184" selection-start-column="37" selection-end-line="184" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/channel/telecom.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="79" column="23" selection-start-line="79" selection-start-column="23" selection-end-line="79" selection-end-column="23" />
+          <folding>
+            <element signature="e#1470#1858#0" expanded="false" />
+            <element signature="e#1905#2321#0" expanded="false" />
+            <element signature="e#2377#2781#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/channel/yingyonghui.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.66531163">
+          <caret line="99" column="41" selection-start-line="99" selection-start-column="41" selection-end-line="99" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/channel/zhangyue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/configure.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="18" />
-          <folding />
+          <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
+          <folding>
+            <element signature="e#404#1756#1" expanded="false" />
+            <element signature="e#1763#2001#1" expanded="false" />
+            <element signature="e#2008#2873#1" expanded="false" />
+            <element signature="e#2882#4436#1" expanded="false" />
+            <element signature="e#4443#4565#1" expanded="false" />
+            <element signature="e#4574#4724#1" expanded="false" />
+            <element signature="e#4734#5695#1" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/yqlfc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
+          <folding>
+            <element signature="e#1198#9521#0" expanded="false" />
+            <element signature="e#9567#12518#0" expanded="false" />
+            <element signature="e#12578#12994#0" expanded="false" />
+            <element signature="e#13060#13829#0" expanded="false" />
+            <element signature="e#13891#14326#0" expanded="false" />
+            <element signature="e#14393#16679#0" expanded="false" />
+            <element signature="e#16737#17708#0" expanded="false" />
+            <element signature="e#17756#18611#0" expanded="false" />
+            <element signature="e#18659#19117#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="53" selection-start-line="45" selection-start-column="53" selection-end-line="45" selection-end-column="53" />
+          <caret line="66" column="46" selection-start-line="66" selection-start-column="46" selection-end-line="66" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game/yqlfc.py">
+    <entry file="file://$PROJECT_DIR$/channel/kaopu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63821137">
-          <caret line="237" column="65" selection-start-line="237" selection-start-column="65" selection-end-line="237" selection-end-column="65" />
-          <folding>
-            <element signature="e#287#661#0" expanded="false" />
-            <element signature="e#710#1152#0" expanded="false" />
-            <element signature="e#9592#12543#0" expanded="false" />
-            <element signature="e#12603#13019#0" expanded="false" />
-            <element signature="e#13085#13854#0" expanded="false" />
-            <element signature="e#13916#14351#0" expanded="false" />
-            <element signature="e#14418#16704#0" expanded="false" />
-            <element signature="e#16762#17733#0" expanded="false" />
-            <element signature="e#17781#18636#0" expanded="false" />
-            <element signature="e#18684#19142#0" expanded="false" />
-            <element signature="e#19183#19509#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.6178862">
+          <caret line="26" column="65" selection-start-line="26" selection-start-column="65" selection-end-line="26" selection-end-column="65" />
+          <folding />
         </state>
       </provider>
     </entry>

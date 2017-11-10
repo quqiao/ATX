@@ -10,33 +10,33 @@ log = logutils.getLogger(__name__)
 class Channel(public.Methods):
     def login(self, driver):
         u'''渠道login'''
-        if self.images_or_none(driver, 'idInput.1920x1080.png',way_name='channel'):
-            self.click_images(driver,"idInput.1920x1080.png",way_name='channel')
+        if self.images_or_none(driver, 'login_01.1920x1080.png',way_name='channel'):
+            driver.click(855,320)  # 点击输入框
             sleep(1)
-            driver.type("17713623912") 
-            self.click_images(driver,"pswInput.1920x1080.png",way_name='channel')
+            driver.type("17713623912",next=True)
             sleep(1)
             driver.type("test123")
-            self.click_images(driver,"login.1920x1080.png",way_name='channel')
-            image = self.images_or_none(driver, 'login_success.1920x1080.png',timeout=30)
-            if image:
-                log.info('登录成功')
-                return 'ok'
-            else:
-                log.info('登录失败')
-                return None
+            sleep(1)
+            driver.click(900,630)  # 点击登录
+            # self.click_images(driver,"idInput.1920x1080.png",way_name='channel')
+            # sleep(1)
+            # driver.type("17713623912")
+            # self.click_images(driver,"pswInput.1920x1080.png",way_name='channel')
+            # sleep(1)
+            # driver.type("test123")
+            # self.click_images(driver,"login.1920x1080.png",way_name='channel')
+            # log.info('输入账号和密码登录')
         elif self.images_or_none(driver, 'login_exit_id.1920x1080.png',way_name='channel'):
             self.click_images(driver,"login_exit_id.1920x1080.png",way_name='channel')
-            image = self.images_or_none(driver, 'login_success.1920x1080.png',timeout=30)
-            if image:
-                log.info('登录成功')
-                return 'ok'
-            
+            log.info('已有账号和密码登录')
         else:
-            image = self.images_or_none(driver, 'login_success.1920x1080.png',timeout=30)
-            if image:
-                log.info('自动登录成功')
-                return 'ok'
+            log.info('自动登录成功')
+        if self.wait_gone_images(driver, 'login_01.1920x1080.png',way_name='channel'):
+            log.info('登录成功')
+            return 'ok'
+        else:
+            log.info('登录失败')
+            return None
               
 
     def ali(self,driver):
@@ -69,8 +69,19 @@ class Channel(public.Methods):
             return 'ok'
         else:
             return None
+
+    def fubiao(self,driver):
+        log.info('电信爱游戏没有浮标')
+        if self.wait_gone_images(driver, 'login_01.1920x1080.png',way_name='channel'):
+            log.info('登录成功')
+            return 'ok'
+        else:
+            log.info('登录失败')
+            return None
         
     def exitGame(self,driver):
+        sleep(2)
+        driver.click(1120,920)  # 退出游戏
         # self.click_images(driver,"setting.1920x1080.png",way_name='channel')
         # self.click_images(driver,"exitGame.1920x1080.png",way_name='channel')
         # self.click_images(driver,"exitGame_01.1920x1080.png",way_name='channel')
@@ -78,7 +89,7 @@ class Channel(public.Methods):
         # self.click_images(driver,"exitGame_02.1920x1080.png",way_name='channel')
         # self.click_images(driver,"exitGame_03.1920x1080.png",way_name='channel')
         # self.click_images(driver,"exitGame.1920x1080.png",way_name='channel')
-        self.click_images(driver,"exitGame_04.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"exitGame_04.1920x1080.png",way_name='channel')
         if self.wait_gone_images(driver, 'exitGame_04.1920x1080.png',way_name='channel'):
             log.info('退出游戏成功')
             return 'ok'

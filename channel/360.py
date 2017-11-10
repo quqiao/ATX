@@ -22,6 +22,7 @@ class Channel(public.Methods):
             self.click_images(driver,"login_shiming_close.1920x1080.png",way_name='channel')
             '''
             # driver(className="android.widget.EditText").sibling(className="android.widget.ImageView").click()
+            sleep(2)
             driver.click(850,230)
             driver.clear_text() 
             driver.type("15198139230",next=True)
@@ -180,7 +181,8 @@ class Channel(public.Methods):
         # self.click_images(driver,"exitGame_01_huodong.1920x1080.png",way_name='channel')
         # self.click_images(driver,"exitGame_01_huodong_close.1920x1080.png",way_name='channel')
         # self.click_images(driver,"exitGame_01.1920x1080.png",way_name='channel')
-        self.click_images(driver,"exitGame_02.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"exitGame_02.1920x1080.png",way_name='channel')
+        driver.click(685,720)  # 退出游戏
         if self.wait_gone_images(driver, 'exitGame_02.1920x1080.png',way_name='channel'):
             log.info('退出游戏成功')
             return 'ok'
