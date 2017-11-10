@@ -2,51 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72c852c7-c514-4c94-891f-065f3eb0b20c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channel/quick_images/screenshots/screen_t1510216846200.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channel/quick_images/screenshots/screen_t1510218480892.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channel/quick_images/screenshots/screen_t1510218797035.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/result/2017-11-09/screencap/360_live.png" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/channel/360_images/setting.1920x1080.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/channel/4399_images/exitGame.1920x1080.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/channel/4399_images/login_success.1920x1080.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result/2017-11-09/result.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result/2017-11-09/screencap/360_live.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game/yqlfc_images/guide_002.1920x1080.png" afterPath="$PROJECT_DIR$/game/yqlfc_images/guide_002.1920x1080.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game/yqlfc_images/guide_003.1920x1080.png" afterPath="$PROJECT_DIR$/game/yqlfc_images/guide_003.1920x1080.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/360.py" afterPath="$PROJECT_DIR$/channel/360.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/37wan.py" afterPath="$PROJECT_DIR$/channel/37wan.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/4399.py" afterPath="$PROJECT_DIR$/channel/4399.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/Gionee.py" afterPath="$PROJECT_DIR$/channel/Gionee.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/Lenovo.py" afterPath="$PROJECT_DIR$/channel/Lenovo.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/UC.py" afterPath="$PROJECT_DIR$/channel/UC.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/anzhi.py" afterPath="$PROJECT_DIR$/channel/anzhi.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/baidu.py" afterPath="$PROJECT_DIR$/channel/baidu.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/chushou.py" afterPath="$PROJECT_DIR$/channel/chushou.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/coolpad.py" afterPath="$PROJECT_DIR$/channel/coolpad.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/dangle.py" afterPath="$PROJECT_DIR$/channel/dangle.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/ewan.py" afterPath="$PROJECT_DIR$/channel/ewan.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/guanfang.py" afterPath="$PROJECT_DIR$/channel/guanfang.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/guopan.py" afterPath="$PROJECT_DIR$/channel/guopan.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/kaopu.py" afterPath="$PROJECT_DIR$/channel/kaopu.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/kugou.py" afterPath="$PROJECT_DIR$/channel/kugou.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/meizu.py" afterPath="$PROJECT_DIR$/channel/meizu.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/muzhiwan.py" afterPath="$PROJECT_DIR$/channel/muzhiwan.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/oppo.py" afterPath="$PROJECT_DIR$/channel/oppo.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/quick.py" afterPath="$PROJECT_DIR$/channel/quick.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/sina.py" afterPath="$PROJECT_DIR$/channel/sina.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/sougou.py" afterPath="$PROJECT_DIR$/channel/sougou.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/telecom.py" afterPath="$PROJECT_DIR$/channel/telecom.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/unicom.py" afterPath="$PROJECT_DIR$/channel/unicom.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/vivo.py" afterPath="$PROJECT_DIR$/channel/vivo.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/wandoujia.py" afterPath="$PROJECT_DIR$/channel/wandoujia.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/xiaomi.py" afterPath="$PROJECT_DIR$/channel/xiaomi.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/yingyongbao.py" afterPath="$PROJECT_DIR$/channel/yingyongbao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/yingyonghui.py" afterPath="$PROJECT_DIR$/channel/yingyonghui.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/youketianxia.py" afterPath="$PROJECT_DIR$/channel/youketianxia.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/youku.py" afterPath="$PROJECT_DIR$/channel/youku.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel/zhangyue.py" afterPath="$PROJECT_DIR$/channel/zhangyue.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/configure.py" afterPath="$PROJECT_DIR$/configure.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game/sjsgz.py" afterPath="$PROJECT_DIR$/game/sjsgz.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game/yqlfc.py" afterPath="$PROJECT_DIR$/game/yqlfc.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/result/2017-11-08/result.html" afterPath="$PROJECT_DIR$/result/2017-11-09/result.html" />
     </list>
     <ignored path="ATX.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -71,7 +32,7 @@
         <entry file="file://$PROJECT_DIR$/configure.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -90,18 +51,20 @@
       <file leaf-file-name="yqlfc.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/game/yqlfc.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.07317073">
-              <caret line="340" column="62" selection-start-line="340" selection-start-column="62" selection-end-line="340" selection-end-column="62" />
+            <state vertical-scroll-proportion="0.63821137">
+              <caret line="237" column="65" selection-start-line="237" selection-start-column="65" selection-end-line="237" selection-end-column="65" />
               <folding>
                 <element signature="e#287#661#0" expanded="false" />
                 <element signature="e#710#1152#0" expanded="false" />
-                <element signature="e#1198#7915#0" expanded="false" />
-                <element signature="e#7961#10912#0" expanded="false" />
-                <element signature="e#12838#15141#0" expanded="false" />
-                <element signature="e#15199#16170#0" expanded="false" />
-                <element signature="e#16218#17073#0" expanded="false" />
-                <element signature="e#17121#17579#0" expanded="false" />
-                <element signature="e#17620#17946#0" expanded="false" />
+                <element signature="e#9592#12543#0" expanded="false" />
+                <element signature="e#12603#13019#0" expanded="false" />
+                <element signature="e#13085#13854#0" expanded="false" />
+                <element signature="e#13916#14351#0" expanded="false" />
+                <element signature="e#14418#16704#0" expanded="false" />
+                <element signature="e#16762#17733#0" expanded="false" />
+                <element signature="e#17781#18636#0" expanded="false" />
+                <element signature="e#18684#19142#0" expanded="false" />
+                <element signature="e#19183#19509#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -111,7 +74,7 @@
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="52" column="87" selection-start-line="52" selection-start-column="87" selection-end-line="52" selection-end-column="87" />
+              <caret line="45" column="53" selection-start-line="45" selection-start-column="53" selection-end-line="45" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -157,10 +120,10 @@
         <option value="$PROJECT_DIR$/channel/youketianxia.py" />
         <option value="$PROJECT_DIR$/channel/youku.py" />
         <option value="$PROJECT_DIR$/channel/zhangyue.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/game/sjsgz.py" />
         <option value="$PROJECT_DIR$/channel/quick.py" />
         <option value="$PROJECT_DIR$/configure.py" />
+        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/game/yqlfc.py" />
       </list>
     </option>
@@ -216,7 +179,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -265,6 +227,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -450,6 +413,42 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/channel/quick.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/yqlfc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#287#661#0" expanded="false" />
+            <element signature="e#710#1152#0" expanded="false" />
+            <element signature="e#9592#12543#0" expanded="false" />
+            <element signature="e#12603#13019#0" expanded="false" />
+            <element signature="e#13085#13854#0" expanded="false" />
+            <element signature="e#13916#14351#0" expanded="false" />
+            <element signature="e#14418#16704#0" expanded="false" />
+            <element signature="e#16762#17733#0" expanded="false" />
+            <element signature="e#17781#18636#0" expanded="false" />
+            <element signature="e#18684#19142#0" expanded="false" />
+            <element signature="e#19183#19509#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="52" column="87" selection-start-line="52" selection-start-column="87" selection-end-line="52" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/configure.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -462,7 +461,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -486,7 +484,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -761,7 +758,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.56639564">
           <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -773,36 +769,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/configure.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="87" selection-start-line="52" selection-start-column="87" selection-end-line="52" selection-end-column="87" />
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/configure.py">
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+          <caret line="45" column="53" selection-start-line="45" selection-start-column="53" selection-end-line="45" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/game/yqlfc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07317073">
-          <caret line="340" column="62" selection-start-line="340" selection-start-column="62" selection-end-line="340" selection-end-column="62" />
+        <state vertical-scroll-proportion="0.63821137">
+          <caret line="237" column="65" selection-start-line="237" selection-start-column="65" selection-end-line="237" selection-end-column="65" />
           <folding>
             <element signature="e#287#661#0" expanded="false" />
             <element signature="e#710#1152#0" expanded="false" />
-            <element signature="e#1198#7915#0" expanded="false" />
-            <element signature="e#7961#10912#0" expanded="false" />
-            <element signature="e#12838#15141#0" expanded="false" />
-            <element signature="e#15199#16170#0" expanded="false" />
-            <element signature="e#16218#17073#0" expanded="false" />
-            <element signature="e#17121#17579#0" expanded="false" />
-            <element signature="e#17620#17946#0" expanded="false" />
+            <element signature="e#9592#12543#0" expanded="false" />
+            <element signature="e#12603#13019#0" expanded="false" />
+            <element signature="e#13085#13854#0" expanded="false" />
+            <element signature="e#13916#14351#0" expanded="false" />
+            <element signature="e#14418#16704#0" expanded="false" />
+            <element signature="e#16762#17733#0" expanded="false" />
+            <element signature="e#17781#18636#0" expanded="false" />
+            <element signature="e#18684#19142#0" expanded="false" />
+            <element signature="e#19183#19509#0" expanded="false" />
           </folding>
         </state>
       </provider>

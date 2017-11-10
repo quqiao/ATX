@@ -54,7 +54,7 @@ class Game(public.Methods):
             driver.click(0.5,0.5)
             '''右转'''
             sleep(5)
-            driver.swipe(1000,500,1000,500,40)
+            driver.swipe(1000,500,1000,500,50)
             sleep(5)
             '''左转'''
             driver.swipe(400,500,400,500,40)
@@ -80,10 +80,18 @@ class Game(public.Methods):
             threads.append(t1)
             t2 = threading.Thread(target=long2)
             threads.append(t2)
+            t3 = threading.Thread(target=long3)
+            threads.append(t3)
+            t4 = threading.Thread(target=long4)
+            threads.append(t4)
             sleep(1)
             for t in threads:
                 t.start()
             threads1 = []
+            t1 = threading.Thread(target=long1)
+            threads1.append(t1)
+            t2 = threading.Thread(target=long2)
+            threads1.append(t2)
             t3 = threading.Thread(target=long3)
             threads1.append(t3)
             t4 = threading.Thread(target=long4)
@@ -96,10 +104,18 @@ class Game(public.Methods):
             threads2.append(t1)
             t2 = threading.Thread(target=long2)
             threads2.append(t2)
+            t3 = threading.Thread(target=long3)
+            threads2.append(t3)
+            t4 = threading.Thread(target=long4)
+            threads2.append(t4)
             for t in threads2:
                 t.start()
             sleep(1)
             threads3 = []
+            t1 = threading.Thread(target=long1)
+            threads3.append(t1)
+            t2 = threading.Thread(target=long2)
+            threads3.append(t2)
             t3 = threading.Thread(target=long3)
             threads3.append(t3)
             t4 = threading.Thread(target=long4)
@@ -107,16 +123,16 @@ class Game(public.Methods):
             for t in threads3:
                 t.start()
             sleep(1)
-            threads2 = []
+            threads4 = []
             t3 = threading.Thread(target=long1)
-            threads2.append(t3)
+            threads4.append(t3)
             t4 = threading.Thread(target=long2)
-            threads2.append(t4)
+            threads4.append(t4)
             t5 = threading.Thread(target=long3)
-            threads2.append(t5)
+            threads4.append(t5)
             t6 = threading.Thread(target=long4)
-            threads2.append(t6)
-            for t in threads2:
+            threads4.append(t6)
+            for t in threads4:
                 t.start()
             sleep(2)
             driver.long_click(400,500)
@@ -176,35 +192,66 @@ class Game(public.Methods):
             sleep(2)
             driver.long_click(1000,500)
             '''氮气'''
-            self.click_images(driver,"guide_004.1920x1080.png")
+            self.images_or_none(driver,"guide_004.1920x1080.png")
+            driver.click(130,495)  # 氮气
             self.images_or_none(driver,'guide_003.1920x1080.png')
             driver.click(0.5,0.5)
             '''设置'''
-            self.click_images(driver,"guide_005.1920x1080.png")
-            self.click_images(driver,"guide_006.1920x1080.png")
-            self.click_images(driver,"guide_007.1920x1080.png")
-            self.images_or_none(driver,'guide_003.1920x1080.png')
+            self.images_or_none(driver,"guide_005.1920x1080.png")
+            driver.click(70,40)  # 设置
             sleep(2)
-            driver.click(0.5,0.5)
+            driver.click(1516,895)  # 确定
+            sleep(2)
+            driver.click(955,815)  # 确定2
+            # self.click_images(driver,"guide_006.1920x1080.png")
+            # self.click_images(driver,"guide_007.1920x1080.png")
+            # self.images_or_none(driver,'guide_003.1920x1080.png')
+            sleep(5)
+            driver.click(500,500)
             '''任务'''
             self.images_or_none(driver,'guide_008.1920x1080.png')
             driver.swipe(1846,597,1846,597,10)
             driver.swipe(1230,393,1230,393,10)
             # self.click_images(driver,"guide_008.1920x1080.png")
-            self.click_images(driver,"guide_009.1920x1080.png")
-            self.click_images(driver,"guide_010.1920x1080.png")
-            driver.click(0.5,0.5)
-            self.click_images(driver,"guide_011.1920x1080.png")
-            self.click_images(driver,"guide_012.1920x1080.png")
-            self.click_images(driver,"guide_013.1920x1080.png")
-            self.click_images(driver,"guide_014.1920x1080.png")
+            sleep(2)
+            driver.click(1690,260)  # 领取
+            sleep(2)
+            driver.click(960,955)  # 确认
+            sleep(3)
+            driver.click(960,955)  # 任意
+            sleep(2)
+            driver.click(960,955)  # 领取2
+            sleep(2)
+            driver.click(50,40)  # 返回
+            sleep(3)
+            driver.click(960,955)  # 确认
+            sleep(2)
+            driver.click(1710,130)  # 关闭
+            sleep(2)
+            driver.click(960,955)  # 任意
+            # self.click_images(driver,"guide_009.1920x1080.png")
+            # self.click_images(driver,"guide_010.1920x1080.png")
+            # driver.click(0.5,0.5)
+            # self.click_images(driver,"guide_011.1920x1080.png")
+            # self.click_images(driver,"guide_012.1920x1080.png")
+            # self.click_images(driver,"guide_013.1920x1080.png")
+            # self.click_images(driver,"guide_014.1920x1080.png")
             '''开始游戏'''
-            self.images_or_none(driver,'guide_003.1920x1080.png')
-            driver.click(0.5,0.5)
-            self.click_images(driver,"guide_015.1920x1080.png")
-            self.click_images(driver,"guide_016.1920x1080.png")
-            self.click_images(driver,"guide_017.1920x1080.png")
-            self.click_images(driver,"guide_017.1920x1080.png")
+            sleep(2)
+            driver.click(1660,960)  # 开始游戏
+            sleep(2)
+            driver.click(760,990)  # 剧情模式
+            sleep(2)
+            driver.click(50,40)  # 返回
+            sleep(2)
+            driver.click(50,40)  # 返回
+            sleep(2)
+            # self.images_or_none(driver,'guide_003.1920x1080.png')
+            # driver.click(0.5,0.5)
+            # self.click_images(driver,"guide_015.1920x1080.png")
+            # self.click_images(driver,"guide_016.1920x1080.png")
+            # self.click_images(driver,"guide_017.1920x1080.png")
+            # self.click_images(driver,"guide_017.1920x1080.png")
         
         else:
             driver.click(0.5,0.5)
@@ -312,7 +359,6 @@ class Game(public.Methods):
         driver.click(60,550)  # 祈愿
         sleep(6)
         driver.click(1669,1018)  # 关闭有虚拟硬件
-        sleep(1)
         driver.click(1791,1022)  # 关闭没有虚拟硬件
         sleep(2)
         # self.click_images(driver,"live_001.1920x1080.png")
@@ -334,7 +380,6 @@ class Game(public.Methods):
         driver.click(85,820)  # 个人
         sleep(2)
         driver.click(1669,1018)  # 关闭有虚拟硬件
-        sleep(1)
         driver.click(1791,1022)  # 关闭没有虚拟硬件
         sleep(2)
         # self.click_images(driver,"gonglue_01.1920x1080.png")
@@ -354,7 +399,6 @@ class Game(public.Methods):
         # driver.swipe(1230,520,1230,520,10)  # 特惠1280*720
         sleep(5)
         driver.click(1669,1018)  # 关闭有虚拟硬件
-        sleep(1)
         driver.click(1791,1022)  # 关闭没有虚拟硬件
         sleep(2)
         self.click_images(driver,"store_02.1920x1080.png")
@@ -370,7 +414,6 @@ class Game(public.Methods):
         # driver.swipe(1230,150,1230,150,10)  # 邀请1280*720
         sleep(2)
         driver.click(1669,1018)  # 关闭有虚拟硬件
-        sleep(1)
         driver.click(1791,1022)  # 关闭没有虚拟硬件
         sleep(2)
         # driver(className="android.view.View",description='每日成功分享（0/1）').click()
