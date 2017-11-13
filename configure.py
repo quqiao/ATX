@@ -13,10 +13,10 @@ print b
 '''
 
 device_name = ''
-game_name = 'yqlfc'
-channel_name = 'kaopu'
-activity_name = 'com.wyd.fc.activity.SplashActivity'    # 一起来飞车
-package_name = 'com.wyd.hero.yqlfc.cb1.kaopu'   # 靠谱
+game_name = 'sjsgz'
+channel_name = '4399'
+package_name = 'com.yx.sjsgz.m4399'  # 4399
+activity_name = 'mobi.xy3d.tstd.SplashActivity'
 
 #quick
 '''
@@ -183,6 +183,7 @@ package_name = 'com.yx.sjsgz.yyh'  # 应用汇
 # 一起来飞车
 """
 activity_name = 'com.wyd.fc.activity.SplashActivity'    # 一起来飞车
+activity_name = 'com.wyd.passport.impl.FirstActivity'    # UC启动
 package_name = 'com.wyd.hero.yqlfc.cb1.samsung'   # 三星
 package_name = 'com.wyd.hero.yqlfc.cb1.baidu'   # 百度
 package_name = 'com.wyd.hero.yqlfc.cb1.egame'   # 电信
@@ -193,6 +194,7 @@ package_name = 'com.wyd.hero.yqlfc.cb1.leshi'   # 乐视手机
 package_name = 'com.wyd.hero.yqlfc.cb1.nearme.gamecenter'   # oppo
 package_name = 'com.wyd.hero.yqlfc.cb1.yyh'   # 应用汇
 package_name = 'com.wyd.hero.yqlfc.cb1.kaopu'   # 靠谱
+package_name = 'com.wyd.hero.yqlfc.cb1.cstv'   # 触手
 """
 
 # coolpad

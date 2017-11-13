@@ -35,7 +35,7 @@ class Game(public.Methods):
         '''开始引导'''
         if self.images_or_none(driver,'guide_001.1920x1080.png'):
             # self.images_or_none(driver,'guide_001.1920x1080.png')#对话
-            sleep(1)
+            sleep(2)
             driver.swipe(55,55,55,800,50)  # 移动浮标
             sleep(2)
             driver.swipe(1820,930,1820,930,10)#故事剧情
@@ -372,7 +372,7 @@ class Game(public.Methods):
             driver.click(1723,966)#进入战斗
             sleep(3)
             driver.click(1638,994)#跳过对话
-            sleep(30)
+            sleep(32)
             driver.click(1687,941)#继续
             '''关卡12'''
             sleep(2)

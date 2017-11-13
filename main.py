@@ -43,24 +43,24 @@ class Test(unittest.TestCase,public.Methods):
 
     def tearDown(self):
         pass
-        #self.driver.stop_app(configure.package_name)
+        # self.driver.stop_app(configure.package_name)
         log.info('测试结束')
            
     '''渠道360'''
     def test01(self):
         game = self.get_names('game')
         channel = self.get_names('channel')
-        self.dy_IsNotNone(self.driver, game.game_update(self.driver),'360_game_update')
-        self.dy_IsNotNone(self.driver, channel.login(self.driver), '360_login')
-        self.dy_IsNotNone(self.driver,game.game_pre(self.driver),'360_game_pre')
-        self.dy_IsNotNone(self.driver,game.guide(self.driver),'360_guide')
+        # self.dy_IsNotNone(self.driver, game.game_update(self.driver),'360_game_update')
+        # self.dy_IsNotNone(self.driver, channel.login(self.driver), '360_login')
+        # self.dy_IsNotNone(self.driver,game.game_pre(self.driver),'360_game_pre')
+        # self.dy_IsNotNone(self.driver,game.guide(self.driver),'360_guide')
         self.dy_IsNotNone(self.driver,game.basicFunction(self.driver),'360_basicFunction')
         self.dy_IsNotNone(self.driver,game.live(self.driver),'360_live')
         self.dy_IsNotNone(self.driver,game.gonglue(self.driver),'360_gonglue')
         self.dy_IsNotNone(self.driver,game.saishi(self.driver),'360_saishi')
-        self.dy_IsNotNone(self.driver,game.lingzuan(self.driver),'360_lingzuan')
+        #self.dy_IsNotNone(self.driver,game.lingzuan(self.driver),'360_lingzuan')
         self.dy_IsNotNone(self.driver,game.store(self.driver),'360_store')
-        self.dy_IsNotNone(self.driver,channel.fubiao(self.driver),'360_fubiao')
+        # self.dy_IsNotNone(self.driver,channel.fubiao(self.driver),'360_fubiao')
         self.dy_IsNotNone(self.driver,game.talking(self.driver),'360_talking')
         self.dy_IsNotNone(self.driver,game.setting(self.driver),'360_setting')
         self.dy_IsNotNone(self.driver,game.exitgame(self.driver),'360_exitgame')

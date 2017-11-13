@@ -12,14 +12,25 @@ log = logutils.getLogger(__name__)
 class Channel(public.Methods):
     def login(self, driver):
         u'''渠道login'''
-        if self.images_or_none(driver,"idInput.1920x1080.png",way_name='channel'):
-            self.click_images(driver,"idInput.1920x1080.png",way_name='channel')
+        if self.images_or_none(driver,"login_01.1920x1080.png",way_name='channel'):
+            # self.click_images(driver,"idInput.1920x1080.png",way_name='channel')
+            # sleep(1)
+            # driver.type("1682930949")
+            # self.click_images(driver,"pswInput.1920x1080.png",way_name='channel')
+            # sleep(1)
+            # driver.type("123456")
+            # self.click_images(driver,"login.1920x1080.png",way_name='channel')
+            sleep(2)
+            driver.click(690,270)  # 点击账号
             sleep(1)
-            driver.type("1682930949")
-            self.click_images(driver,"pswInput.1920x1080.png",way_name='channel')
+            driver.clear_text()
+            sleep(1)
+            driver.type("1682930949",next=True)
             sleep(1)
             driver.type("123456")
-            self.click_images(driver,"login.1920x1080.png",way_name='channel')
+            sleep(1)
+            driver.click(900,620)  # 登录
+
         else:
             sleep(6)
             log.info('自动登录成功')

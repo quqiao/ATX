@@ -257,6 +257,8 @@ class Game(public.Methods):
             sleep(2)
             driver.click(1660,960)  # 开始游戏
             sleep(2)
+            driver.click(1660,960)  # 开始游戏
+            sleep(2)
             driver.click(760,990)  # 剧情模式
             sleep(2)
             driver.click(50,40)  # 返回
@@ -264,10 +266,10 @@ class Game(public.Methods):
             driver.click(50,40)  # 返回
             sleep(2)
         if self.wait_gone_images(driver,'guide_017.1920x1080.png'):
-            log.info('游戏更新成功')
+            log.info('游戏引导成功')
             return 'ok'
         else:
-            log.info('游戏更新失败')
+            log.info('游戏引导失败')
             return None
 
     def basicFunction(self,driver):
@@ -353,8 +355,10 @@ class Game(public.Methods):
         # self.click_images(driver,"basic_014.1920x1080.png")
         # self.click_images(driver,"basic_002.1920x1080.png")
         if self.wait_gone_images(driver, 'basic_002.1920x1080.png'):
+            log.info('基本功能检查成功')
             return 'ok'
         else:
+            log.info('基本功能检查失败')
             return None
         
     '''飞车祈愿'''
