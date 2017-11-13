@@ -18,18 +18,16 @@ class Channel(public.Methods):
             driver.clear_text()
             driver.type("123456")
             driver(className='android.widget.Button',index=1).click()
-            image = self.wait_gone_images(driver, 'exists_02.1920x1080.png',timeout=40,way_name='channel')
-            if image:
-                log.info('登录成功')
-                return 'ok'
-            else:
-                log.info('登录失败')
-                return None
+            log.info('输入账号登录')
         else:
-            image = self.wait_gone_images(driver, 'exists_02.1920x1080.png',way_name='channel')
-            if image:
-                log.info('自动登录成功')
-                return 'ok'
+            log.info('自动登录')
+
+        if self.wait_gone_images(driver, 'exists_02.1920x1080.png',timeout=40,way_name='channel'):
+            log.info('登录成功')
+            return 'ok'
+        else:
+            log.info('登录失败')
+            return None
     
     def fubiao(self,driver):
         u"浮标检查"

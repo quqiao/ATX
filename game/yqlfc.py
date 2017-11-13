@@ -255,7 +255,11 @@ class Game(public.Methods):
         
         else:
             sleep(2)
-            driver.click(1660,960)  # 开始游戏
+            driver.click(1660,960)  # 获得确认
+            sleep(2)
+            driver.click(1710,138)  # 关闭
+            sleep(2)
+            driver.click(1660,960)  # 任意键
             sleep(2)
             driver.click(1660,960)  # 开始游戏
             sleep(2)

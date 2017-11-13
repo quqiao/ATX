@@ -115,7 +115,9 @@ class Channel(public.Methods):
         # self.click_images(driver,"exitGame_02.1920x1080.png",way_name='channel')
         # self.click_images(driver,"exitGame_03.1920x1080.png",way_name='channel')
         # self.click_images(driver,"exitGame_01.1920x1080.png",way_name='channel')
-        self.click_images(driver,"exitGame_04.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"exitGame_04.1920x1080.png",way_name='channel')
+        sleep(2)
+        driver.click(665,810)  # 退出游戏
         if self.wait_gone_images(driver, 'exitGame_04.1920x1080.png',way_name='channel'):
             log.info('退出游戏成功')
             return 'ok'

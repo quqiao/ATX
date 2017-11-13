@@ -9,17 +9,31 @@ log = logutils.getLogger(__name__)
 class Channel(public.Methods):
     def login(self, driver):
         u'''渠道login'''
-        if self.images_or_none(driver,"idInput.1920x1080.png",way_name='channel'):
-            self.click_images(driver,"idInput.1920x1080.png",way_name='channel')
+        if self.images_or_none(driver,"login_01.1920x1080.png",way_name='channel'):
+            # self.click_images(driver,"idInput.1920x1080.png",way_name='channel')
+            # sleep(1)
+            # driver.type("17713623912")
+            # self.click_images(driver,"pswInput.1920x1080.png",way_name='channel')
+            # sleep(1)
+            # driver.type("test123")
+            # self.click_images(driver,"login.1920x1080.png",way_name='channel')
+            # self.click_images(driver,"login_shimingzhi_close.1920x1080.png",way_name='channel')
             sleep(1)
-            driver.type("17713623912")
-            self.click_images(driver,"pswInput.1920x1080.png",way_name='channel')
+            driver.click(860,350)  # 点击账号
+            sleep(1)
+            driver.clear_text()
+            sleep(1)
+            driver.type("17713623912",next=True)
             sleep(1)
             driver.type("test123")
-            self.click_images(driver,"login.1920x1080.png",way_name='channel')
+            sleep(1)
+            driver.click(1342,733)  # 点击账号
+            sleep(1)
             self.click_images(driver,"login_shimingzhi_close.1920x1080.png",way_name='channel')
+            log.info('输入账号登录')
         else:
             self.click_images(driver,"login_shimingzhi_close.1920x1080.png",way_name='channel')
+            log.info('自动登录')
         if self.wait_gone_images(driver, 'login_shimingzhi_close.1920x1080.png',way_name='channel'):
             log.info('登录成功')
             return 'ok'
@@ -99,7 +113,7 @@ class Channel(public.Methods):
             
     def phonePay(self,driver):
         u"手机点卡支付"
-        #if self.get_view_info(driver) == channel_pay_activity:
+        # if self.get_view_info(driver) == channel_pay_activity:
         self.click_images(driver,"anzhi_pay_changepay.1920x1080.png",way_name='channel')
         self.click_images(driver,"phonePay.1920x1080.png",way_name='channel')
         self.click_images(driver,"anzhi_pay.1920x1080.png",way_name='channel')
@@ -110,14 +124,17 @@ class Channel(public.Methods):
             return None
         
     def exitGame(self,driver):
-        self.click_images(driver,"setting.1920x1080.png",way_name='channel')
-        self.click_images(driver,"exitGame.1920x1080.png",way_name='channel')
-        self.click_images(driver,"exitGame_01.1920x1080.png",way_name='channel')
-        self.click_images(driver,"exitGame.1920x1080.png",way_name='channel')
-        self.click_images(driver,"exitGame_02.1920x1080.png",way_name='channel')
-        self.click_images(driver,"exitGame_03.1920x1080.png",way_name='channel')
-        self.click_images(driver,"exitGame.1920x1080.png",way_name='channel')
-        self.click_images(driver,"exitGame_04.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"setting.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"exitGame.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"exitGame_01.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"exitGame.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"exitGame_02.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"exitGame_03.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"exitGame.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"exitGame_04.1920x1080.png",way_name='channel')
+        sleep(1)
+        driver.click(655,569)  # 退出游戏
+        sleep(2)
         if self.wait_gone_images(driver, 'exitGame_04.1920x1080.png',way_name='channel'):
             log.info('退出游戏成功')
             return 'ok'

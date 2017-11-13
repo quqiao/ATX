@@ -11,11 +11,10 @@ class Channel(public.Methods):
         u'''渠道login'''
         if self.images_or_none(driver, 'pswInput.1920x1080.png',way_name='channel',timeout=10):
                 driver.press.back()
-                #self.click_exists(driver, 'cancel_auto_login.1920x1080.png',way_name='channel')
+                # self.click_exists(driver, 'cancel_auto_login.1920x1080.png',way_name='channel')
                 self.click_images(driver,"idInput.1920x1080.png",way_name='channel')
                 sleep(1)
-                driver.type("hero002") 
-                self.click_images(driver,"pswInput.1920x1080.png",way_name='channel')
+                driver.type("hero002",next=True)
                 sleep(1)
                 driver.type("111111")
                 self.click_images(driver,"login.1920x1080.png",way_name='channel')
@@ -93,13 +92,13 @@ class Channel(public.Methods):
             return None
         
     def exitGame(self,driver):
-        self.click_images(driver,"setting.1920x1080.png",way_name='channel')
-        self.click_images(driver,"exitGame.1920x1080.png",way_name='channel')
-        self.click_images(driver,"exitGame_01.1920x1080.png",way_name='channel')
-        self.click_images(driver,"exitGame.1920x1080.png",way_name='channel')
-        self.click_images(driver,"exitGame_02.1920x1080.png",way_name='channel')
-        self.click_images(driver,"exitGame_03.1920x1080.png",way_name='channel')
-        self.click_images(driver,"exitGame.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"setting.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"exitGame.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"exitGame_01.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"exitGame.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"exitGame_02.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"exitGame_03.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"exitGame.1920x1080.png",way_name='channel')
         self.click_images(driver,"exitGame_04.1920x1080.png",way_name='channel')
         if self.wait_gone_images(driver, 'exitGame_04.1920x1080.png',way_name='channel'):
             log.info('退出游戏成功')

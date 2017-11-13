@@ -23,10 +23,14 @@ class Channel(public.Methods):
             '''
             # driver(className="android.widget.EditText").sibling(className="android.widget.ImageView").click()
             sleep(2)
-            driver.click(850,230)
-            driver.clear_text() 
+            driver.click(850,230)  # 登录
+            sleep(1)
+            driver.clear_text()
+            sleep(1)
             driver.type("15198139230",next=True)
+            sleep(1)
             driver.type("a123123")
+            sleep(1)
             driver.click(950,610)
             # driver(className="android.widget.Button",index=0).sibling(className="android.widget.LinearLayout",index=1).click()
             image = self.wait_gone_images(driver, 'login_shiming_close.1920x1080.png',timeout=40,way_name='channel')

@@ -25,7 +25,7 @@ class Channel(public.Methods):
             # sleep(1)
             # driver.type("test123")
             # self.click_images(driver,"login.1920x1080.png",way_name='channel')
-            # log.info('输入账号和密码登录')
+            log.info('输入账号和密码登录')
         elif self.images_or_none(driver, 'login_exit_id.1920x1080.png',way_name='channel'):
             self.click_images(driver,"login_exit_id.1920x1080.png",way_name='channel')
             log.info('已有账号和密码登录')

@@ -10,13 +10,12 @@ class Channel(public.Methods):
     def login(self, driver):
         u'''渠道login'''
         if self.images_or_none(driver, 'idInput.1920x1080.png',way_name='channel'):
-            self.click_images(driver,u"idInput.1920x1080.png",way_name='channel')
+            self.click_images(driver,"idInput.1920x1080.png",way_name='channel')
             sleep(1)
-            driver.type("18583238812") 
-            self.click_images(driver,u"pswInput.1920x1080.png",way_name='channel')
+            driver.type("18583238812",next=True)
             sleep(1)
             driver.type("qatest123")
-            self.click_images(driver,u"login.1920x1080.png",way_name='channel')
+            self.click_images(driver,"login.1920x1080.png",way_name='channel')
         else:
             log.info('自动登录成功')
         if self.wait_gone_images(driver, 'login.1920x1080.png',way_name='channel'):
