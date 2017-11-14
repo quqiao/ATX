@@ -16,17 +16,14 @@ class Channel(public.Methods):
     
     def login(self, driver):
         u'''渠道login'''
-        #self.click_images(driver,u"idInput.1920x1080.png",way_name='channel')
-        #sleep(1)
-        #driver.type("Ewan10000") 
-        #self.click_images(driver,u"pswInput.1920x1080.png",way_name='channel')
-        #sleep(1)
-        #driver.type("123456")
-        if self.images_or_none(driver, 'login.1920x1080.png',way_name='channel'):
-            self.click_images(driver,u"login.1920x1080.png",way_name='channel')
+        if self.images_or_none(driver, 'login_01.1920x1080.png',way_name='channel'):
+            sleep(1)
+            driver.click(680,700)  # 登录成功
+            sleep(1)
+            log.info('登录成功')
         else:
             log.info('自动登录完成')
-        if self.images_or_none(driver, 'login_success.1920x1080.png',timeout=30):
+        if self.wait_gone_images(driver, 'login_success.1920x1080.png',way_name='channel'):
             log.info('登录成功')
             return 'ok'
         else:
@@ -65,7 +62,14 @@ class Channel(public.Methods):
         # self.click_exists(driver,"exitGame_02.1920x1080.png",way_name='channel')
         # self.click_exists(driver,"exitGame.1920x1080.png",way_name='channel')
         # self.click_exists(driver,"exitGame_01.1920x1080.png",way_name='channel')
-        self.click_exists(driver,"exitGame_03.1920x1080.png",way_name='channel')
+        # self.click_exists(driver,"exitGame_03.1920x1080.png",way_name='channel')
+        # sleep(1)
+        # driver.click(600,930)  # 使用游戏方退出框
+        # sleep(1)
+        # driver.click(1200,720)  # 使用游戏方退出框
+        # sleep(1)
+        driver.click(1300,930)  # 直接退出
+        sleep(1)
         if self.wait_gone_images(driver, 'exitGame_03.1920x1080.png',way_name='channel'):
             log.info('退出游戏成功')
             return 'ok'

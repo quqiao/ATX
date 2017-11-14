@@ -37,7 +37,7 @@ class Channel(public.Methods):
         driver(index=0, resourceId="com.xiaomi.gamecenter.sdk.service:id/back").click()
         driver(className='android.widget.GridView',index=0).child(className="android.widget.LinearLayout",index=2).click()
         driver(index=0, resourceId="com.xiaomi.gamecenter.sdk.service:id/back").click()
-        driver(className="android.widget.RelativeLayout").child(text=u"隐藏").click()
+        driver(className="android.widget.RelativeLayout").child(text="隐藏").click()
         if self.wait_gone_images(driver, 'fubiao_02.1920x1080.png',way_name='channel'):
             log.info('浮标检查成功')
             return "OK"

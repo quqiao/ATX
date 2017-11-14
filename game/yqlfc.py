@@ -32,6 +32,8 @@ class Game(public.Methods):
         sleep(2)
         driver.click(950,890)  # 开始
         sleep(1)
+        driver.click(950,890)  # 开始
+        sleep(1)
         # self.click_images(driver,"game_pre_02.1920x1080.png")
         if self.wait_gone_images(driver,'game_pre_02.1920x1080.png'):
             log.info('进入游戏前准备成功')
@@ -69,128 +71,108 @@ class Game(public.Methods):
             '''左漂移'''
             def long1():
                 driver.click(400,500)
+
             def long2():
                 driver.click(1000,500)
-            def long3():
-                driver.click(1000,500)
-            def long4():
-                driver.click(400,500)
-            threads = []
-            t1 = threading.Thread(target=long1)
-            threads.append(t1)
-            t2 = threading.Thread(target=long2)
-            threads.append(t2)
-            t3 = threading.Thread(target=long3)
-            threads.append(t3)
-            t4 = threading.Thread(target=long4)
-            threads.append(t4)
-            sleep(1)
-            for t in threads:
-                t.start()
+
             threads1 = []
             t1 = threading.Thread(target=long1)
             threads1.append(t1)
             t2 = threading.Thread(target=long2)
             threads1.append(t2)
-            t3 = threading.Thread(target=long3)
-            threads1.append(t3)
-            t4 = threading.Thread(target=long4)
-            threads1.append(t4)
-            sleep(1)
             for t in threads1:
                 t.start()
+            sleep(1)
+
             threads2 = []
             t1 = threading.Thread(target=long1)
             threads2.append(t1)
             t2 = threading.Thread(target=long2)
             threads2.append(t2)
-            t3 = threading.Thread(target=long3)
-            threads2.append(t3)
-            t4 = threading.Thread(target=long4)
-            threads2.append(t4)
             for t in threads2:
                 t.start()
             sleep(1)
+
             threads3 = []
             t1 = threading.Thread(target=long1)
             threads3.append(t1)
             t2 = threading.Thread(target=long2)
             threads3.append(t2)
-            t3 = threading.Thread(target=long3)
-            threads3.append(t3)
-            t4 = threading.Thread(target=long4)
-            threads3.append(t4)
             for t in threads3:
                 t.start()
             sleep(1)
+
             threads4 = []
-            t3 = threading.Thread(target=long1)
-            threads4.append(t3)
-            t4 = threading.Thread(target=long2)
-            threads4.append(t4)
-            t5 = threading.Thread(target=long3)
-            threads4.append(t5)
-            t6 = threading.Thread(target=long4)
-            threads4.append(t6)
+            t1 = threading.Thread(target=long1)
+            threads4.append(t1)
+            t2 = threading.Thread(target=long2)
+            threads4.append(t2)
             for t in threads4:
                 t.start()
-            sleep(2)
+            sleep(1)
+
+            threads5 = []
+            t3 = threading.Thread(target=long1)
+            threads5.append(t3)
+            t4 = threading.Thread(target=long2)
+            threads5.append(t4)
+            for t in threads5:
+                t.start()
+            sleep(1)
             driver.long_click(400,500)
-            sleep(8)
+            sleep(6)
             '''右漂移'''
             #for i in range(2):
                 #self.images_or_none(driver,'guide_003.1920x1080.png')
                 #driver.click(0.5,0.5)
-            
-            threads = []
-            t1 = threading.Thread(target=long1)
-            threads.append(t1)
-            t2 = threading.Thread(target=long2)
-            threads.append(t2)
-            t3 = threading.Thread(target=long3)
-            threads.append(t3)
-            t4 = threading.Thread(target=long4)
-            threads.append(t4)
-            for t in threads:
+
+            threads6 = []
+            t1 = threading.Thread(target=long2)
+            threads6.append(t1)
+            t2 = threading.Thread(target=long1)
+            threads6.append(t2)
+            for t in threads6:
                 t.start()
             sleep(1)
-            threads1 = []
-            t1 = threading.Thread(target=long1)
-            threads1.append(t1)
-            t2 = threading.Thread(target=long2)
-            threads1.append(t2)
-            t3 = threading.Thread(target=long3)
-            threads1.append(t3)
-            t4 = threading.Thread(target=long4)
-            threads1.append(t4)
-            for t in threads1:
+
+            threads7 = []
+            t1 = threading.Thread(target=long2)
+            threads7.append(t1)
+            t2 = threading.Thread(target=long1)
+            threads7.append(t2)
+            for t in threads7:
                 t.start()
             sleep(1)
-            threads2 = []
-            t3 = threading.Thread(target=long1)
-            threads2.append(t3)
-            t4 = threading.Thread(target=long2)
-            threads2.append(t4)
-            t5 = threading.Thread(target=long3)
-            threads2.append(t5)
-            t6 = threading.Thread(target=long4)
-            threads2.append(t6)
-            for t in threads2:
+
+            threads8 = []
+            t3 = threading.Thread(target=long2)
+            threads8.append(t3)
+            t4 = threading.Thread(target=long1)
+            threads8.append(t4)
+            for t in threads8:
                 t.start()
-            sleep(2)
-            threads3 = []
-            t3 = threading.Thread(target=long1)
-            threads3.append(t3)
-            t4 = threading.Thread(target=long2)
-            threads3.append(t4)
-            t5 = threading.Thread(target=long3)
-            threads3.append(t5)
-            t6 = threading.Thread(target=long4)
-            threads3.append(t6)
-            for t in threads3:
+            sleep(1)
+
+            threads9 = []
+            t3 = threading.Thread(target=long2)
+            threads9.append(t3)
+            t4 = threading.Thread(target=long1)
+            threads9.append(t4)
+            for t in threads9:
                 t.start()
-            sleep(2)
+            sleep(1)
+
+            threads10 = []
+            t3 = threading.Thread(target=long2)
+            threads10.append(t3)
+            t4 = threading.Thread(target=long1)
+            threads10.append(t4)
+            for t in threads9:
+                t.start()
+            sleep(1)
+
             driver.long_click(1000,500)
+            sleep(2)
             '''氮气'''
             self.images_or_none(driver,"guide_004.1920x1080.png")
             driver.click(130,495)  # 氮气
@@ -246,6 +228,7 @@ class Game(public.Methods):
             sleep(2)
             driver.click(50,40)  # 返回
             sleep(2)
+            log.info('游戏引导结束')
             # self.images_or_none(driver,'guide_003.1920x1080.png')
             # driver.click(0.5,0.5)
             # self.click_images(driver,"guide_015.1920x1080.png")
@@ -255,11 +238,11 @@ class Game(public.Methods):
         
         else:
             sleep(2)
-            driver.click(1660,960)  # 获得确认
+            driver.click(960,960)  # 获得确认
             sleep(2)
             driver.click(1710,138)  # 关闭
             sleep(2)
-            driver.click(1660,960)  # 任意键
+            driver.click(50,40)  # 任意键
             sleep(2)
             driver.click(1660,960)  # 开始游戏
             sleep(2)
@@ -269,6 +252,7 @@ class Game(public.Methods):
             sleep(2)
             driver.click(50,40)  # 返回
             sleep(2)
+            log.info('不用过游戏引导')
         if self.wait_gone_images(driver,'guide_017.1920x1080.png'):
             log.info('游戏引导成功')
             return 'ok'
@@ -508,7 +492,9 @@ class Game(public.Methods):
         driver(className='android.widget.EditText',index=0).click()
         driver.type(u"毛泽东法轮功江泽民")
         sleep(2)
-        driver.click(1700,912)  # 输入框确定说
+        driver.click(1700,912)  # 输入框确定 有底部虚拟
+        sleep(1)
+        driver.click(1840,932)  # 输入框确定 无底部虚拟
         # driver(className='android.widget.Button',index=1).click()
         sleep(2)
         driver.click(750,1000)  # 发送
@@ -548,3 +534,6 @@ class Game(public.Methods):
             return 'ok'
         else:
             return None
+
+
+

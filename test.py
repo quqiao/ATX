@@ -9,7 +9,22 @@ print a[1:5]
 print a[5:9]
 print a[-5:-1]
 '''
-
+import threading
 import time
 
-print time.time()
+def long1():
+
+    print "a"
+    print time.time()
+
+def long2():
+    print "b"
+    print time.time()
+
+threads1 = []
+t1 = threading.Thread(target=long2)
+threads1.append(t1)
+t2 = threading.Thread(target=long1)
+threads1.append(t2)
+for t in threads1:
+    t.start()

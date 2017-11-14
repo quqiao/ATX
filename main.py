@@ -16,7 +16,7 @@ class Test(unittest.TestCase,public.Methods):
             self.driver = atx.connect()
         else:
             self.driver = atx.connect(configure.device_name)
-        self.driver.start_app(configure.package_name,configure.activity_name)
+        # self.driver.start_app(configure.package_name,configure.activity_name)
         log.info('测试开始')
     
 
@@ -50,9 +50,9 @@ class Test(unittest.TestCase,public.Methods):
     def test01(self):
         game = self.get_names('game')
         channel = self.get_names('channel')
-        self.dy_IsNotNone(self.driver, game.game_update(self.driver),'360_game_update')
-        self.dy_IsNotNone(self.driver, channel.login(self.driver), '360_login')
-        self.dy_IsNotNone(self.driver,game.game_pre(self.driver),'360_game_pre')
+        # self.dy_IsNotNone(self.driver, game.game_update(self.driver),'360_game_update')
+        # self.dy_IsNotNone(self.driver, channel.login(self.driver), '360_login')
+        # self.dy_IsNotNone(self.driver,game.game_pre(self.driver),'360_game_pre')
         self.dy_IsNotNone(self.driver,game.guide(self.driver),'360_guide')
         self.dy_IsNotNone(self.driver,game.basicFunction(self.driver),'360_basicFunction')
         self.dy_IsNotNone(self.driver,game.live(self.driver),'360_live')
