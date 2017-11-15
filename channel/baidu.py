@@ -23,6 +23,9 @@ class Channel(public.Methods):
             driver.type("123456Ly")
             sleep(1)
             driver.click(900,600)  # 登录
+            sleep(3)
+            driver.click(1459,106)  # 关闭实名
+            log.info('输入账号密码登录')
             # self.click_images(driver,u"idInput.1920x1080.png",way_name='channel')
             # sleep(1)
             # driver.type("18583238812")
@@ -31,7 +34,9 @@ class Channel(public.Methods):
             # driver.type("qatest123")
             # self.click_images(driver,u"login.1920x1080.png",way_name='channel')
         else:
-            print '自动登录'
+            sleep(3)
+            driver.click(1459,106)  # 关闭实名
+            log.info('自动登录')
         if self.wait_gone_images(driver, 'login.1920x1080.png',way_name='channel'):
             log.info('登录成功')
             return 'ok'
@@ -39,7 +44,6 @@ class Channel(public.Methods):
             log.info('登录失败')
             return None
     def fubiao (self, driver):
-
         log.info('暂时没有浮标')
         if self.wait_gone_images(driver, 'login.1920x1080.png',way_name='channel'):
             log.info('登录成功')

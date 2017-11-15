@@ -9,17 +9,23 @@ log = logutils.getLogger(__name__)
 class Channel(public.Methods):
     def login(self, driver):
         u'''渠道login'''
-        if self.images_or_none(driver, 'login.1920x1080.png',way_name='channel'):
-            self.click_images(driver,"idInput.1920x1080.png",way_name='channel')
+        if self.images_or_none(driver, 'login_01.1920x1080.png',way_name='channel'):
             sleep(1)
-            driver.type("yzrtest7") 
-            self.click_images(driver,"pswInput.1920x1080.png",way_name='channel')
-            sleep(1)
-            driver.type("123456")
-            self.click_images(driver,"login.1920x1080.png",way_name='channel')
-            self.click_images(driver,"login_bangdingshouji.1920x1080.png",way_name='channel')
+            driver.click(665,643)  # QQ登录
+            sleep(6)
+            driver.click(580,1485)  # 登录
+            sleep(2)
+            log.info('QQ登录')
+            # self.click_images(driver,"idInput.1920x1080.png",way_name='channel')
+            # sleep(1)
+            # driver.type("yzrtest7")
+            # self.click_images(driver,"pswInput.1920x1080.png",way_name='channel')
+            # sleep(1)
+            # driver.type("123456")
+            # self.click_images(driver,"login.1920x1080.png",way_name='channel')
+            # self.click_images(driver,"login_bangdingshouji.1920x1080.png",way_name='channel')
         else:
-            self.click_images(driver,"login_bangdingshouji.1920x1080.png",way_name='channel')
+            log.info('自动登录')
         if self.wait_gone_images(driver,"login_bangdingshouji.1920x1080.png",way_name='channel'):
             log.info('登录成功')
             return 'ok'

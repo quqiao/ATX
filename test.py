@@ -29,5 +29,6 @@ print a[-5:-1]
 # for t in threads1:
 #     t.start()
 
+
 coldeInfo = "ab(1)cd(1)"
-print coldeInfo[1:3]
+coldeInfo[1:3]

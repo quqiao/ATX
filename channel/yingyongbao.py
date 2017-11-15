@@ -9,17 +9,13 @@ log = logutils.getLogger(__name__)
 class Channel(public.Methods):
     def login(self, driver):
         u'''渠道login'''
-        self.click_images(driver,"QQlogin.1920x1080.png",way_name='channel')
-        if self.images_or_none(driver, 'exist_login_01.1920x1080.png',way_name='channel'):
-            self.click_images(driver,"yingyongbao_exist_login.1920x1080.png",way_name='channel')
-        elif self.images_or_none(driver, 'idInput.1920x1080.png',way_name='channel'):
-            self.click_images(driver,"idInput.1920x1080.png",way_name='channel')
+        if self.images_or_none(driver, 'login_01.1920x1080.png',way_name='channel'):
             sleep(1)
-            driver.type("Ewan10000") 
-            self.click_images(driver,"pswInput.1920x1080.png",way_name='channel')
+            driver.click(750,530)  # QQ登录
+            sleep(2)
+            driver.click(530,1450)  # 登录
             sleep(1)
-            driver.type("123456")
-            self.click_images(driver,"login.1920x1080.png",way_name='channel')
+            log.info('QQ登录')
         else:
             log.info('自动登录成功')
         if self.wait_gone_images(driver,"yingyongbao_exist_login.1920x1080.png",way_name='channel'):
@@ -47,6 +43,14 @@ class Channel(public.Methods):
         # self.click_images(driver,"yingyongbao_pay_yes.1920x1080.png",way_name='channel')
         self.click_images(driver,"wechat_back.1920x1080.png",way_name='channel')
         if self.images_or_none(driver, 'exists_01.1920x1080.png',way_name='channel'):
+            return 'ok'
+        else:
+            return None
+
+    def exitGame(self,driver):
+        log.info('该渠道没有退出游戏功能')
+        if self.wait_gone_images(driver, 'login_01.1920x1080.png',way_name='channel'):
+            log.info('退出游戏成功')
             return 'ok'
         else:
             return None

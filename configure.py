@@ -13,10 +13,10 @@ print b
 '''
 
 device_name = ''
-game_name = 'qmqz2'
-channel_name = 'unicom'
-package_name = 'com.crisisfire.android.wolt'
-activity_name = 'com.unicom.dcLoader.welcomeview'
+game_name = 'sjsgz'
+channel_name = 'baidu'
+package_name = 'com.sjsgz.hero'
+activity_name = 'mobi.xy3d.tstd.SplashActivity'
 
 #quick
 '''
@@ -184,6 +184,8 @@ package_name = 'com.tencent.tmgp.com.sjsgz'  # 应用宝
 package_name = 'com.yx.sjsgz.mzw'  # 拇指玩
 package_name = 'com.yx.sjsgz.am'  # 金立
 package_name = 'com.yx.sjsgz.yyh'  # 应用汇
+package_name = 'mobi.xy3d.tstdgj.uc'  # UC
+package_name = 'com.sjsgz.hero'  # 官方
 '''
 
 # 一起来飞车

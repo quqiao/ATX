@@ -9,16 +9,21 @@ log = logutils.getLogger(__name__)
 class Channel(public.Methods):
     def login(self, driver):
         u'''渠道login'''
-        if self.images_or_none(driver, 'idInput.1920x1080.png',way_name='channel'):
-            self.click_images(driver,"idInput.1920x1080.png",way_name='channel')
+        if self.images_or_none(driver, 'login_01.1920x1080.png',way_name='channel'):
             sleep(1)
+            driver.click(1245,909)  # 已有账号登录
+            sleep(2)
+            driver.click(800,369)  # 点击输入框
+            sleep(2)
             driver.type("18583238812",next=True)
             sleep(1)
             driver.type("qatest123")
-            self.click_images(driver,"login.1920x1080.png",way_name='channel')
+            sleep(1)
+            driver.click(950,710)  # 进入游戏
+            log.info('输入账号密码登录')
         else:
             log.info('自动登录成功')
-        if self.wait_gone_images(driver, 'login.1920x1080.png',way_name='channel'):
+        if self.wait_gone_images(driver, 'login_01.1920x1080.png',way_name='channel'):
             log.info('登录成功')
             return 'ok'
         else:

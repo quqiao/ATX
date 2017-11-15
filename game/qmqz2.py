@@ -18,8 +18,10 @@ class Game(public.Methods):
         self.click_images(driver,"ares.1920x1080.png")
         self.click_images(driver,"enter_game1.1920x1080.png")
         if self.wait_gone_images(driver, 'enter_game1.1920x1080.png'):
+            log.info('游戏更新成功')
             return 'ok'
         else:
+            log.info('游戏更新失败')
             return None
             
 
@@ -83,8 +85,6 @@ class Game(public.Methods):
             driver.click(1366,863)  # 退出战斗
             sleep(2)
             driver.click(810,650)  # 确定退出战斗
-
-
             '''商城'''
             self.images_or_none(driver,'guide_004.1920x1080.png')
             sleep(1)
@@ -148,8 +148,8 @@ class Game(public.Methods):
             sleep(2)
             driver.click(1225,280)  # 关闭获得物品
             sleep(2)
+            log.info('游戏引导完成')
         else:
-            print "不过引导，关闭广告"
             if self.images_or_none(driver, 'exists_05.1920x1080.png',timeout=10):
                 self.click_images(driver,"exists_05.1920x1080.png")
                 for i in xrange(100):
@@ -169,6 +169,7 @@ class Game(public.Methods):
                         if self.exist(driver,'exists_01.1920x1080.png'):
                             print 'fail'
                             break
+            log.info('没有游戏引导')
         if self.wait_gone_images(driver,'guide_006.1920x1080.png'):
             log.info('引导成功')
             return 'ok'

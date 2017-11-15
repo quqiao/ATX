@@ -23,6 +23,8 @@ class Game(public.Methods):
     def game_pre(self,driver):
         sleep(5)
         driver.click(880,910)  # 进入游戏
+        sleep(6)
+        driver.click(1823,995)  # 游戏开始前跳过
         # self.click_images(driver,"game_pre_01.1920x1080.png")
         if self.wait_gone_images(driver,'game_pre_01.1920x1080.png'):
             log.info('更新成功')
@@ -423,7 +425,11 @@ class Game(public.Methods):
             sleep(2)
             driver.click(125,45)#返回
         else:
-            print "引导已完成"
+            sleep(2)
+            driver.swipe(1820,930,1820,930,10)#故事剧情
+            sleep(2)
+            driver.click(125,45)#返回
+            log.info( "引导已完成")
         if self.wait_gone_images(driver,'guide_001.1920x1080.png'):
             log.info('游戏引导成功')
             return 'ok'
@@ -450,7 +456,7 @@ class Game(public.Methods):
         driver.click(50,39)#返回
         sleep(2)
         driver.swipe(1860,150,1860,150,10)#活动
-        sleep(3)
+        sleep(5)
         driver.click(50,39)#返回
         sleep(3)
         driver.click(1239,46)#体力
