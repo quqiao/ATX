@@ -13,10 +13,10 @@ print b
 '''
 
 device_name = ''
-game_name = 'yqlfc'
-channel_name = 'xiaomi'
-package_name = 'com.wyd.hero.yqlfc.cb1.mi'
-activity_name = 'com.wyd.fc.activity.SplashActivity'
+game_name = 'qmqz2'
+channel_name = 'quick'
+package_name = 'com.crisisfire.cmgeQ'
+activity_name = 'com.crisisfire.cmgeQ.SplashActivity'
 
 #quick
 '''
@@ -49,64 +49,64 @@ activity_name = 'com.wyd.fc.activity.SplashActivity'
 
 #游戏名
 '''
-game_name_01 = 'ddd'
-game_name_02 = 'dfzj'
-game_name_03 = 'jjmlz'
-game_name_04 = 'jws'
-game_name_05 = 'NBA'
-game_name_06 = 'qmqz2'
-game_name_07 = 'qtdl3D'
-game_name_08 = 'sswd'
-game_name_09 = 'yqlfc'
-game_name_10 = 'yqltw'
-game_name_11 = 'yzr'
-game_name_12 = 'sjsgz'
+game_name_01 = 'ddd'  # 弹弹岛
+game_name_02 = 'dfzj'  # 巅峰战舰
+game_name_03 = 'jjmlz'  # 九剑魔龙传
+game_name_04 = 'jws'   # 极无双
+game_name_05 = 'NBA'   # NBA
+game_name_06 = 'qmqz2'  # 全名枪战
+game_name_07 = 'qtdl3D' # 抢滩登陆3D
+game_name_08 = 'sswd'  # 三生问道
+game_name_09 = 'yqlfc'  # 一起来飞车
+game_name_10 = 'yqltw'  # 一起来跳舞
+game_name_11 = 'yzr'  # 影之刃2
+game_name_12 = 'sjsgz'  # 生煎三国志
 '''
 
 #渠道名
 '''
-channel_name_01 = '360'
-channel_name_02 = '37wan'
-channel_name_03 = '4399'
-channel_name_04 = 'anzhi'
-channel_name_05 = 'baidu'
-channel_name_06 = 'chushou'
-channel_name_07 = 'coolpad'
-channel_name_08 = 'dangle'
-channel_name_09 = 'ewan'
-channel_name_10 = 'Gionee'
-channel_name_11 = 'guanfang'
-channel_name_12 = 'guopan'
-channel_name_13 = 'HTC'
-channel_name_14 = 'huawei'
-channel_name_15 = 'kugou'
-channel_name_16 = 'Lenovo'
-channel_name_17 = 'meizu'
-channel_name_18 = 'muzhiwan'
-channel_name_19 = 'oppo'
-channel_name_20 = 'papa'
-channel_name_21 = 'PPS'
-channel_name_22 = 'quick'
-channel_name_23 = 'Samsung'
-channel_name_24 = 'sina'
-channel_name_25 = 'sougou'
-channel_name_26 = 'telecom'
-channel_name_27 = 'UC'
-channel_name_28 = 'unicom'
-channel_name_29 = 'vivo'
-channel_name_30 = 'wandoujia'
-channel_name_31 = 'xiaomi'
-channel_name_32 = 'yingyongbao'
-channel_name_33 = 'yingyonghui'
-channel_name_34 = 'youku'
-channel_name_35 = 'kaopu'
-channel_name_36 = 'youketianxia'
-channel_name_37 = 'douyu'
-channel_name_38 = 'huya'   # 账号需要验证码
-channel_name_39 = 'leshi'
-channel_name_40 = 'pptv'
-channel_name_41 = 'jinritoutiao'
-channel_name_42 = 'kuaikan'
+channel_name_01 = '360' # 360
+channel_name_02 = '37wan' # 37玩
+channel_name_03 = '4399'  # 4399
+channel_name_04 = 'anzhi'  # 安智
+channel_name_05 = 'baidu'  # 百度
+channel_name_06 = 'chushou'  # 触手
+channel_name_07 = 'coolpad'  # 酷派
+channel_name_08 = 'dangle'  # 当乐
+channel_name_09 = 'ewan'  # 益玩
+channel_name_10 = 'Gionee'  # 金立
+channel_name_11 = 'guanfang'  # 官方
+channel_name_12 = 'guopan'  # 果盘
+channel_name_13 = 'HTC'  # HTC
+channel_name_14 = 'huawei'  # 华为
+channel_name_15 = 'kugou'  # 酷狗
+channel_name_16 = 'Lenovo'  # 联想
+channel_name_17 = 'meizu'  # 魅族
+channel_name_18 = 'muzhiwan'  # 拇指玩
+channel_name_19 = 'oppo'  # OPPO
+channel_name_20 = 'papa'  # 啪啪
+channel_name_21 = 'PPS'  # 爱奇艺（PPS)
+channel_name_22 = 'quick'  # 母包
+channel_name_23 = 'Samsung'  # 三星
+channel_name_24 = 'sina'  # 新浪
+channel_name_25 = 'sougou'  # 搜狗
+channel_name_26 = 'telecom'  # 电信
+channel_name_27 = 'UC'  # UC
+channel_name_28 = 'unicom'  # 联通
+channel_name_29 = 'vivo'  # vivo
+channel_name_30 = 'wandoujia'  # 豌豆荚
+channel_name_31 = 'xiaomi'  # 小米
+channel_name_32 = 'yingyongbao'  # 应用宝
+channel_name_33 = 'yingyonghui'  # 应用汇
+channel_name_34 = 'youku'  # 优酷
+channel_name_35 = 'kaopu'  # 酷派
+channel_name_36 = 'youketianxia'  # 游客天下
+channel_name_37 = 'douyu'  # 斗鱼
+channel_name_38 = 'huya'   # 虎牙（账号需要验证码）
+channel_name_39 = 'leshi'  # 乐视
+channel_name_40 = 'pptv'  # PPTV
+channel_name_41 = 'jinritoutiao'  # 今日头条
+channel_name_42 = 'kuaikan'  # 快看
 '''
   
 #极无双
@@ -189,254 +189,37 @@ package_name = 'com.yx.sjsgz.yyh'  # 应用汇
 # 一起来飞车
 """
 activity_name = 'com.wyd.fc.activity.SplashActivity'    # 一起来飞车
-activity_name = 'com.wyd.passport.impl.FirstActivity'    # UC，乐视启动
+activity_name = 'com.wyd.passport.impl.FirstActivity'    # UC，乐视
 package_name = 'com.wyd.hero.yqlfc.cb1.samsung'   # 三星
 package_name = 'com.wyd.hero.yqlfc.cb1.baidu'   # 百度
 package_name = 'com.wyd.hero.yqlfc.cb1.mcbg'   # 虎牙
 package_name = 'com.wyd.hero.yqlfc.cb1.uc'   # UC
 package_name = 'com.wyd.hero.yqlfc.cb1.leshi'   # 乐视手机
-package_name = 'com.wyd.hero.yqlfc.cb1.nearme.gamecenter'   # oppo
-package_name = 'com.wyd.hero.yqlfc.cb1.yyh'   # 应用汇
-package_name = 'com.wyd.hero.yqlfc.cb1.kaopu'   # 靠谱
-package_name = 'com.wyd.hero.yqlfc.cb1.cstv'   # 触手
-package_name = 'com.wyd.hero.yqlfc.cb1.egame'   # 电信
-package_name = 'com.wyd.hero.yqlfc.cb1.yyh'   # 应用汇
-package_name = 'com.wyd.hero.yqlfc.cb1.m4399'   # 4399
-package_name = 'com.wyd.hero.yqlfc.cb1.ewan'   # 益玩
+package_name = 'com.wyd.hero.yqlfc.cb1.nearme.gamecenter'   # OPPO
+package_name = 'com.wyd.hero.yqlfc.cb1.pptv'   # pptv
+package_name = 'com.wyd.hero.yqlfc.cb1.huawei'   # 华为
+package_name = 'com.wyd.hero.yqlfc.cb1.egame'   # 电信爱游戏
+package_name = 'com.wyd.hero.yqlfc.cb1.qihoo'   # 360
 package_name = 'com.wyd.hero.yqlfc.cb1.mi'   # 小米
+package_name = 'com.wyd.hero.yqlfc.cb1.iqiyi'   # 爱奇艺（pps)
+package_name = 'com.wyd.hero.yqlfc.cb1.zy'   # 掌阅
+package_name = 'com.wyd.hero.yqlfc.cb1.mz'   # 魅族
+package_name = 'com.wyd.hero.yqlfc.cb1.kaopu'   # 靠谱
+package_name = 'com.wyd.hero.yqlfc.cb1.vivo'   # vivo
+package_name = 'com.wyd.hero.yqlfc.cb1.downjoy'   # 当乐
+package_name = 'com.wyd.hero.yqlfc.cb1.kuaikan'   # 快看
+package_name = 'com.wyd.hero.yqlfc.cb1.coolpad'   # 酷派
+package_name = 'com.wyd.hero.yqlfc.cb1.lenovo'   # 联想
+package_name = 'com.wyd.hero.yqlfc.cb1.am'   # 金立
+package_name = 'com.wyd.hero.yqlfc.cb1.cstv'   # 触手
+package_name = 'com.wyd.hero.yqlfc.cb1.ewan'   # 益玩
+package_name = 'com.wyd.hero.yqlfc.cb1.jrtt'   # 今日头条
+package_name = 'com.wyd.hero.yqlfc.cb1.m4399'   # 4399
+package_name = 'com.wyd.hero.yqlfc.cb1.mzw'   # 拇指玩
+package_name = 'com.wyd.hero.yqlfc.cb1.anzhi'   # 安智
+package_name = 'com.wyd.hero.yqlfc.cb1.yyh'   # 应用汇
+package_name = 'com.tencent.tmgp.yqlfc'   # 应用宝
+package_name = 'com.wyd.hero.yqlfc.cb1.sogou.com'   # 搜狗
 """
 
-# coolpad
-'''
-channel_name = 'coolpad'
-package_name = 'com.crisisfire.android.kp'
-activity_name = 'com.crisisfire.android.kp.UnityPlayerNativeActivity'
-'''
 
-# guopan
-'''
-channel_name = 'guopan'
-package_name = 'com.crisisfire.android.guopan'
-activity_name = 'com.crisisfire.android.xxzhushou.UnityPlayerNativeActivity'
-'''
-
-
-# chushou
-"""
-channel_name = 'chushou'
-package_name = 'com.crisisfire.android.cstv'
-activity_name = 'com.crisisfire.cmgeQ.SplashActivity'
-"""
-
-# 360
-'''
-channel_name = '360'
-#package_name = 'com.crisisfire.android.qihoo' #全民枪战
-#activity_name = 'com.crisisfire.cmge.UnityPlayerNativeActivity'    #全民枪战
-#package_name = 'com.yingxiong.dfzj.qihoo360'    #巅峰战舰
-#activity_name = 'com.games.HZ.SDK.SplashActivity'     #巅峰战舰
-package_name = 'com.tqyouxi.sswd.qihu'    #三生问道
-activity_name = 'com.tqyouxi.sdk.SplashActivity'     #三生问道
-'''
-
-
-# 37wan
-'''
-channel_name = '37wan'
-package_name = 'com.crisisfire.android.sy37'     #枪战  
-activity_name = 'com.crisisfire.android.sy37.UnityPlayerNativeActivity'    #枪战
-'''
-
-
-# 4399
-'''
-channel_name = '4399'
-package_name = 'com.crisisfire.android.f399'
-activity_name = 'com.crisisfire.android.f399.UnityPlayerNativeActivity'
-'''
-
-# PPS
-'''
-channel_name = 'PPS'
-package_name = 'com.crisisfire.android.pps'
-activity_name = 'com.crisisfire.android.pps.UnityPlayerNativeActivity'
-'''
-
-# baidu
-"""
-channel_name = 'baidu'
-package_name = 'com.crisisfire.android.baidu.UnityPlayerNativeActivity'
-activity_name = 'com.crisisfire.android.baidu'
-"""
-
-# UC
-"""
-channel_name = 'UC'
-#package_name = 'com.crisisfire.android.uc'    #全民枪战
-#activity_name = 'com.crisisfire.android.uc.UnityPlayerNativeActivity'    #全民枪战
-package_name = 'com.tqyouxi.sswd.aligames'    #三生问道
-activity_name = 'com.tqyouxi.sdk.SplashActivity'    #三生问道
-"""
-
-# telecom
-'''
-channel_name = 'telecom'
-package_name = 'com.crisisfire.android.dianxin.egame'
-activity_name = 'cn.egame.terminal.paysdk.EgameLaunchActivity'
-'''
-
-# unicom
-'''
-channel_name = 'unicom'
-package_name = 'com.crisisfire.android.wolt'
-activity_name = 'com.unicom.dcLoader.welcomeview'
-'''
-
-# wandoujia
-'''
-channel_name = 'wandoujia'
-package_name = 'com.crisisfire.android.wdj'
-activity_name = 'com.crisisfire.android.wdj.UnityPlayerNativeActivity'
-'''
-
-# sina
-'''
-channel_name = 'sina'
-package_name = 'com.crisisfire.android.sina_wyx'
-activity_name = 'com.crisisfire.android.sina_wyx.UnityPlayerNativeActivity'
-'''
-
-# ewan
-"""
-channel_name = 'ewan'
-package_name = 'com.crisisfire.android.ewan'
-activity_name = 'com.crisisfire.android.ewan.UnityPlayerNativeActivity'
-"""
-
-# yingyongbao
-'''
-channel_name = 'yingyongbao'
-package_name = 'com.tencent.tmgp.qmqzhero'
-activity_name = 'com.crisisfire.cmgeQ.SplashActivity'
-'''
-
-# muzhiwan
-'''
-channel_name = 'muzhiwan'
-package_name = 'com.crisisfire.android.mzw'
-activity_name = 'com.crisisfire.android.mzw.UnityPlayerNativeActivity'
-'''
-
-# anzhi
-"""
-channel_name = 'anzhi'
-package_name = 'com.crisisfire.android.anzhi'
-activity_name = 'com.crisisfire.android.anzhi.UnityPlayerNativeActivity'
-"""
-
-# sougou
-'''
-channel_name = 'sougou'
-package_name = 'com.crisisfire.android.sougou'
-activity_name = 'com.crisisfire.android.sougou.UnityPlayerNativeActivity'
-'''
-
-# dangle
-'''
-channel_name = 'dangle'
-package_name = 'com.crisisfire.android.DL'
-activity_name = 'com.crisisfire.android.DL.MyActivity'
-'''
-
-# yingyonghui
-'''
-channel_name = 'yingyonghui'
-package_name = 'com.crisisfire.android.yyh'
-activity_name = 'com.crisisfire.android.yyh.UnityPlayerNativeActivity'
-'''
-
-# youku
-'''
-channel_name = 'youku'
-package_name = 'com.crisisfire.android.yyh'
-activity_name = 'com.crisisfire.android.yyh.UnityPlayerNativeActivity'
-'''
-
-# guanwang
-"""
-channel_name = 'guanfang'
-package_name = 'com.crisisfire.cmge'
-activity_name = 'com.crisisfire.cmge.UnityPlayerNativeActivity'
-"""
-
-# kugou
-'''
-channel_name = 'sougou'
-package_name = 'com.crisisfire.android.kugou'
-activity_name = 'com.crisisfire.android.kugou.UnityPlayerNativeActivity'
-'''
-
-# HTC
-'''
-channel_name = 'HTC'
-package_name = 'com.crisisfire.android.joloplay'
-activity_name = 'com.crisisfire.android.joloplay.UnityPlayerNativeActivity'
-'''
-
-# xiaomi
-'''
-channel_name = 'xiaomi'
-#package_name = 'com.crisisfire.android.mi'    #全民枪战
-#activity_name = 'com.crisisfire.android.mi.UnityPlayerNativeActivity'    #全民枪战
-package_name = 'com.tqyouxi.sswd.mi'        #三生问道
-activity_name = 'com.tqyouxi.sdk.SplashActivity'    #三生问道
-'''
-
-# meizu
-'''
-channel_name = 'meizu'
-package_name = 'com.crisisfire.android.mz'
-activity_name = 'com.crisisfire.android.mz.UnityPlayerNativeActivity'
-'''
-
-# huawei
-'''
-channel_name = 'huawei'
-package_name = 'com.crisisfire.android.huawei'
-activity_name = 'com.crisisfire.android.huawei.UnityPlayerNativeActivity'
-'''
-
-# Gionee
-'''
-channel_name = 'Gionee'
-package_name = 'com.crisisfire.android.am'
-activity_name = 'com.crisisfire.android.am.UnityPlayerNativeActivity'
-'''
-
-# Lenovo
-'''
-channel_name = 'Lenovo'
-package_name = 'com.crisisfire.android.lenovo'
-activity_name = 'com.crisisfire.android.lenovo.MyActivity'
-'''
-
-# vivo
-'''
-channel_name = 'vivo'
-package_name = 'com.cmge.crisisfire.android.vivo'
-activity_name = 'com.crisisfire.android.vivo.UnityPlayerNativeActivity'
-'''
-
-# Samsung
-'''
-channel_name = 'Samsung'
-package_name = 'com.crisisfire.android.samsung'
-activity_name = 'com.crisisfire.cmge.UnityPlayerNativeActivity'
-'''
-
-# oppo
-'''
-channel_name = 'oppo'
-package_name = 'com.crisisfire.android.nearme.gamecenter'
-activity_name = 'com.crisisfire.android.nearme.gamecenter.UnityPlayerNativeActivity'
-'''

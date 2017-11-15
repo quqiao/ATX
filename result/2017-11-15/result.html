@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>yqlfc--xiaomi测试报告( *  * )</title>
+    <title>qmqz2--quick测试报告( *  * )</title>
     <meta name="generator" content="HTMLTestRunner 0.8.2"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     
@@ -188,9 +188,9 @@ function showOutput(id, name) {
 --></script>
 
 <div class='heading'>
-<h1>yqlfc--xiaomi测试报告( *  * )</h1>
-<p class='attribute'><strong>Start Time:</strong> 2017-11-14 18:11:06</p>
-<p class='attribute'><strong>Duration:</strong> 0:01:31.487000</p>
+<h1>qmqz2--quick测试报告( *  * )</h1>
+<p class='attribute'><strong>Start Time:</strong> 2017-11-15 14:35:45</p>
+<p class='attribute'><strong>Duration:</strong> 0:03:22.016000</p>
 <p class='attribute'><strong>Status:</strong> Error 1</p>
 
 <p class='description'>用例执行情况：</p>
@@ -245,21 +245,25 @@ function showOutput(id, name) {
         </div>
         <pre>
         
-ft1.1: 2017-11-14 18:11:06.819 INFO  [main:  20] 测试开始
-2017-11-14 18:11:09.855 INFO  [atx.drivers.mixin: 504] click image: Pattern(name: ./game/yqlfc_images/guide_001.1920x1080.png, offset: None)
-sleep 1s, left  1s
-
-2017-11-14 18:11:13.096 INFO  [atx.drivers.mixin: 504] click image: Pattern(name: ./game/yqlfc_images/guide_002.1920x1080.png, offset: None)
-sleep 1s, left  1s
-
+ft1.1: 2017-11-15 14:35:45.286 INFO  [main:  20] 测试开始
 Traceback (most recent call last):
-  File "F:\ATX\main.py", line 56, in test01
-    self.dy_IsNotNone(self.driver,game.guide(self.driver),'360_guide')
-  File "F:\ATX\game\yqlfc.py", line 171, in guide
-    t.start()
-  File "C:\Python27\lib\threading.py", line 730, in start
-    raise RuntimeError("threads can only be started once")
-RuntimeError: threads can only be started once
+  File "F:\ATX\main.py", line 64, in test01
+    self.dy_IsNotNone(self.driver,game.talking(self.driver),'360_talking')
+  File "F:\ATX\game\qmqz2.py", line 396, in talking
+    driver(className='android.widget.Button',index=1).click()
+  File "C:\Python27\lib\site-packages\uiautomator\__init__.py", line 108, in __call__
+    return self.func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\uiautomator\__init__.py", line 78, in _inner
+    ret = fn(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\uiautomator\__init__.py", line 954, in _click
+    return self.jsonrpc.click(self.selector)
+  File "C:\Python27\lib\site-packages\uiautomator\__init__.py", line 442, in wrapper
+    return _method_obj(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\uiautomator\__init__.py", line 203, in __call__
+    return self.remote_call(data)
+  File "C:\Python27\lib\site-packages\uiautomator\__init__.py", line 190, in remote_call
+    "%s: %s" % (jsonresult["error"]["data"]["exceptionTypeName"], jsonresult["error"]["message"])
+JsonRPCError: JsonRPC Error code: -32002, Message: com.android.uiautomator.core.UiObjectNotFoundException: UiSelector[CLASS=android.widget.Button, INDEX=1]
 
 
         </pre>
