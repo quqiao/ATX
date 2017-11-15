@@ -16,7 +16,7 @@ class Test(unittest.TestCase,public.Methods):
             self.driver = atx.connect()
         else:
             self.driver = atx.connect(configure.device_name)
-        # self.driver.start_app(configure.package_name,configure.activity_name)
+        self.driver.start_app(configure.package_name,configure.activity_name)
         log.info('测试开始')
     
 

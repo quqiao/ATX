@@ -14,9 +14,9 @@ print b
 
 device_name = ''
 game_name = 'qmqz2'
-channel_name = 'quick'
-package_name = 'com.crisisfire.cmgeQ'
-activity_name = 'com.crisisfire.cmgeQ.SplashActivity'
+channel_name = 'unicom'
+package_name = 'com.crisisfire.android.wolt'
+activity_name = 'com.unicom.dcLoader.welcomeview'
 
 #quick
 '''
@@ -47,7 +47,7 @@ activity_name = 'com.crisisfire.cmgeQ.SplashActivity'
 #activity_name = 'mobi.xy3d.tstd.SplashActivity'    #生煎三国志
 '''
 
-#游戏名
+# 游戏名
 '''
 game_name_01 = 'ddd'  # 弹弹岛
 game_name_02 = 'dfzj'  # 巅峰战舰
@@ -222,4 +222,9 @@ package_name = 'com.tencent.tmgp.yqlfc'   # 应用宝
 package_name = 'com.wyd.hero.yqlfc.cb1.sogou.com'   # 搜狗
 """
 
+# 全民枪战
+"""
+activity_name = 'com.unicom.dcLoader.welcomeview'    # 联通专用
+package_name = 'com.crisisfire.android.wolt'   # 联通
+"""
 
