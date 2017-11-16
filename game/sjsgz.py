@@ -9,6 +9,9 @@ log = logutils.getLogger(__name__)
 
 class Game(public.Methods):
     def game_update(self,driver):
+        driver.prepare_ime()
+        sleep(3)
+        driver.click(620,740)  # 满足华为点击
         sleep(20)
         self.images_or_none(driver,"game_update_01.1920x1080.png")
         sleep(2)
@@ -23,14 +26,16 @@ class Game(public.Methods):
     def game_pre(self,driver):
         sleep(5)
         driver.click(880,910)  # 进入游戏
-        sleep(6)
-        driver.click(1823,995)  # 游戏开始前跳过
+        sleep(1)
+        driver.click(880,910)  # 进入游戏
+        sleep(9)
+        driver.long_click(1823,995)  # 游戏开始前跳过
         # self.click_images(driver,"game_pre_01.1920x1080.png")
         if self.wait_gone_images(driver,'game_pre_01.1920x1080.png'):
-            log.info('更新成功')
+            log.info('游戏前准备成功')
             return 'ok'
         else:
-            log.info('更新失败')
+            log.info('游戏前准备失败')
             return None
         
     def guide(self,driver):
@@ -87,7 +92,7 @@ class Game(public.Methods):
             driver.click(1440,520)#新任务
             sleep(2)
             driver.click(716,450)#领取奖励
-            sleep(3)
+            sleep(5)
             driver.click(955,687)#确定
             sleep(1)
             driver.click(1290,526)#点击空白处
@@ -425,8 +430,8 @@ class Game(public.Methods):
             sleep(2)
             driver.click(125,45)#返回
         else:
-            sleep(2)
-            driver.swipe(1820,930,1820,930,10)#故事剧情
+            # sleep(2)
+            # driver.swipe(1820,930,1820,930,10)#故事剧情
             sleep(2)
             driver.click(125,45)#返回
             log.info( "引导已完成")
@@ -438,27 +443,27 @@ class Game(public.Methods):
             return None
 
     def basicFunction(self,driver):
-        sleep(2)
-        driver.click(1352,150)#成长基金
-        sleep(2)
-        driver.click(50,39)#返回
-        sleep(2)
-        driver.click(1472,150)#签到
-        sleep(2)
-        driver.click(50,39)#返回
-        sleep(2)
-        driver.click(1600,150)#首充
-        sleep(2)
-        driver.click(50,39)#返回
-        sleep(2)
+        # sleep(2)
+        # driver.click(1352,150)#成长基金
+        # sleep(2)
+        # driver.click(50,39)#返回
+        # sleep(2)
+        # driver.click(1472,150)#签到
+        # sleep(2)
+        # driver.click(50,39)#返回
+        # sleep(2)
+        # driver.click(1600,150)#首充
+        # sleep(2)
+        # driver.click(50,39)#返回
+        # sleep(2)
         driver.click(1740,150)#充值
         sleep(2)
         driver.click(50,39)#返回
         sleep(2)
-        driver.swipe(1860,150,1860,150,10)#活动
-        sleep(5)
-        driver.click(50,39)#返回
-        sleep(3)
+        # driver.swipe(1860,150,1860,150,10)#活动
+        # sleep(5)
+        # driver.click(50,39)#返回
+        # sleep(3)
         driver.click(1239,46)#体力
         sleep(2)
         driver.click(1555,580)#点击空白处
@@ -467,7 +472,7 @@ class Game(public.Methods):
         sleep(2)
         driver.click(1555,580)#点击空白处
         sleep(2)
-        driver.click(1850,46)#金币
+        driver.long_click(1850,46)#金币
         sleep(2)
         driver.click(50,39)#返回
         sleep(2)
@@ -492,7 +497,7 @@ class Game(public.Methods):
         driver.click(50,39)#返回
         sleep(2)
         driver.click(350,1000)#背包
-        sleep(2)
+        sleep(3)
         driver.click(50,39)#返回
         sleep(2)
         if self.images_or_none(driver, 'basicFunction_01.1920x1080.png'):
@@ -576,7 +581,7 @@ class Game(public.Methods):
   
     def exitgame(self,driver):
         sleep(2)
-        driver.click(1200,720)#确定退出游戏
+        driver.click(1200,720)  # 确定退出游戏
         if self.wait_gone_images(driver, 'exitgame_01.1920x1080.png'):
             log.info('游戏退出成功')
             return 'ok'

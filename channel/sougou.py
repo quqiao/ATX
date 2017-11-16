@@ -38,25 +38,26 @@ class Channel(public.Methods):
         self.click_images(driver,"fubiao_05.1920x1080.png",way_name='channel')
         self.click_images(driver,"fubiao_07.1920x1080.png",way_name='channel')
         '''
-        sleep(2)
-        driver.click(1898,285)#浮标
-        sleep(2)
-        driver.click(1669,285)#新游
-        sleep(2)
-        driver.click(1749,113)#关闭
-        sleep(2)
-        driver.click(1898,285)#浮标
-        sleep(2)
-        driver.click(1550,285)#福利
-        sleep(2)
-        driver.click(1749,113)#关闭
-        sleep(2)
-        driver.click(1898,285)#浮标
-        sleep(2)
-        driver.click(1420,285)#我的
-        sleep(2)
-        driver.click(1780,100)#关闭
-        sleep(2)
+        log.info('不用浮标操作')
+        # sleep(2)
+        # driver.click(1898,285)#浮标
+        # sleep(2)
+        # driver.click(1669,285)#新游
+        # sleep(2)
+        # driver.click(1749,113)#关闭
+        # sleep(2)
+        # driver.click(1898,285)#浮标
+        # sleep(2)
+        # driver.click(1550,285)#福利
+        # sleep(2)
+        # driver.click(1749,113)#关闭
+        # sleep(2)
+        # driver.click(1898,285)#浮标
+        # sleep(2)
+        # driver.click(1420,285)#我的
+        # sleep(2)
+        # driver.click(1780,100)#关闭
+        # sleep(2)
         if self.wait_gone_images(driver, 'fubiao_07.1920x1080.png',way_name='channel'):
             log.info('浮标已关闭')
             return 'ok'

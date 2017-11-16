@@ -87,16 +87,17 @@ class Channel(public.Methods):
             return None
 
     def fubiao(self,driver):
-        driver.click(10,869)  # 隐藏浮标
-        sleep(1)
-        driver.click(60,900)  # 浮标
-        sleep(2)
-        driver.click(535,450)  # 礼包
-        sleep(2)
-        driver.click(868,450)  # 消息
-        sleep(2)
-        driver.click(950,130)  # 关闭
-        sleep(2)
+        log.info('暂时不用浮标')
+        # driver.click(10,869)  # 隐藏浮标
+        # sleep(1)
+        # driver.click(60,900)  # 浮标
+        # sleep(2)
+        # driver.click(535,450)  # 礼包
+        # sleep(2)
+        # driver.click(868,450)  # 消息
+        # sleep(2)
+        # driver.click(950,130)  # 关闭
+        # sleep(2)
         if self.wait_gone_images(driver,"fubiao_01.1920x1080.png",way_name='channel'):
             log.info('退出游戏成功')
             return 'ok'

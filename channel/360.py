@@ -51,15 +51,16 @@ class Channel(public.Methods):
             
     def fubiao(self,driver):
         u'浮标操作'
-        self.click_images(driver,"fubiao_01.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_02.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_03.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_04.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_05.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_06.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_07.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_08.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_09.1920x1080.png",way_name='channel')
+        log.info('不用浮标操作')
+        # self.click_images(driver,"fubiao_01.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_02.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_03.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_04.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_05.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_06.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_07.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_08.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_09.1920x1080.png",way_name='channel')
         if self.wait_gone_images(driver, 'fubiao_01.1920x1080.png',way_name='channel'):
             log.info('浮标已关闭')
             return 'ok'

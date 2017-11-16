@@ -10,31 +10,59 @@ import configure
 class Channel(public.Methods):
     def login(self, driver):
         u'''渠道login'''
-        if self.images_or_none(driver, 'exists_01.1920x1080.png',way_name='channel'):
-            driver(className='android.widget.LinearLayout',index=0).child(className="android.widget.MultiAutoCompleteTextView",index=1).click()
+        if self.images_or_none(driver, 'login_01.1920x1080.png',way_name='channel'):
+            # driver(className='android.widget.LinearLayout',index=0).child(className="android.widget.MultiAutoCompleteTextView",index=1).click()
+            # driver.clear_text()
+            # driver.type("autotest1122")
+            # driver(className='android.widget.LinearLayout',index=1).child(className="android.widget.EditText",index=1).click()
+            # driver.clear_text()
+            # driver.type("123123")
+            # sleep(2)
+            # driver(className='android.widget.Button',index=2).click()
+            # sleep(2)
+            # driver(text=u'以后再说', className='android.widget.Button').click()
+            sleep(1)
+            driver.click(500,380)  # 账号输入框
+            sleep(1)
             driver.clear_text()
-            driver.type("autotest1122")
-            driver(className='android.widget.LinearLayout',index=1).child(className="android.widget.EditText",index=1).click()
-            driver.clear_text()
-            driver.type("123123")
+            sleep(1)
+            driver.type("18980158564",next=True)
+            sleep(1)
+            driver.type("123456")
             sleep(2)
-            driver(className='android.widget.Button',index=2).click()
+            driver.click(900,860)  # 登录
             sleep(2)
-            driver(text=u'以后再说', className='android.widget.Button').click()
+            driver.click(566,920)  # 取消实名认证
+            log.info('输入账号和密码登录')
 
         else:
             # driver(text=u'以后再说', className='android.widget.Button').click()
-            sleep(5)
+            sleep(2)
+            driver.click(566,920)  # 取消实名认证
             log.info('自动登录成功')
-            return 'ok'
 
-        if self.wait_gone_images(driver, 'exists_01.1920x1080.png',timeout=40,way_name='channel'):
+        if self.wait_gone_images(driver, 'login_01.1920x1080.png',timeout=40,way_name='channel'):
             log.info('登录成功')
             return 'ok'
         else:
             log.info('登录失败')
             return None
-            
+
+    def fubiao(self,driver):
+        sleep(1)
+        driver.click(15,609)  # 双击点击浮标
+        driver.click(15,609)  # 双击点击浮标
+        sleep(1)
+        driver.swipe(15,609,15,790,50)  # 浮标移动
+        log.info('浮标移动')
+        if self.wait_gone_images(driver, 'exists_01.1920x1080.png',timeout=40,way_name='channel'):
+            log.info('浮标移动成功')
+            return 'ok'
+        else:
+            log.info('浮标移动失败')
+            return None
+
+
     def ali(self,driver):
         u'''支付宝支付'''
         driver(className='android.widget.LinearLayout',index=0).child(className="android.widget.ImageView",index=2).click() #支付宝支付

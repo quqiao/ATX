@@ -14,8 +14,8 @@ print b
 
 device_name = ''
 game_name = 'sjsgz'
-channel_name = 'baidu'
-package_name = 'com.sjsgz.hero'
+channel_name = 'Lenovo'
+package_name = 'com.yx.sjsgz.lenovo'
 activity_name = 'mobi.xy3d.tstd.SplashActivity'
 
 #quick
@@ -99,7 +99,7 @@ channel_name_31 = 'xiaomi'  # 小米
 channel_name_32 = 'yingyongbao'  # 应用宝
 channel_name_33 = 'yingyonghui'  # 应用汇
 channel_name_34 = 'youku'  # 优酷
-channel_name_35 = 'kaopu'  # 酷派
+channel_name_35 = 'kaopu'  # 靠谱
 channel_name_36 = 'youketianxia'  # 游客天下
 channel_name_37 = 'douyu'  # 斗鱼
 channel_name_38 = 'huya'   # 虎牙（账号需要验证码）
@@ -162,7 +162,8 @@ package_name = 'com.ttxw.yktx'
 
 # 生煎三国志
 '''
-activity_name = 'mobi.xy3d.tstd.SplashActivity'
+activity_name_01 = 'mobi.xy3d.tstd.SplashActivity'
+activity_name_02 = 'com.yx.sjsgz.huawei.SDKHuawei'  # 华为专用
 package_name = 'com.yx.sjsgz.sougou' # 搜狗
 package_name = 'com.yx.sjsgz.iqiyi'  # 爱奇艺
 package_name = 'com.yx.sjsgz.lenovo' # 联想

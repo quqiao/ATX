@@ -25,6 +25,15 @@ class Channel(public.Methods):
             log.info('登录失败')
             return None
 
+    def fubiao(self,driver):
+        log.info('不用')
+        if self.wait_gone_images(driver,"yingyongbao_exist_login.1920x1080.png",way_name='channel'):
+            log.info('登录成功')
+            return 'ok'
+        else:
+            log.info('登录失败')
+            return None
+
     def QQ(self,driver):
         u"QQ钱包支付"
         self.click_images(driver,"yingyongbao_pay.1920x1080.png",way_name='channel')

@@ -9,46 +9,57 @@ log = logutils.getLogger(__name__)
 class Channel(public.Methods):
     def login(self, driver):
         u'''渠道login'''
-        if self.images_or_none(driver, 'exists_02.1920x1080.png',way_name='channel'):
-            driver(index=0, resourceId="com.gionee.gsp:id/username_edittext").click()
+        if self.images_or_none(driver, 'login_01.1920x1080.png',way_name='channel'):
+            sleep(1)
+            driver.click(818,1848)  # 登录账号
+            sleep(2)
+            driver.click(500,300)  # 账号输入框
+            sleep(1)
             driver.clear_text()
-            driver.type("15202828543")
-            driver(index=0, resourceId="com.gionee.gsp:id/password_edittext").click()
-            driver.clear_text()
+            sleep(1)
+            driver.type("15202828543",next=True)
+            sleep(1)
             driver.type("123456")
-            driver(className='android.widget.RelativeLayout',index=1).child(className='android.widget.Button',index=0).click()
-            driver(className='android.widget.Button',index=0).click()
-            image = self.wait_gone_images(driver, 'exists_02.1920x1080.png',timeout=40,way_name='channel')
-            if image:
-                log.info('登录成功')
-                return 'ok'
-            else:
-                log.info('登录失败')
-                return None
+            sleep(2)
+            driver.click(540,790)  # 登录
+            sleep(3)
+            driver.click(724,698)  # 稍后认证
+            sleep(2)
+            driver.click(1357,157)  # 关闭福利
+            log.info('输入账号密码登录')
         else:
-            self.click_images(driver,"shiming_close.1920x1080.png",way_name='channel')
-            image = self.wait_gone_images(driver, 'exists_02.1920x1080.png',way_name='channel')
-            if image:
-                log.info('自动登录成功')
-                return 'ok'
+            sleep(3)
+            driver.click(724,698)  # 稍后认证
+            sleep(2)
+            driver.click(1357,157)  # 关闭福利
+            log.info('自动登录')
+        if self.wait_gone_images(driver, 'login_01.1920x1080.png',way_name='channel'):
+            log.info('登录成功')
+            return 'ok'
+        else:
+            log.info('登录失败')
+            return None
     
     def fubiao(self,driver):
         u"浮标检查"
-        self.click_images(driver,"fubiao_01.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_02.1920x1080.png",way_name='channel')
-        driver(className='android.widget.RelativeLayout',index=0).child(className="android.widget.TextView",index=0).click()
-        self.click_images(driver,"fubiao_01.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_03.1920x1080.png",way_name='channel')
-        driver(className='android.widget.RelativeLayout',index=0).child(className="android.widget.TextView",index=0).click()
-        self.click_images(driver,"fubiao_01.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_04.1920x1080.png",way_name='channel')
-        driver(className='android.widget.RelativeLayout',index=0).child(className="android.widget.TextView",index=0).click()
-        self.click_images(driver,"fubiao_01.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_05.1920x1080.png",way_name='channel')
-        driver(className='android.widget.RelativeLayout',index=0).child(className="android.widget.TextView",index=0).click()
-        self.click_images(driver,"fubiao_01.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_06.1920x1080.png",way_name='channel')
-        driver(className='android.widget.RelativeLayout',index=0).child(className="android.widget.TextView",index=0).click()
+        sleep(1)
+        driver.swipe(15,40,15,770,50)  # 移动浮标
+        log.info('移动浮标')
+        # self.click_images(driver,"fubiao_01.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_02.1920x1080.png",way_name='channel')
+        # driver(className='android.widget.RelativeLayout',index=0).child(className="android.widget.TextView",index=0).click()
+        # self.click_images(driver,"fubiao_01.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_03.1920x1080.png",way_name='channel')
+        # driver(className='android.widget.RelativeLayout',index=0).child(className="android.widget.TextView",index=0).click()
+        # self.click_images(driver,"fubiao_01.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_04.1920x1080.png",way_name='channel')
+        # driver(className='android.widget.RelativeLayout',index=0).child(className="android.widget.TextView",index=0).click()
+        # self.click_images(driver,"fubiao_01.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_05.1920x1080.png",way_name='channel')
+        # driver(className='android.widget.RelativeLayout',index=0).child(className="android.widget.TextView",index=0).click()
+        # self.click_images(driver,"fubiao_01.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_06.1920x1080.png",way_name='channel')
+        # driver(className='android.widget.RelativeLayout',index=0).child(className="android.widget.TextView",index=0).click()
         if self.wait_gone_images(driver, 'fubiao_06.1920x1080.png',way_name='channel'):
             log.info('浮标检查成功')
             return "OK"
@@ -86,9 +97,9 @@ class Channel(public.Methods):
             return None
         
     def exitGame(self,driver):
-        #sleep(1)      
-        #driver(className='android.widget.Button',index=1).click()
-        self.click_images(driver,"exitGame_01.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"exitGame_01.1920x1080.png",way_name='channel')
+        sleep(1)
+        driver.click(1160,652)
         if self.wait_gone_images(driver, 'exitGame_01.1920x1080.png',way_name='channel'):
             log.info('微信支付成功')
             return "OK"

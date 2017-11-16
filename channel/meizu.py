@@ -9,24 +9,34 @@ class Channel(public.Methods):
     def login(self, driver):
         u"渠道login"
         if self.images_or_none(driver, 'exists_01.1920x1080.png',way_name='channel'):
-            driver(className='android.widget.LinearLayout',index=1).child(className="android.widget.RelativeLayout",index=3).click()
-            driver(className='android.widget.LinearLayout',index=0).child(className="android.widget.EditText",index=0).click()
-            driver.clear_text()
-            driver.type("markettest@flyme.cn")
-            driver(className='android.widget.LinearLayout',index=1).child(className="android.widget.EditText",index=0).click()
-            driver.clear_text()
+            sleep(1)
+            driver.click(900,910)  # 登录其他账号
+            sleep(2)
+            driver.click(889,358)  # 账号输入框
+            sleep(1)
+            driver.type("markettest@flyme.cn",next=True)
+            sleep(1)
             driver.type("ck123456")
-            driver(className='android.widget.Button',index=0).click()
-            if self.wait_gone_images(driver, 'exists_01.1920x1080.png',timeout=40,way_name='channel'):
-                log.info('登录成功')
-                return 'ok'
-            else:
-                log.info('登录失败')
-                return None
+            sleep(1)
+            driver.click(968,790)  # 登录
+            log.info('输入账号密码登录')
+            # driver(className='android.widget.LinearLayout',index=1).child(className="android.widget.RelativeLayout",index=3).click()
+            # driver(className='android.widget.LinearLayout',index=0).child(className="android.widget.EditText",index=0).click()
+            # driver.clear_text()
+            # driver.type("markettest@flyme.cn")
+            # driver(className='android.widget.LinearLayout',index=1).child(className="android.widget.EditText",index=0).click()
+            # driver.clear_text()
+            # driver.type("ck123456")
+            # driver(className='android.widget.Button',index=0).click()
+
         else:
-            if self.wait_gone_images(driver, 'exists_01.1920x1080.png',way_name='channel'):
                 log.info('自动登录成功')
-                return 'ok'
+        if self.wait_gone_images(driver, 'exists_01.1920x1080.png',way_name='channel'):
+            log.info('登录成功')
+            return 'ok'
+        else:
+            log.info('登录失败')
+            return None
     
     def ali(self,driver):
         u'''支付宝支付'''

@@ -25,8 +25,10 @@ class Channel(public.Methods):
             # self.click_images(driver,"login.1920x1080.png",way_name='channel')
             # self.click_images(driver,"login_bangdingshouji.1920x1080.png",way_name='channel')
         else:
-            log.info('自动登录')
-        if self.wait_gone_images(driver,"login_bangdingshouji.1920x1080.png",way_name='channel'):
+            sleep(1)
+            driver.click(960,690)  # 直接登录
+            log.info('直接登录')
+        if self.wait_gone_images(driver,"login_01.1920x1080.png",way_name='channel'):
             log.info('登录成功')
             return 'ok'
         else:
@@ -60,24 +62,36 @@ class Channel(public.Methods):
         else:
             return None 
             
-    def youyuwan(self,driver):
-        u"游娱玩支付"
-        if self.get_view_info(driver) == channel_pay_activity:
-            self.click_images(driver,"youyuwan.1920x1080.png",way_name='channel')
-            self.click_images(driver,"guanfang_pay.1920x1080.png",way_name='channel')
-            self.click_images(driver,"youyuwan_pay_back.1920x1080.png",way_name='channel')
-            self.click_images(driver,"youyuwan_pay_back_yes.1920x1080.png",way_name='channel')
+    # def youyuwan(self,driver):
+    #     u"游娱玩支付"
+    #     if self.get_view_info(driver) == channel_pay_activity:
+    #         self.click_images(driver,"youyuwan.1920x1080.png",way_name='channel')
+    #         self.click_images(driver,"guanfang_pay.1920x1080.png",way_name='channel')
+    #         self.click_images(driver,"youyuwan_pay_back.1920x1080.png",way_name='channel')
+    #         self.click_images(driver,"youyuwan_pay_back_yes.1920x1080.png",way_name='channel')
             
             
-    def phonePay(self,driver):
-        u"充值卡支付"
-        if self.get_view_info(driver) == channel_pay_activity:
-            self.click_images(driver,"phonePay.1920x1080.png",way_name='channel')
-            self.click_images(driver,"guanfang_pay.1920x1080.png",way_name='channel')
-            self.click_images(driver,"yingyongdou_pay_back_yes.1920x1080.png",way_name='channel')
+    # def phonePay(self,driver):
+    #     u"充值卡支付"
+    #     if self.get_view_info(driver) == channel_pay_activity:
+    #         self.click_images(driver,"phonePay.1920x1080.png",way_name='channel')
+    #         self.click_images(driver,"guanfang_pay.1920x1080.png",way_name='channel')
+    #         self.click_images(driver,"yingyongdou_pay_back_yes.1920x1080.png",way_name='channel')
             
 
             
+    def exitGame(self,driver):
+        # self.click_images(driver,"setting.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"exitGame.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"exitGame_01.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"exitGame.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"exitGame_02.1920x1080.png",way_name='channel')
+        log.info('该渠道没有退出游戏')
+        if self.wait_gone_images(driver, 'exitGame_02.1920x1080.png',way_name='channel'):
+            log.info('退出游戏成功')
+            return 'ok'
+        else:
+            return None
 
 
 

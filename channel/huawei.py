@@ -9,20 +9,21 @@ log = logutils.getLogger(__name__)
 class Channel(public.Methods):
     def login(self, driver):
         u'''渠道login'''
-        driver(className='android.widget.Button',index=0,resourceId="android:id/button2").click()
-        if self.images_or_none(driver, 'exists_02.1920x1080.png',way_name='channel'):
-            driver(className='android.widget.LinearLayout',index=0).child(className="android.widget.EditText",index=0).click()
-            driver.clear_text()
-            driver.type("15883980943")
-            driver(className='android.widget.LinearLayout',index=1).child(className="android.widget.EditText",index=0).click()
-            driver.clear_text()
-            driver.type("123456")
-            driver(className='android.widget.Button',index=1).click()
-            log.info('输入账号登录')
-        else:
-            log.info('自动登录')
+        log.info('自动登录了')
+        # driver(className='android.widget.Button',index=0,resourceId="android:id/button2").click()
+        # if self.images_or_none(driver, 'exists_02.1920x1080.png',way_name='channel'):
+        #     driver(className='android.widget.LinearLayout',index=0).child(className="android.widget.EditText",index=0).click()
+        #     driver.clear_text()
+        #     driver.type("15883980943")
+        #     driver(className='android.widget.LinearLayout',index=1).child(className="android.widget.EditText",index=0).click()
+        #     driver.clear_text()
+        #     driver.type("123456")
+        #     driver(className='android.widget.Button',index=1).click()
+        #     log.info('输入账号登录')
+        # else:
+        #     log.info('自动登录')
 
-        if self.wait_gone_images(driver, 'exists_02.1920x1080.png',timeout=40,way_name='channel'):
+        if self.wait_gone_images(driver, 'exists_02.1920x1080.png',way_name='channel'):
             log.info('登录成功')
             return 'ok'
         else:
@@ -31,25 +32,27 @@ class Channel(public.Methods):
     
     def fubiao(self,driver):
         u"浮标检查"
-        self.click_images(driver,"fubiao_01.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_02.1920x1080.png",way_name='channel')
-        driver(className="android.widget.RelativeLayout", resourceId="com.huawei.gamebox:id/player_nickname").click()
         sleep(2)
-        driver.press.back()
-        driver(index=0, resourceId="com.huawei.gamebox:id/mine_score_linearlayout").click()
-        driver(className="android.widget.ImageView", resourceId="com.huawei.gamebox:id/back_to_homepage").click()
-        driver(index=1, resourceId="com.huawei.gamebox:id/mine_score_linearlayout").click()
-        sleep(2)
-        driver.press.back()
-        driver(index=2, resourceId="com.huawei.gamebox:id/mine_score_linearlayout").click()
-        sleep(2)
-        driver.press.back()
-        driver(index=3, resourceId="com.huawei.gamebox:id/mine_score_linearlayout").click()
-        sleep(2)
-        driver.press.back()
-        sleep(2)
-        driver.press.back()
-        driver.press.back()
+        driver.swipe(15,590,15,800,50)  # 移动浮标
+        # self.click_images(driver,"fubiao_01.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_02.1920x1080.png",way_name='channel')
+        # driver(className="android.widget.RelativeLayout", resourceId="com.huawei.gamebox:id/player_nickname").click()
+        # sleep(2)
+        # driver.press.back()
+        # driver(index=0, resourceId="com.huawei.gamebox:id/mine_score_linearlayout").click()
+        # driver(className="android.widget.ImageView", resourceId="com.huawei.gamebox:id/back_to_homepage").click()
+        # driver(index=1, resourceId="com.huawei.gamebox:id/mine_score_linearlayout").click()
+        # sleep(2)
+        # driver.press.back()
+        # driver(index=2, resourceId="com.huawei.gamebox:id/mine_score_linearlayout").click()
+        # sleep(2)
+        # driver.press.back()
+        # driver(index=3, resourceId="com.huawei.gamebox:id/mine_score_linearlayout").click()
+        # sleep(2)
+        # driver.press.back()
+        # sleep(2)
+        # driver.press.back()
+        # driver.press.back()
         if self.wait_gone_images(driver, 'fubiao_02.1920x1080.png',way_name='channel'):
             log.info('浮标检查成功')
             return "OK"
