@@ -9,12 +9,26 @@ log = logutils.getLogger(__name__)
 class Channel(public.Methods):
     def login(self, driver):
         u'''渠道login'''
-        self.click_images(driver,"shiming_skip.1920x1080.png",way_name='channel')
-        self.click_images(driver,"good.1920x1080.png",way_name='channel')
-        self.click_images(driver,"lingqufuli.1920x1080.png",way_name='channel',timeout=5)
-        self.click_images(driver,"chakankebi.1920x1080.png",way_name='channel',timeout=5)
-        self.click_images(driver,"guanbikebi.1920x1080.png",way_name='channel',timeout=5)
-        if self.wait_gone_images(driver, 'lingqufuli.1920x1080.png',way_name='channel'):
+        if self.images_or_none(driver, 'login_01.1920x1080.png',way_name='channel'):
+            sleep(1)
+            driver.click(900,920)  # 使用其他账号登录
+            sleep(2)
+            driver.click(550,610)  # 账号输入框
+            sleep(1)
+            driver.clear_text()
+            driver.type("17713623912")
+            sleep(1)
+            driver.click(955,815)  # 关闭联想框
+            sleep(1)
+            driver.click(500,780)  # 密码输入框
+            sleep(1)
+            driver.type("test123")
+            sleep(1)
+            driver.click(530,1060)  # 登录
+            log.info('输入账号密码登录')
+        else:
+            log.info('自动登录')
+        if self.wait_gone_images(driver, 'login_01.1920x1080.png',way_name='channel'):
             log.info('浮标检查成功')
             return "OK"
         else:
@@ -58,25 +72,26 @@ class Channel(public.Methods):
     
     def fubiao(self,driver):
         u"浮标检查"
-        sleep(2)
-        driver.click(18,174)
-        driver.click(18,174)
-        driver(className="android.widget.RelativeLayout").child(text=u"福利").click()
-        driver(index=0, resourceId="com.nearme.game.service:id/back").click()
-        driver(className="android.widget.RelativeLayout").child(text=u"积分商城").click()
-        driver(index=0, resourceId="com.nearme.gamecenter:id/color_home_view").click()
-        driver(className="android.widget.RelativeLayout").child(text=u"可币券").click()
-        driver(index=0, resourceId="com.nearme.game.service:id/back").click()
-        driver(className="android.widget.RelativeLayout").child(text=u"论坛").click()
-        sleep(3)
-        driver.press.back()
-        driver(className="android.widget.RelativeLayout").child(text=u"消息").click()
-        driver(index=0, resourceId="com.nearme.game.service:id/back").click()
-        driver(className="android.widget.RelativeLayout").child(text=u"客服").click()
-        driver(index=0, resourceId="com.nearme.game.service:id/back").click()
-        driver(index=2, resourceId="com.nearme.game.service:id/close").click()
-        sleep(2)
-        driver.swipe(18,174,961,872)
+        log.info('暂时不处理浮标')
+        # sleep(2)
+        # driver.click(18,174)
+        # driver.click(18,174)
+        # driver(className="android.widget.RelativeLayout").child(text=u"福利").click()
+        # driver(index=0, resourceId="com.nearme.game.service:id/back").click()
+        # driver(className="android.widget.RelativeLayout").child(text=u"积分商城").click()
+        # driver(index=0, resourceId="com.nearme.gamecenter:id/color_home_view").click()
+        # driver(className="android.widget.RelativeLayout").child(text=u"可币券").click()
+        # driver(index=0, resourceId="com.nearme.game.service:id/back").click()
+        # driver(className="android.widget.RelativeLayout").child(text=u"论坛").click()
+        # sleep(3)
+        # driver.press.back()
+        # driver(className="android.widget.RelativeLayout").child(text=u"消息").click()
+        # driver(index=0, resourceId="com.nearme.game.service:id/back").click()
+        # driver(className="android.widget.RelativeLayout").child(text=u"客服").click()
+        # driver(index=0, resourceId="com.nearme.game.service:id/back").click()
+        # driver(index=2, resourceId="com.nearme.game.service:id/close").click()
+        # sleep(2)
+        # driver.swipe(18,174,961,872)
         if self.wait_gone_images(driver, 'fubiao_01.1920x1080.png',way_name='channel'):
             log.info('浮标检查成功')
             return "OK"

@@ -42,8 +42,8 @@ class Game(public.Methods):
         '''开始引导'''
         if self.images_or_none(driver,'guide_001.1920x1080.png'):
             # self.images_or_none(driver,'guide_001.1920x1080.png')#对话
-            sleep(2)
-            driver.swipe(55,55,55,800,50)  # 移动浮标
+            # sleep(2)
+            # driver.swipe(55,55,55,800,50)  # 移动浮标
             sleep(2)
             driver.swipe(1820,930,1820,930,10)#故事剧情
             '''关卡1'''
@@ -54,9 +54,9 @@ class Game(public.Methods):
                 sleep(1)
                 driver.click(500,500)
             sleep(2)
-            driver.click(1479,376)#去战斗
+            driver.click(1479,376)  # 去战斗
             sleep(2)
-            self.images_or_none(driver,'guide_002.1920x1080.png')#全部
+            self.images_or_none(driver,'guide_002.1920x1080.png')  # 全部
             sleep(1)
             driver.swipe(593,969,455,550,50)#滑动位置
             sleep(1)

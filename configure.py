@@ -12,40 +12,13 @@ b = raw_input("activity_name:")
 print b
 '''
 
-device_name = ''
-game_name = 'sjsgz'
-channel_name = 'Lenovo'
-package_name = 'com.yx.sjsgz.lenovo'
-activity_name = 'mobi.xy3d.tstd.SplashActivity'
+device_name = '917ec8bc'
+game_name = 'yqlfc'
+channel_name = 'oppo'
+package_name = 'com.wyd.hero.yqlfc.cb1.nearme.gamecenter'
+activity_name = 'com.unity.wydsdk.SplashActivity'
 
-#quick
-'''
-#channel_name = 'quick'
-#package_name = 'com.crisisfire.cmgeQ' #全民枪战
-#activity_name = 'com.crisisfire.cmgeQ.SplashActivity'    #全民枪战
-#package_name = 'com.fengniao.games.HZ.aSkymoon'   #巅峰战舰
-#activity_name = 'com.games.HZ.SDK.SplashActivity'    #巅峰战舰
-#package_name = 'com.tqyouxi.xlj2.local'   #三生问道
-#activity_name = 'com.tqyouxi.sdk.SplashActivity'    #三生问道
-#package_name = 'com.wyd.ddfc.quick'   #一起来飞车
-#activity_name = 'com.wyd.fc.activity.SplashActivity'    #一起来飞车
-#package_name = 'com.taiyouxi.ifsg.quick'   #极无双
-#activity_name = 'com.taiyouxi.a3k.SplashActivity'    #极无双
-#package_name = 'com.yingxiong.jiujian.Android'   #九剑魔龙传
-#activity_name = 'com.YouYiFang.NewGame.SplashActivity'    #九剑魔龙传
-#package_name = 'com.fengniao.games.QTDL.aSkymoon'   #抢滩登陆
-#activity_name = 'com.fengniao.games.QTDL.SDK.SplashActivity'    #抢滩登陆
-#package_name = 'com.qihoo.wm'   #一起来跳舞
-#activity_name = 'com.ttxw.quicker.SplashActivity'    #一起来跳舞
-#package_name = 'm.Sgame.yzr2.quick'   #影之刃
-#activity_name = 'm.Sgame.yzr2.SplashActivity'    #影之刃
-#package_name = 'com.wyd.hero.dandandao'   #弹弹岛
-#activity_name = 'com.excelliance.open.KXQP'    #弹弹岛
-#package_name = 'com.ea.android.chs.nbamobile'   #NBA
-#activity_name = 'com.ea.game.nba.QkSplashActivity'    #NBA
-#package_name = 'mobi.xy3d.tstd'   #生煎三国志
-#activity_name = 'mobi.xy3d.tstd.SplashActivity'    #生煎三国志
-'''
+
 
 # 游戏名
 '''
@@ -108,7 +81,147 @@ channel_name_40 = 'pptv'  # PPTV
 channel_name_41 = 'jinritoutiao'  # 今日头条
 channel_name_42 = 'kuaikan'  # 快看
 '''
-  
+
+#quick
+'''
+#channel_name = 'quick'
+#package_name = 'com.crisisfire.cmgeQ' #全民枪战
+#activity_name = 'com.crisisfire.cmgeQ.SplashActivity'    #全民枪战
+#package_name = 'com.fengniao.games.HZ.aSkymoon'   #巅峰战舰
+#activity_name = 'com.games.HZ.SDK.SplashActivity'    #巅峰战舰
+#package_name = 'com.tqyouxi.xlj2.local'   #三生问道
+#activity_name = 'com.tqyouxi.sdk.SplashActivity'    #三生问道
+#package_name = 'com.wyd.ddfc.quick'   #一起来飞车
+#activity_name = 'com.wyd.fc.activity.SplashActivity'    #一起来飞车
+#package_name = 'com.taiyouxi.ifsg.quick'   #极无双
+#activity_name = 'com.taiyouxi.a3k.SplashActivity'    #极无双
+#package_name = 'com.yingxiong.jiujian.Android'   #九剑魔龙传
+#activity_name = 'com.YouYiFang.NewGame.SplashActivity'    #九剑魔龙传
+#package_name = 'com.fengniao.games.QTDL.aSkymoon'   #抢滩登陆
+#activity_name = 'com.fengniao.games.QTDL.SDK.SplashActivity'    #抢滩登陆
+#package_name = 'com.qihoo.wm'   #一起来跳舞
+#activity_name = 'com.ttxw.quicker.SplashActivity'    #一起来跳舞
+#package_name = 'm.Sgame.yzr2.quick'   #影之刃
+#activity_name = 'm.Sgame.yzr2.SplashActivity'    #影之刃
+#package_name = 'com.wyd.hero.dandandao'   #弹弹岛
+#activity_name = 'com.excelliance.open.KXQP'    #弹弹岛
+#package_name = 'com.ea.android.chs.nbamobile'   #NBA
+#activity_name = 'com.ea.game.nba.QkSplashActivity'    #NBA
+#package_name = 'mobi.xy3d.tstd'   #生煎三国志
+#activity_name = 'mobi.xy3d.tstd.SplashActivity'    #生煎三国志
+'''
+
+#NBA
+"""
+activity_name =
+package_name = 'com.ea.android.chs.nbamobile.wyx'   # 新浪
+package_name = 'com.ea.android.chs.nbamobile.samsung'   # 三星
+package_name = 'com.ea.android.chs.nbamobile.iqiyi'   # 爱奇艺（PPS)
+package_name = 'com.ea.android.chs.nbamobile.vivo'   # VIVO
+package_name = 'com.ea.android.chs.nbamobile.coolpad'   # 酷派
+package_name = 'com.ea.android.chs.nbamobile.coolpad'   # 魅族
+package_name = 'com.ea.android.chs.nbamobile.aligames'   # UC
+package_name = 'com.ea.android.chs.nbamobile.anzhi'   # 安智
+package_name = 'com.ea.android.chs.nbamobile.baidu'   # 百度
+package_name = 'com.ea.android.chs.nbamobile.mi'   # 小米
+package_name = 'com.ea.android.chs.nbamobile.nearme.gamecenter'   # OPPO
+package_name = 'com.ea.android.chs.nbamobile.huawei'   # 华为
+package_name = 'com.ea.android.chs.nbamobile.am'   # 金立
+package_name = 'com.ea.android.chs.nbamobile.m4399'   # 4399
+package_name = 'com.ea.android.chs.nbamobile.lenovo'   #联想
+package_name = 'com.tencent.tmgp.ea.android.chs.nbamobile'   #应用宝
+package_name = 'com.ea.android.chs.nbamobile.qihoo'   #360
+"""
+
+# 一起来飞车
+"""
+activity_name = 'com.wyd.fc.activity.SplashActivity'    # 一起来飞车
+activity_name = 'com.wyd.passport.impl.FirstActivity'    # UC，乐视
+activity_name = 'com.unity.wydsdk.SplashActivity'  # oppo
+package_name = 'com.wyd.hero.yqlfc.cb1.samsung'   # 三星
+package_name = 'com.wyd.hero.yqlfc.cb1.baidu'   # 百度
+package_name = 'com.wyd.hero.yqlfc.cb1.mcbg'   # 虎牙
+package_name = 'com.wyd.hero.yqlfc.cb1.uc'   # UC
+package_name = 'com.wyd.hero.yqlfc.cb1.leshi'   # 乐视手机
+package_name = 'com.wyd.hero.yqlfc.cb1.nearme.gamecenter'   # OPPO
+package_name = 'com.wyd.hero.yqlfc.cb1.pptv'   # pptv
+package_name = 'com.wyd.hero.yqlfc.cb1.huawei'   # 华为
+package_name = 'com.wyd.hero.yqlfc.cb1.egame'   # 电信爱游戏
+package_name = 'com.wyd.hero.yqlfc.cb1.qihoo'   # 360
+package_name = 'com.wyd.hero.yqlfc.cb1.mi'   # 小米
+package_name = 'com.wyd.hero.yqlfc.cb1.iqiyi'   # 爱奇艺（pps)
+package_name = 'com.wyd.hero.yqlfc.cb1.zy'   # 掌阅
+package_name = 'com.wyd.hero.yqlfc.cb1.mz'   # 魅族
+package_name = 'com.wyd.hero.yqlfc.cb1.kaopu'   # 靠谱
+package_name = 'com.wyd.hero.yqlfc.cb1.vivo'   # vivo
+package_name = 'com.wyd.hero.yqlfc.cb1.downjoy'   # 当乐
+package_name = 'com.wyd.hero.yqlfc.cb1.kuaikan'   # 快看
+package_name = 'com.wyd.hero.yqlfc.cb1.coolpad'   # 酷派
+package_name = 'com.wyd.hero.yqlfc.cb1.lenovo'   # 联想
+package_name = 'com.wyd.hero.yqlfc.cb1.am'   # 金立
+package_name = 'com.wyd.hero.yqlfc.cb1.cstv'   # 触手
+package_name = 'com.wyd.hero.yqlfc.cb1.ewan'   # 益玩
+package_name = 'com.wyd.hero.yqlfc.cb1.jrtt'   # 今日头条
+package_name = 'com.wyd.hero.yqlfc.cb1.m4399'   # 4399
+package_name = 'com.wyd.hero.yqlfc.cb1.mzw'   # 拇指玩
+package_name = 'com.wyd.hero.yqlfc.cb1.anzhi'   # 安智
+package_name = 'com.wyd.hero.yqlfc.cb1.yyh'   # 应用汇
+package_name = 'com.tencent.tmgp.yqlfc'   # 应用宝
+package_name = 'com.wyd.hero.yqlfc.cb1.sogou.com'   # 搜狗
+"""
+
+# 全民枪战
+"""
+activity_name ='com.crisisfire.cmge.UnityPlayerNativeActivity'
+activity_name = 'com.unicom.dcLoader.welcomeview'    # 联通专用
+package_name_01 = 'com.crisisfire.android.qihoo'   # 360
+package_name_02 = 'com.crisisfire.android.wolt'   # 联通
+package_name_03 = 'com.crisisfire.android.cstv'   # 触手
+package_name_04 = 'com.tencent.tmgp.qmqzhero'   # 应用宝
+package_name_05 = 'com.crisisfire.android.huawei'   # 华为
+package_name_06 = 'com.crisisfire.android.baidu'   # 百度
+package_name_07 = 'com.crisisfire.android.papa'   # 啪啪
+package_name_08 = 'com.crisisfire.android.yq'   # 朋友玩
+package_name_09 = 'com.crisisfire.android.tt'   # TT语音
+package_name_10 = 'com.crisisfire.android.meitu'   # 美图
+package_name_11 = 'com.crisisfire.android.anzhi'   # 安智
+package_name_12 = 'com.crisisfire.android.mzw'   # 拇指玩
+package_name_13 = 'com.crisisfire.android.dianxin.egame'   # 电信爱游戏
+package_name_14 = 'com.crisisfire.android.sougou'   # 搜狗
+package_name_15 = 'com.crisisfire.android.mi'   # 小米
+package_name_16 = 'com.crisisfire.android.sina_wyx'   # 新浪
+package_name_17 = 'com.crisisfire.android.DL'   # 当乐
+package_name_18 = 'com.crisisfire.android.guopan'   # 果盘（叉叉助手）
+package_name_19 = 'com.crisisfire.android.wdj'   # 豌豆荚
+package_name_20 = 'com.crisisfire.android.ewan'   # 益玩
+package_name_21 = 'com.crisisfire.android.sy37'   # 37玩
+package_name_22 = 'com.cmge.crisisfire.android.vivo'   # VIVO
+package_name_23 = 'com.crisisfire.android.uc'   # UC
+package_name_24 = 'com.crisisfire.android.samsung'   # 三星
+package_name_25 = 'com.crisisfire.android.nearme.gamecenter'   # OPPO
+package_name_26 = 'com.crisisfire.android.pps'   # PPS(爱奇艺）
+package_name_27 = 'com.crisisfire.android.mz'   # 魅族
+package_name_28 = 'com.crisisfire.android.lenovo'   # 联想
+package_name_29 = 'com.crisisfire.android.am'   # 金立
+package_name_30 = 'com.crisisfire.android.leshi'   # 乐视
+package_name_31 = 'com.crisisfire.android.kp'   # 酷派
+package_name_32 = 'com.crisisfire.android.f399'   # 4399
+package_name_33 = 'com.crisisfire.android.joloplay'   # HTC
+package_name_34 = 'com.crisisfire.android.yyh'   # 应用汇
+package_name_35 = 'com.crisisfire.android.kaopu'   # 靠谱
+package_name_36 = 'com.crisisfire.android.sy38'   # 38玩
+package_name_37 = 'com.crisisfire.android.kugou'   # 酷狗
+package_name_38 = 'com.crisisfire.android.douyu'   # 斗鱼
+package_name_39 = 'com.crisisfire.android.caohua'   # 草花游戏
+package_name_40 = 'com.crisisfire.android.youku'   # 优酷
+package_name_41 = 'com.crisisfire.android.game17173'   # 17173
+package_name_42 = 'com.crisisfire.android.anqu'   # 安趣
+package_name_43 = 'com.crisisfire.android.changba'   # 唱吧
+package_name_44 = 'com.qmqz.xunlei.niux'   # 迅雷
+package_name_45 = 'com.crisisfire.android.iccgame'   # 游艺春秋
+package_name_46 = 'com.crisisfire.android.mengbao'   # 盟宝
+"""
+
 #极无双
 '''
 activity_name = 'com.taiyouxi.a3k.SplashActivity'
@@ -189,45 +302,7 @@ package_name = 'mobi.xy3d.tstdgj.uc'  # UC
 package_name = 'com.sjsgz.hero'  # 官方
 '''
 
-# 一起来飞车
-"""
-activity_name = 'com.wyd.fc.activity.SplashActivity'    # 一起来飞车
-activity_name = 'com.wyd.passport.impl.FirstActivity'    # UC，乐视
-package_name = 'com.wyd.hero.yqlfc.cb1.samsung'   # 三星
-package_name = 'com.wyd.hero.yqlfc.cb1.baidu'   # 百度
-package_name = 'com.wyd.hero.yqlfc.cb1.mcbg'   # 虎牙
-package_name = 'com.wyd.hero.yqlfc.cb1.uc'   # UC
-package_name = 'com.wyd.hero.yqlfc.cb1.leshi'   # 乐视手机
-package_name = 'com.wyd.hero.yqlfc.cb1.nearme.gamecenter'   # OPPO
-package_name = 'com.wyd.hero.yqlfc.cb1.pptv'   # pptv
-package_name = 'com.wyd.hero.yqlfc.cb1.huawei'   # 华为
-package_name = 'com.wyd.hero.yqlfc.cb1.egame'   # 电信爱游戏
-package_name = 'com.wyd.hero.yqlfc.cb1.qihoo'   # 360
-package_name = 'com.wyd.hero.yqlfc.cb1.mi'   # 小米
-package_name = 'com.wyd.hero.yqlfc.cb1.iqiyi'   # 爱奇艺（pps)
-package_name = 'com.wyd.hero.yqlfc.cb1.zy'   # 掌阅
-package_name = 'com.wyd.hero.yqlfc.cb1.mz'   # 魅族
-package_name = 'com.wyd.hero.yqlfc.cb1.kaopu'   # 靠谱
-package_name = 'com.wyd.hero.yqlfc.cb1.vivo'   # vivo
-package_name = 'com.wyd.hero.yqlfc.cb1.downjoy'   # 当乐
-package_name = 'com.wyd.hero.yqlfc.cb1.kuaikan'   # 快看
-package_name = 'com.wyd.hero.yqlfc.cb1.coolpad'   # 酷派
-package_name = 'com.wyd.hero.yqlfc.cb1.lenovo'   # 联想
-package_name = 'com.wyd.hero.yqlfc.cb1.am'   # 金立
-package_name = 'com.wyd.hero.yqlfc.cb1.cstv'   # 触手
-package_name = 'com.wyd.hero.yqlfc.cb1.ewan'   # 益玩
-package_name = 'com.wyd.hero.yqlfc.cb1.jrtt'   # 今日头条
-package_name = 'com.wyd.hero.yqlfc.cb1.m4399'   # 4399
-package_name = 'com.wyd.hero.yqlfc.cb1.mzw'   # 拇指玩
-package_name = 'com.wyd.hero.yqlfc.cb1.anzhi'   # 安智
-package_name = 'com.wyd.hero.yqlfc.cb1.yyh'   # 应用汇
-package_name = 'com.tencent.tmgp.yqlfc'   # 应用宝
-package_name = 'com.wyd.hero.yqlfc.cb1.sogou.com'   # 搜狗
-"""
 
-# 全民枪战
-"""
-activity_name = 'com.unicom.dcLoader.welcomeview'    # 联通专用
-package_name = 'com.crisisfire.android.wolt'   # 联通
-"""
+
+
 

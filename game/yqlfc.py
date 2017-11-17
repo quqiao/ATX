@@ -12,6 +12,7 @@ class Game(public.Methods):
         pass
 
     def game_update(self,driver):
+        driver.prepare_ime()
         sleep(30)
         driver.click(500,500)
         sleep(30)
@@ -29,11 +30,10 @@ class Game(public.Methods):
         self.images_or_none(driver,"game_pre_01.1920x1080.png")
         sleep(1)
         driver.click(955,858)  # 确定
-        sleep(2)
-        driver.click(950,890)  # 开始
+        sleep(6)
+        driver.click(900,900)  # 开始
         sleep(1)
-        driver.click(950,890)  # 开始
-        sleep(1)
+        driver.click(900,900)  # 开始
         # self.click_images(driver,"game_pre_02.1920x1080.png")
         if self.wait_gone_images(driver,'game_pre_02.1920x1080.png'):
             log.info('进入游戏前准备成功')
@@ -235,15 +235,12 @@ class Game(public.Methods):
             # self.click_images(driver,"guide_016.1920x1080.png")
             # self.click_images(driver,"guide_017.1920x1080.png")
             # self.click_images(driver,"guide_017.1920x1080.png")
-        
         else:
             sleep(2)
             driver.click(960,960)  # 获得确认
-            sleep(2)
-            driver.click(1710,138)  # 关闭
-            sleep(2)
-            driver.click(50,40)  # 任意键
-            sleep(2)
+            for i in range(12):
+                sleep(1)
+                driver.click(1685,150)  # 关闭
             driver.click(1660,960)  # 开始游戏
             sleep(2)
             driver.click(760,990)  # 剧情模式
