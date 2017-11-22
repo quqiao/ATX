@@ -24,7 +24,7 @@ class Channel(public.Methods):
             driver.clear_text()
             sleep(2)
             driver.type("15198139230",next=True)
-            sleep(1)
+            sleep(2)
             driver.type("a123123")
             sleep(2)
             driver.click(900,850)  # 登录按钮

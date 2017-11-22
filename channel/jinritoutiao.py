@@ -35,6 +35,14 @@ class Channel(public.Methods):
             log.info('登录失败')
             return None
 
+    def fubiao(self,driver):
+        log.info('没有浮标')
+        if self.wait_gone_images(driver, 'login_01.1920x1080.png',way_name='channel'):
+            log.info('退出游戏成功')
+            return 'ok'
+        else:
+            return None
+
     def exitGame(self,driver):
         log.info('该渠道没有退出框')
         if self.wait_gone_images(driver, 'login_01.1920x1080.png',way_name='channel'):

@@ -81,10 +81,10 @@ class Channel(public.Methods):
         
     def wechat(self,driver):
         u'''微信支付'''
-        driver(className='android.widget.LinearLayout',index=2).child(className="android.widget.ImageView",index=2).click() #微信支付
+        driver(className='android.widget.LinearLayout',index=2).child(className="android.widget.ImageView",index=2).click()  # 微信支付
         driver(className='android.widget.LinearLayout',resourceId="com.tencent.mm:id/h6").click() #微信支付返回
-        driver(className='android.widget.RelativeLayout',resourceId="com.crisisfire.android.kp:id/back_re").click() #退出充值界面
-        driver(className='android.widget.LinearLayout',index=4).child(className="android.widget.TextView",index=2).click() #退出充值界面确定
+        driver(className='android.widget.RelativeLayout',resourceId="com.crisisfire.android.kp:id/back_re").click()  # 退出充值界面
+        driver(className='android.widget.LinearLayout',index=4).child(className="android.widget.TextView",index=2).click()  # 退出充值界面确定
         
         if self.wait_gone_images(driver, 'exists_02.1920x1080.png',way_name='channel'):
             log.info('微信支付成功')
@@ -113,5 +113,3 @@ class Channel(public.Methods):
         else:
             log.info('重启失败')
             return None
-        
-    

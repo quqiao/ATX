@@ -155,13 +155,13 @@ class Game(public.Methods):
             driver.click(1788,975)#开始战斗
             '''战斗'''
             sleep(5)
-            self.images_or_none(driver,"guide_exist_01.1920x1080.png")#等待对话
+            self.images_or_none(driver,"guide_exist_01.1920x1080.png")  # 等待对话
             for i in range(2):
                 driver.click(500,500)
                 sleep(1)
             for i in range(1000):
                 self.click_exists(driver,"guide_003.1920x1080.png")
-                if self.exist(driver,"guide_exist_02.1920x1080.png"):#等待战斗胜利
+                if self.exist(driver,"guide_exist_02.1920x1080.png"):  # 等待战斗胜利
                     break
             sleep(2)
             driver.click(1850,22)#战斗结束后关闭

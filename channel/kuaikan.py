@@ -19,7 +19,7 @@ class Channel(public.Methods):
             sleep(1)
             driver.type("12345678")
             sleep(1)
-            driver.click(927,696)  # 登录
+            driver.click(1150,800)  # 登录
             sleep(2)
             driver.click(1530,530)  # 开始游戏
             sleep(2)
@@ -29,7 +29,16 @@ class Channel(public.Methods):
             driver.click(1530,530)  # 开始游戏
             sleep(2)
             log.info('自动登录')
-        if self.wait_gone_images(driver, 'login_02.1920x1080.png',way_name='channel'):
+        if self.wait_gone_images(driver, 'login_01.1920x1080.png',way_name='channel'):
+            log.info('登录成功')
+            return 'ok'
+        else:
+            log.info('登录失败')
+            return None
+
+    def fubiao(self,driver):
+        log.info('不用移动浮标')
+        if self.wait_gone_images(driver, 'login_01.1920x1080.png',way_name='channel'):
             log.info('登录成功')
             return 'ok'
         else:
@@ -42,4 +51,5 @@ class Channel(public.Methods):
             log.info('退出游戏成功')
             return 'ok'
         else:
+            log.info('退出游戏失败')
             return None

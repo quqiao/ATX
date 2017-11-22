@@ -32,8 +32,8 @@ class Game(public.Methods):
         driver.click(955,858)  # 确定
         sleep(6)
         driver.click(900,900)  # 开始
-        sleep(1)
-        driver.click(900,900)  # 开始
+        # sleep(1)
+        # driver.click(900,900)  # 开始
         # self.click_images(driver,"game_pre_02.1920x1080.png")
         if self.wait_gone_images(driver,'game_pre_02.1920x1080.png'):
             log.info('进入游戏前准备成功')
@@ -112,19 +112,20 @@ class Game(public.Methods):
             sleep(1)
 
             threads5 = []
-            t3 = threading.Thread(target=long1)
-            threads5.append(t3)
-            t4 = threading.Thread(target=long2)
-            threads5.append(t4)
+            t1 = threading.Thread(target=long1)
+            threads5.append(t1)
+            t2 = threading.Thread(target=long2)
+            threads5.append(t2)
             for t in threads5:
                 t.start()
             sleep(1)
+
             driver.long_click(400,500)
             sleep(6)
             '''右漂移'''
-            #for i in range(2):
-                #self.images_or_none(driver,'guide_003.1920x1080.png')
-                #driver.click(0.5,0.5)
+            # for i in range(2):
+            #     self.images_or_none(driver,'guide_003.1920x1080.png')
+            #     driver.click(0.5,0.5)
 
             threads6 = []
             t1 = threading.Thread(target=long2)
@@ -167,7 +168,7 @@ class Game(public.Methods):
             threads10.append(t3)
             t4 = threading.Thread(target=long1)
             threads10.append(t4)
-            for t in threads9:
+            for t in threads10:
                 t.start()
             sleep(1)
 
@@ -236,11 +237,16 @@ class Game(public.Methods):
             # self.click_images(driver,"guide_017.1920x1080.png")
             # self.click_images(driver,"guide_017.1920x1080.png")
         else:
-            sleep(2)
+            sleep(6)
             driver.click(960,960)  # 获得确认
+            sleep(5)
+            driver.click(1700,130)
             for i in range(12):
                 sleep(1)
-                driver.click(1685,150)  # 关闭
+                driver.click(1600,169)  # 关闭
+                sleep(1)
+                driver.click(1570,165)  # 关闭
+            sleep(2)
             driver.click(1660,960)  # 开始游戏
             sleep(2)
             driver.click(760,990)  # 剧情模式
@@ -274,8 +280,8 @@ class Game(public.Methods):
         sleep(2)
         driver.click(50,40)  # 返回
         sleep(2)
-        driver.click(350,1030)  # 车队
-        sleep(2)
+        # driver.click(350,1030)  # 车队
+        # sleep(2)
         driver.click(100,1030)  # 社交
         sleep(2)
         driver.click(50,40)  # 返回
@@ -350,7 +356,7 @@ class Game(public.Methods):
     def live(self,driver):
         sleep(2)
         driver.click(60,550)  # 祈愿
-        sleep(6)
+        sleep(9)
         driver.click(1669,1018)  # 关闭有虚拟硬件
         driver.click(1791,1022)  # 关闭没有虚拟硬件
         sleep(2)
@@ -358,10 +364,12 @@ class Game(public.Methods):
         # self.click_images(driver,"live_002.1920x1080.png")
         if self.wait_gone_images(driver, 'live_002.1920x1080.png'):
             return 'ok'
+            log.info('飞车祈愿检查成功')
         else:
             return None
+            log.info('飞车祈愿检查失败')
         
-    '''飞车社区'''   
+    '''飞车社区'''
     def gonglue(self,driver):
         sleep(2)
         driver.click(1755,300)  # 社区
@@ -382,8 +390,10 @@ class Game(public.Methods):
         # self.click_images(driver,"gonglue_05.1920x1080.png")
         if self.wait_gone_images(driver, 'gonglue_02.1920x1080.png'):
             return 'ok'
+            log.info('飞车社区检查成功')
         else:
             return None
+            log.info('飞车社区检查失败')
         
     '''飞车特惠 '''
     def store(self,driver):
@@ -405,7 +415,7 @@ class Game(public.Methods):
         sleep(2)
         driver.swipe(1846,230,1846,230,10)  # 邀请1920*1080
         # driver.swipe(1230,150,1230,150,10)  # 邀请1280*720
-        sleep(2)
+        sleep(8)
         driver.click(1669,1018)  # 关闭有虚拟硬件
         driver.click(1791,1022)  # 关闭没有虚拟硬件
         sleep(2)
@@ -446,8 +456,10 @@ class Game(public.Methods):
         # self.click_images(driver,"lingzuan_03.1920x1080.png")
         if self.wait_gone_images(driver, 'lingzuan_04.1920x1080.png'):
             return 'ok'
+            log.info('飞车邀请成功')
         else:
             return None
+            log.info('飞车邀请失败')
 
     '''飞车任务'''    
     def saishi(self,driver):
@@ -475,9 +487,11 @@ class Game(public.Methods):
         # self.click_images(driver,"saishi_07.1920x1080.png")
         if self.wait_gone_images(driver, 'saishi_07.1920x1080.png'):
             return 'ok'
+            log.info('飞车任务检查成功')
         else:
             return None
-        
+            log.info('飞车任务检查失败')
+
     def talking(self,driver):
         # self.click_images(driver,"talking_01.1920x1080.png")
         # self.click_images(driver,"talking_02.1920x1080.png")
@@ -502,8 +516,10 @@ class Game(public.Methods):
         # self.click_images(driver,"talking_04.1920x1080.png")
         if self.wait_gone_images(driver, 'talking_04.1920x1080.png'):
             return 'ok'
+            log.info('对话检查成功')
         else:
             return None
+            log.info('对话检查失败')
         
     def setting(self,driver):
         # self.click_images(driver,"setting_01.1920x1080.png")
@@ -515,9 +531,10 @@ class Game(public.Methods):
         sleep(2)
         # self.click_images(driver,"setting_02.1920x1080.png")
         if self.wait_gone_images(driver, 'setting_02.1920x1080.png'):
-            log.info('游戏中退出按钮')
+            log.info('游戏中设置检查成功')
             return 'ok'
         else:
+            log.info('游戏中设置检查失败')
             return None
 
     def exitgame(self,driver):
@@ -527,9 +544,10 @@ class Game(public.Methods):
         driver.click(1150,700)
         # self.click_images(driver,"exitgame_01.1920x1080.png")
         if self.wait_gone_images(driver, 'exitgame_01.1920x1080.png'):
-            log.info('游戏中退出按钮')
+            log.info('游戏中退出按钮成功')
             return 'ok'
         else:
+            log.info('游戏中退出按钮失败')
             return None
 
 

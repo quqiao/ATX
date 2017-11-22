@@ -8,7 +8,7 @@ import unittest
 import HTMLTestRunner
 import time
 import os
-#import shutil
+import shutil
 import configure
 from public import logutils
 log = logutils.getLogger(__name__)
@@ -29,17 +29,17 @@ def Creatsuite():
 test_case = Creatsuite()
 # 获取系统当前日期
 day = time.strftime('%Y-%m-%d')
-#定义个报告存放路径，支持相对路径
-# aaa = os.path.exists('./result/' + day)
-# if aaa:
-#     shutil.rmtree('./result/' + day)
-# os.mkdir('./result/' + day)
+# 定义个报告存放路径，支持相对路径
+aaa = os.path.exists('./result/' + day)
+if aaa:
+    shutil.rmtree('./result/' + day)
+os.mkdir('./result/' + day)
 # os.mkdir('./result/' + day + '/screencap')
 filename = './result/' + day + '/result.html'
 fp = file(filename, 'wb')
 
 log.info('获取手机信息')
-cmd = 'adb -s %s shell cat /system/build.prop>phone.txt' %configure.device_name
+cmd = 'adb -s %s shell cat /system/build.prop>phone.txt' % configure.device_name
 os.popen(cmd)
 info = open('phone.txt', 'r')
 lines = info.readlines()
@@ -60,8 +60,8 @@ os.remove('phone.txt')
 
 # 定义测试报告
 title=u'%s--%s测试报告(%s * %s * %s)'%(configure.game_name,configure.channel_name,phone_brand, phone_model ,phone_version)
-runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title=title , description=u'用例执行情况：')
-#运行测试用例
+runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title=title, description=u'用例执行情况：')
+# 运行测试用例
 runner.run(test_case)
 fp.close()  # 关闭报告文件
-#unittest.TextTestRunner(verbosity=2).run(test_case)
+# unittest.TextTestRunner(verbosity=2).run(test_case)

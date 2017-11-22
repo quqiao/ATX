@@ -2,10 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>yqlfc--oppo测试报告(手机品牌=OPPO
- * 手机型号=MSM8916 for arm64
- * 系统版本=5.1.1
-)</title>
+    <title>yqlfc--dangle测试报告( *  * )</title>
     <meta name="generator" content="HTMLTestRunner 0.8.2"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     
@@ -191,13 +188,10 @@ function showOutput(id, name) {
 --></script>
 
 <div class='heading'>
-<h1>yqlfc--oppo测试报告(手机品牌=OPPO
- * 手机型号=MSM8916 for arm64
- * 系统版本=5.1.1
-)</h1>
-<p class='attribute'><strong>Start Time:</strong> 2017-11-17 18:06:30</p>
-<p class='attribute'><strong>Duration:</strong> 0:03:31.488000</p>
-<p class='attribute'><strong>Status:</strong> Failure 1</p>
+<h1>yqlfc--dangle测试报告( *  * )</h1>
+<p class='attribute'><strong>Start Time:</strong> 2017-11-22 13:57:22</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:00.150000</p>
+<p class='attribute'><strong>Status:</strong> Error 1</p>
 
 <p class='description'>用例执行情况：</p>
 </div>
@@ -227,22 +221,22 @@ function showOutput(id, name) {
     <td>View</td>
 </tr>
 
-<tr class='failClass'>
+<tr class='errorClass'>
     <td>main.Test</td>
     <td>1</td>
     <td>0</td>
-    <td>1</td>
     <td>0</td>
+    <td>1</td>
     <td><a href="javascript:showClassDetail('c1',1)">Detail</a></td>
 </tr>
 
 <tr id='ft1.1' class='none'>
-    <td class='failCase'><div class='testcase'>test01</div></td>
+    <td class='errorCase'><div class='testcase'>test01</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
     <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
-        fail</a>
+        error</a>
 
     <div id='div_ft1.1' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
@@ -251,21 +245,16 @@ function showOutput(id, name) {
         </div>
         <pre>
         
-ft1.1: 2017-11-17 18:06:31.706 INFO  [main:  20] 测试开始
-2017-11-17 18:07:55.963 INFO  [game.yqlfc:  23] 游戏更新成功
-2017-11-17 18:08:17.353 INFO  [channel.oppo:  30] 自动登录
-2017-11-17 18:08:20.763 INFO  [channel.oppo:  32] 浮标检查成功
-2017-11-17 18:08:54.985 INFO  [game.yqlfc:  39] 进入游戏前准备成功
-2017-11-17 18:09:42.361 INFO  [game.yqlfc: 252] 不用过游戏引导
-2017-11-17 18:09:45.444 INFO  [game.yqlfc: 254] 游戏引导成功
-2017-11-17 18:09:45.445 INFO  [channel.oppo:  75] 暂时不处理浮标
-2017-11-17 18:09:58.422 INFO  [channel.oppo:  99] 浮标检查失败
-Traceback (most recent call last):
-  File "F:\ATX\main.py", line 57, in test01
-    self.dy_IsNotNone(self.driver,channel.fubiao(self.driver),'360_fubiao')
-  File "F:\ATX\public\methods.py", line 71, in dy_IsNotNone
-    self.assertIsNotNone(obj)
-AssertionError: unexpectedly None
+ft1.1: Traceback (most recent call last):
+  File "F:\ATX\main.py", line 16, in setUp
+    self.driver = atx.connect()
+  File "C:\Python27\lib\site-packages\atx\__init__.py", line 77, in connect
+    c = cls(connect_url, **kwargs)
+  File "C:\Python27\lib\site-packages\atx\drivers\android.py", line 87, in __init__
+    self._adb_device = self._adb_client.device(serialno)
+  File "C:\Python27\lib\site-packages\atx\adbkit\client.py", line 128, in device
+    raise EnvironmentError("Device not attached.")
+EnvironmentError: Device not attached.
 
 
         </pre>
@@ -279,8 +268,8 @@ AssertionError: unexpectedly None
     <td>Total</td>
     <td>1</td>
     <td>0</td>
-    <td>1</td>
     <td>0</td>
+    <td>1</td>
     <td>&nbsp;</td>
 </tr>
 </table>

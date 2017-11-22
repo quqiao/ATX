@@ -13,8 +13,9 @@ class Channel(public.Methods):
             sleep(1)
             driver.click(665,643)  # QQ登录
             sleep(6)
-            driver.click(580,1485)  # 登录
+            driver.click(580,1720)  # 登录
             sleep(2)
+            driver.click(1720,70)  # 关闭实名注册
             log.info('QQ登录')
             # self.click_images(driver,"idInput.1920x1080.png",way_name='channel')
             # sleep(1)
@@ -27,6 +28,8 @@ class Channel(public.Methods):
         else:
             sleep(1)
             driver.click(960,690)  # 直接登录
+            sleep(2)
+            driver.click(1720,70)  # 关闭实名注册
             log.info('直接登录')
         if self.wait_gone_images(driver,"login_01.1920x1080.png",way_name='channel'):
             log.info('登录成功')

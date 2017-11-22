@@ -22,7 +22,6 @@ class Methods():
         elif direction == 'left':
             return self.left_swipe(driver)
         else:
-
             log.info('没传滑动方向，不做滑动操作，up,down,right,left')
     def up_swipe(self,driver):
         size = self.size(driver)

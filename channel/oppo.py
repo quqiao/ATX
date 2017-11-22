@@ -25,8 +25,18 @@ class Channel(public.Methods):
             driver.type("test123")
             sleep(1)
             driver.click(530,1060)  # 登录
+            sleep(1)
+            driver.click(720,830)  # 跳过
+            sleep(1)
+            driver.click(900,920)  # 好
+            sleep(1)
             log.info('输入账号密码登录')
         else:
+            sleep(1)
+            driver.click(720,830)  # 跳过
+            sleep(1)
+            driver.click(900,920)  # 好
+            sleep(1)
             log.info('自动登录')
         if self.wait_gone_images(driver, 'login_01.1920x1080.png',way_name='channel'):
             log.info('浮标检查成功')
@@ -132,7 +142,8 @@ class Channel(public.Methods):
         
     def exitGame(self,driver):
         sleep(2)
-        driver(resourceIdclassName='com.nearme.game.service:id/exit_btn',index=1).click()
+        # driver(resourceIdclassName='com.nearme.game.service:id/exit_btn',index=1).click()
+        driver.click(900,690)  # 退出游戏
         sleep(2)
         if self.wait_gone_images(driver, 'exists_02.1920x1080.png',way_name='channel'):
             log.info('微信支付成功')

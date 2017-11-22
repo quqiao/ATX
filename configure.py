@@ -12,11 +12,11 @@ b = raw_input("activity_name:")
 print b
 '''
 
-device_name = '917ec8bc'
+device_name = ''
 game_name = 'yqlfc'
-channel_name = 'oppo'
-package_name = 'com.wyd.hero.yqlfc.cb1.nearme.gamecenter'
-activity_name = 'com.unity.wydsdk.SplashActivity'
+channel_name = 'dangle'
+package_name = 'com.wyd.hero.yqlfc.cb1.downjoy'
+activity_name = 'com.wyd.fc.activity.SplashActivity'
 
 
 
@@ -168,6 +168,7 @@ package_name = 'com.wyd.hero.yqlfc.cb1.anzhi'   # 安智
 package_name = 'com.wyd.hero.yqlfc.cb1.yyh'   # 应用汇
 package_name = 'com.tencent.tmgp.yqlfc'   # 应用宝
 package_name = 'com.wyd.hero.yqlfc.cb1.sogou.com'   # 搜狗
+package_name = 'com.wyd.hero.yqlfc.cb1.apk'   # 官方
 """
 
 # 全民枪战
