@@ -24,6 +24,7 @@ class Channel(public.Methods):
         #     log.info('自动登录')
 
         if self.wait_gone_images(driver, 'exists_02.1920x1080.png',way_name='channel'):
+            driver.click(630,920)  # 取消完善资料
             log.info('登录成功')
             return 'ok'
         else:
@@ -59,6 +60,18 @@ class Channel(public.Methods):
         else:
             log.info('浮标检查失败')
             return None
+
+    def exitGame(self,driver):
+        sleep(1)
+        driver.click(1130,700)  # 游戏的退出
+        sleep(1)
+        if self.wait_gone_images(driver, 'fubiao_02.1920x1080.png',way_name='channel'):
+            log.info('浮标检查成功')
+            return "OK"
+        else:
+            log.info('浮标检查失败')
+            return None
+
         
         
             

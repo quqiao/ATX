@@ -22,7 +22,7 @@ class Test(unittest.TestCase,public.Methods):
 
     def get_names(self,name):
         '''
-                    动态import 游戏和渠道相应的测试类
+        动态import 游戏和渠道相应的测试类
         :param name: 动态import 游戏还是 渠道
         :return: 返回 游戏 或者 渠道 实例 的类
         '''
@@ -53,21 +53,23 @@ class Test(unittest.TestCase,public.Methods):
         # self.dy_IsNotNone(self.driver,game.game_update(self.driver),'360_game_update')
         # self.dy_IsNotNone(self.driver,channel.login(self.driver), '360_login')
         # self.dy_IsNotNone(self.driver,game.game_pre(self.driver),'360_game_pre')
-        # self.dy_IsNotNone(self.driver,game.guide(self.driver),'360_guide')
-        self.dy_IsNotNone(self.driver,channel.fubiao(self.driver),'360_fubiao')
-        self.dy_IsNotNone(self.driver,game.basicFunction(self.driver),'360_basicFunction')
-        self.dy_IsNotNone(self.driver,game.live(self.driver),'360_live')
-        self.dy_IsNotNone(self.driver,game.gonglue(self.driver),'360_gonglue')
-        self.dy_IsNotNone(self.driver,game.saishi(self.driver),'360_saishi')
-        self.dy_IsNotNone(self.driver,game.lingzuan(self.driver),'360_lingzuan')
-        self.dy_IsNotNone(self.driver,game.store(self.driver),'360_store')
-        self.dy_IsNotNone(self.driver,game.talking(self.driver),'360_talking')
-        self.dy_IsNotNone(self.driver,game.setting(self.driver),'360_setting')
-        self.dy_IsNotNone(self.driver,game.exitgame(self.driver),'360_exitgame')
-        self.dy_IsNotNone(self.driver,channel.exitGame(self.driver),'360_exitGame')
+        self.dy_IsNotNone(self.driver,game.guide(self.driver),'360_guide')
+        # self.dy_IsNotNone(self.driver,channel.fubiao(self.driver),'360_fubiao')
+        # self.dy_IsNotNone(self.driver,game.basicFunction(self.driver),'360_basicFunction')
+        # self.dy_IsNotNone(self.driver,game.live(self.driver),'360_live')
+        # self.dy_IsNotNone(self.driver,game.gonglue(self.driver),'360_gonglue')
+        # self.dy_IsNotNone(self.driver,game.saishi(self.driver),'360_saishi')
+        # self.dy_IsNotNone(self.driver,game.lingzuan(self.driver),'360_lingzuan')
+        # self.dy_IsNotNone(self.driver,game.store(self.driver),'360_store')
+        # self.dy_IsNotNone(self.driver,game.talking(self.driver),'360_talking')
+        # self.dy_IsNotNone(self.driver,game.setting(self.driver),'360_setting')
+        # # self.dy_IsNotNone(self.driver,game.exitgame(self.driver),'360_exitgame')
+        # self.dy_IsNotNone(self.driver,channel.exitGame(self.driver),'360_exitGame')
 
 if __name__ == '__main__':
-    unittest.main()    
+    unittest.main()
+
+
     '''渠道37wan'''
     """
     def test02(self):

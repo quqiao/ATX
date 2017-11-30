@@ -19,38 +19,35 @@ class Channel(public.Methods):
                 driver.type("111111")
                 self.click_images(driver,"login.1920x1080.png",way_name='channel')
                 self.click_images(driver,"bangding.1920x1080.png",way_name='channel')
-                image = self.wait_gone_images(driver, 'login.1920x1080.png',way_name='channel')
-                if image:
-                    log.info('登录成功')
-                    return 'ok'
-                else:
-                    log.info('登录失败')
-                    return None
-
+                log.info('输入帐号密码登录')
         else:
             self.click_images(driver,"bangding.1920x1080.png",way_name='channel')
-            image = self.wait_gone_images(driver, 'bangding.1920x1080.png',way_name='channel')
-            if image:
-                log.info('自动登录成功')
-                return 'ok'
-              
+            log.info('自动登录成功')
+        if self.wait_gone_images(driver, 'login.1920x1080.png',way_name='channel'):
+            log.info('登录成功')
+            return 'ok'
+        else:
+            log.info('登录失败')
+            return None
+
     def fubiao(self,driver):
-        self.click_images(driver,"fubiao_01.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_02.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_03.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_04.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_05.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_04.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_06.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_04.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_07.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_04.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_08.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_04.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_09.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_04.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_10.1920x1080.png",way_name='channel')
-        if self.wait_gone_images(driver, 'fubiao_10.1920x1080.png',way_name='channel'):
+        log.info('暂时不操作浮标')
+        # self.click_images(driver,"fubiao_01.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_02.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_03.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_04.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_05.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_04.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_06.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_04.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_07.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_04.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_08.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_04.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_09.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_04.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_10.1920x1080.png",way_name='channel')
+        if self.wait_gone_images(driver, 'login.1920x1080.png',way_name='channel'):
             log.info('浮标已关闭')
             return 'ok'
         else:
@@ -99,7 +96,9 @@ class Channel(public.Methods):
         # self.click_images(driver,"exitGame_02.1920x1080.png",way_name='channel')
         # self.click_images(driver,"exitGame_03.1920x1080.png",way_name='channel')
         # self.click_images(driver,"exitGame.1920x1080.png",way_name='channel')
-        self.click_images(driver,"exitGame_04.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"exitGame_04.1920x1080.png",way_name='channel')
+        sleep(2)
+        driver.click(1150,700)  # 原生的退出
         if self.wait_gone_images(driver, 'exitGame_04.1920x1080.png',way_name='channel'):
             log.info('退出游戏成功')
             return 'ok'

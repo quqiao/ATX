@@ -89,7 +89,7 @@ class Channel(public.Methods):
             
     def QQ(self,driver): 
         u"QQ支付"
-        if self.get_view_info(driver) == channel_login_activity:
+        if self.get_view_info(driver):
             self.click_images(driver,"exchange_pay.1920x1080.png",way_name='channel')
             self.click_images(driver,"QQ.1920x1080.png",way_name='channel')
             self.click_images(driver,"4399_pay_certain.1920x1080.png",way_name='channel')
@@ -97,9 +97,9 @@ class Channel(public.Methods):
             self.click_images(driver,"4399_pay_close.1920x1080.png",way_name='channel')
             
 
-    def caifutong(self,driver): 
+    def caifutong(self,driver):
         u"财付通支付"
-        if self.get_view_info(driver) == channel_login_activity:
+        if self.get_view_info(driver):
             self.click_images(driver,"exchange_pay.1920x1080.png",way_name='channel')
             self.click_images(driver,"caifutong.1920x1080.png",way_name='channel')
             self.click_images(driver,"4399_pay_certain.1920x1080.png",way_name='channel')
@@ -122,8 +122,7 @@ class Channel(public.Methods):
             log.info('退出游戏成功')
             return 'ok'
         else:
+            log.info('退出游戏失败')
             return None
-        
-            
 
 

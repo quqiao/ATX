@@ -73,8 +73,8 @@ class Channel(public.Methods):
         driver(className='android.widget.RelativeLayout',index=1).click() #支付宝支付
         sleep(2)
         driver.press.back()
-        #self.click_images(driver,"ali_pay_back.1920x1080.png",way_name='channel')
-        #self.click_images(driver,"ali_pay_back_yes.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"ali_pay_back.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"ali_pay_back_yes.1920x1080.png",way_name='channel')
         if self.images_or_none(driver, 'exists_02.1920x1080.png',way_name='channel'):
             log.info('支付宝支付成功')
             return "OK"
@@ -85,10 +85,10 @@ class Channel(public.Methods):
     def wechat(self,driver):
         u'''微信支付'''
         sleep(1)
-        driver(className='android.widget.ListView',index=2).child(className='android.widget.RelativeLayout',index=0).click() #微信支付
+        driver(className='android.widget.ListView',index=2).child(className='android.widget.RelativeLayout',index=0).click() # 微信支付
         sleep(3)
-        driver(className='android.widget.LinearLayout',index=0).child(className="android.widget.ImageView",index=0).click() #退出微信
-        driver(className='android.widget.RelativeLayout',index=0).child(className="android.widget.ImageView",index=0).click() #支付退出确定
+        driver(className='android.widget.LinearLayout',index=0).child(className="android.widget.ImageView",index=0).click() # 退出微信
+        driver(className='android.widget.RelativeLayout',index=0).child(className="android.widget.ImageView",index=0).click() # 支付退出确定
         if self.wait_gone_images(driver, 'exists_02.1920x1080.png',way_name='channel'):
             log.info('微信支付成功')
             return "OK"
@@ -99,7 +99,7 @@ class Channel(public.Methods):
     def exitGame(self,driver):
         # self.click_images(driver,"exitGame_01.1920x1080.png",way_name='channel')
         sleep(1)
-        driver.click(1160,652)
+        driver.click(1160,652)  # 退出游戏
         if self.wait_gone_images(driver, 'exitGame_01.1920x1080.png',way_name='channel'):
             log.info('微信支付成功')
             return "OK"

@@ -42,21 +42,22 @@ class Channel(public.Methods):
             return None
               
     def fubiao(self,driver):
-        self.click_images(driver,"fubiao_01.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_02.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_03.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_04.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_05.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_04.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_06.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_04.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_07.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_04.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_08.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_04.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_09.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_04.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_10.1920x1080.png",way_name='channel')
+        log.info('暂时不处理浮标')
+        # self.click_images(driver,"fubiao_01.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_02.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_03.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_04.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_05.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_04.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_06.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_04.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_07.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_04.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_08.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_04.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_09.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_04.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_10.1920x1080.png",way_name='channel')
         if self.wait_gone_images(driver, 'fubiao_10.1920x1080.png',way_name='channel'):
             log.info('浮标已关闭')
             return 'ok'
@@ -132,7 +133,8 @@ class Channel(public.Methods):
         # self.click_images(driver,"exitGame_03.1920x1080.png",way_name='channel')
         # self.click_images(driver,"exitGame.1920x1080.png",way_name='channel')
         # self.click_images(driver,"exitGame_04.1920x1080.png",way_name='channel')
-        sleep(1)
+        driver.click(85,196)  # 返回游戏
+        sleep(2)
         driver.click(655,569)  # 退出游戏
         sleep(2)
         if self.wait_gone_images(driver, 'exitGame_04.1920x1080.png',way_name='channel'):
@@ -140,9 +142,4 @@ class Channel(public.Methods):
             return 'ok'
         else:
             return None
-        
-        
-        
-        
-            
-    
+

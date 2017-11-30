@@ -10,24 +10,28 @@ class Channel(public.Methods):
     def login(self, driver):
         u'''渠道login'''
         if self.images_or_none(driver, 'login_01.1920x1080.png',way_name='channel'):
-            # elf.click_images(driver,"idInput.1920x1080.png",way_name='channel')
-            driver.click(505,868)  # 切换登录方式
-            sleep(2)
-            driver.click(505,868)  # 切换登录方式
-            sleep(2)
-            driver.click(800,380)  # 点击用户输入框
-            sleep(1)
-            driver.clear_text()
-            sleep(1)
-            driver.type("15202828543",next='True')
-            sleep(1)
-            driver.type("menglong")
-            sleep(1)
-            driver.click(880,700)  # 登录按钮
-            sleep(5)
-            driver.click(1359,150)  # 关闭实名
-            # self.click_images(driver,"login.1920x1080.png",way_name='channel')
-            # self.click_images(driver,"login_shiming_close.1920x1080.png",way_name='channel')
+            if self.images_or_none(driver, 'login_02.1920x1080.png',way_name='channel'):
+                sleep(1)
+                driver.click(880,700)  # 登录按钮
+            else:
+                # elf.click_images(driver,"idInput.1920x1080.png",way_name='channel')
+                driver.click(505,868)  # 切换登录方式
+                sleep(2)
+                driver.click(505,868)  # 切换登录方式
+                sleep(2)
+                driver.click(800,380)  # 点击用户输入框
+                sleep(1)
+                driver.clear_text()
+                sleep(1)
+                driver.type("15202828543",next='True')
+                sleep(1)
+                driver.type("menglong")
+                sleep(1)
+                driver.click(880,700)  # 登录按钮
+                sleep(5)
+                driver.click(1359,150)  # 关闭实名
+                # self.click_images(driver,"login.1920x1080.png",way_name='channel')
+                # self.click_images(driver,"login_shiming_close.1920x1080.png",way_name='channel')
 
         else:
             # self.click_images(driver,"login_shiming_close.1920x1080.png",way_name='channel')
@@ -43,13 +47,18 @@ class Channel(public.Methods):
             return None
     
     def fubiao(self,driver):
-        self.click_images(driver,"fubiao_01.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_02.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_03.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_04.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_05.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_06.1920x1080.png",way_name='channel')
-        self.click_images(driver,"fubiao_07.1920x1080.png",way_name='channel')
+        sleep(1)
+        driver.swipe(15,190,960,920,50)
+        sleep(2)
+        driver.click(1115,860)  # 隐藏
+        log.info('移动浮标隐藏')
+        # self.click_images(driver,"fubiao_01.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_02.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_03.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_04.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_05.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_06.1920x1080.png",way_name='channel')
+        # self.click_images(driver,"fubiao_07.1920x1080.png",way_name='channel')
         sleep(2)
         driver.swipe(20,355,960,909)
         self.click_images(driver,"fubiao_08.1920x1080.png",way_name='channel')

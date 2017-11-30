@@ -32,11 +32,11 @@ class Channel(public.Methods):
             sleep(1)
             log.info('输入账号密码登录')
         else:
-            sleep(1)
+            sleep(2)
             driver.click(720,830)  # 跳过
-            sleep(1)
+            sleep(2)
             driver.click(900,920)  # 好
-            sleep(1)
+            sleep(2)
             log.info('自动登录')
         if self.wait_gone_images(driver, 'login_01.1920x1080.png',way_name='channel'):
             log.info('浮标检查成功')

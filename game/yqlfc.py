@@ -43,9 +43,13 @@ class Game(public.Methods):
             return None
         
     def guide(self,driver):
-        if self.images_or_none(driver,'guide_002.1920x1080.png'):
-            self.click_images(driver,"guide_001.1920x1080.png")
-            self.click_images(driver,"guide_002.1920x1080.png")
+        if self.images_or_none(driver,'guide_001.1920x1080.png'):
+            sleep(1)
+            driver.click(1198,923)  # 随机
+            sleep(1)
+            driver.click(1676,923)  # 开始
+            # self.click_images(driver,"guide_001.1920x1080.png")
+            # self.click_images(driver,"guide_002.1920x1080.png")
             sleep(8)
             self.images_or_none(driver,'guide_003.1920x1080.png')
             sleep(1)
@@ -225,6 +229,8 @@ class Game(public.Methods):
             sleep(2)
             driver.click(760,990)  # 剧情模式
             sleep(2)
+            driver.click(500,500)  # 任意键
+            sleep(2)
             driver.click(50,40)  # 返回
             sleep(2)
             driver.click(50,40)  # 返回
@@ -246,6 +252,8 @@ class Game(public.Methods):
                 driver.click(1600,169)  # 关闭
                 sleep(1)
                 driver.click(1570,165)  # 关闭
+                sleep(1)
+                driver.click(1700,150)  # 关闭
             sleep(2)
             driver.click(1660,960)  # 开始游戏
             sleep(2)
@@ -287,7 +295,7 @@ class Game(public.Methods):
         driver.click(50,40)  # 返回
         sleep(2)
         driver.click(65,400)  # 转盘
-        sleep(2)
+        sleep(3)
         driver.click(50,40)  # 返回
         sleep(2)
         driver.click(65,250)  # 活动
@@ -404,7 +412,7 @@ class Game(public.Methods):
         driver.click(1669,1018)  # 关闭有虚拟硬件
         driver.click(1791,1022)  # 关闭没有虚拟硬件
         sleep(2)
-        self.click_images(driver,"store_02.1920x1080.png")
+        # self.click_images(driver,"store_02.1920x1080.png")
         if self.wait_gone_images(driver, 'store_02.1920x1080.png'):
             return 'ok'
         else:
@@ -540,8 +548,6 @@ class Game(public.Methods):
     def exitgame(self,driver):
         sleep(2)
         driver.press.back()  # 返回键
-        sleep(2)
-        driver.click(1150,700)
         # self.click_images(driver,"exitgame_01.1920x1080.png")
         if self.wait_gone_images(driver, 'exitgame_01.1920x1080.png'):
             log.info('游戏中退出按钮成功')

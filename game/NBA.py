@@ -40,6 +40,7 @@ class Game(public.Methods):
         '''引导'''
         if self.images_or_none(driver,'guide_001.1920x1080.png'):
             '''教程-运球'''
+
             #self.click_images(driver,"guide_001.1920x1080.png")
             driver.click(963,885)  # 开始
             sleep(2)
@@ -103,8 +104,8 @@ class Game(public.Methods):
             # self.click_images(driver,"guide_006.1920x1080.png")
             # self.click_images(driver,"guide_007.1920x1080.png")
             '''商店'''
-            sleep(3)
-            driver.click(1796,38)  # 商店
+            sleep(5)
+            driver.swipe(1796,38,1796,38,30)  # 商店
             sleep(6)
             driver.click(280,680)  # 领取
             sleep(6)

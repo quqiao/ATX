@@ -28,9 +28,18 @@ class Channel(public.Methods):
         else:
             sleep(1)
             driver.click(960,690)  # 直接登录
-            sleep(2)
+            sleep(5)
             driver.click(1720,70)  # 关闭实名注册
             log.info('直接登录')
+        if self.wait_gone_images(driver,"login_01.1920x1080.png",way_name='channel'):
+            log.info('登录成功')
+            return 'ok'
+        else:
+            log.info('登录失败')
+            return None
+
+    def fubiao(self,driver):
+        log.info('该渠道没有浮标操作')
         if self.wait_gone_images(driver,"login_01.1920x1080.png",way_name='channel'):
             log.info('登录成功')
             return 'ok'
@@ -90,7 +99,7 @@ class Channel(public.Methods):
         # self.click_images(driver,"exitGame.1920x1080.png",way_name='channel')
         # self.click_images(driver,"exitGame_02.1920x1080.png",way_name='channel')
         log.info('该渠道没有退出游戏')
-        if self.wait_gone_images(driver, 'exitGame_02.1920x1080.png',way_name='channel'):
+        if self.wait_gone_images(driver, 'login_01.1920x1080.png',way_name='channel'):
             log.info('退出游戏成功')
             return 'ok'
         else:

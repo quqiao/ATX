@@ -30,13 +30,18 @@ test_case = Creatsuite()
 # 获取系统当前日期
 day = time.strftime('%Y-%m-%d')
 # 定义个报告存放路径，支持相对路径
-aaa = os.path.exists('./result/' + day)
-if aaa:
-    shutil.rmtree('./result/' + day)
-os.mkdir('./result/' + day)
-# os.mkdir('./result/' + day + '/screencap')
-filename = './result/' + day + '/result.html'
-fp = file(filename, 'wb')
+filename = './result/' + day + '/result.html'  # 文件相对路径
+dirName = './result/' + day  # 文件夹相对路径
+if os.path.exists(dirName) and os.path.exists(filename):
+    fp = file(filename, 'wb')
+else:
+    aaa = os.path.exists(filename)
+    if aaa:
+        shutil.rmtree('./result/' + day)
+    os.mkdir(dirName)
+    os.mkdir('./result/' + day + '/screencap')
+    fp = file(filename, 'wb')
+
 
 log.info('获取手机信息')
 cmd = 'adb -s %s shell cat /system/build.prop>phone.txt' % configure.device_name

@@ -13,12 +13,10 @@ print b
 '''
 
 device_name = ''
-game_name = 'yqlfc'
-channel_name = 'dangle'
-package_name = 'com.wyd.hero.yqlfc.cb1.downjoy'
+game_name = 'NBA'
+channel_name = 'huawei'
+package_name = 'com.wyd.hero.yqlfc.cb1.zy'
 activity_name = 'com.wyd.fc.activity.SplashActivity'
-
-
 
 # 游戏名
 '''
@@ -137,7 +135,8 @@ package_name = 'com.ea.android.chs.nbamobile.qihoo'   #360
 """
 activity_name = 'com.wyd.fc.activity.SplashActivity'    # 一起来飞车
 activity_name = 'com.wyd.passport.impl.FirstActivity'    # UC，乐视
-activity_name = 'com.unity.wydsdk.SplashActivity'  # oppo
+activity_name = 'com.unity.wydsdk.SplashActivity'  # oppo，三星
+activity_name = 'com.wyd.passport.impl.HuaweiPPActivity'  # 华为
 package_name = 'com.wyd.hero.yqlfc.cb1.samsung'   # 三星
 package_name = 'com.wyd.hero.yqlfc.cb1.baidu'   # 百度
 package_name = 'com.wyd.hero.yqlfc.cb1.mcbg'   # 虎牙
