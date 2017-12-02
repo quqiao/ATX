@@ -12,11 +12,39 @@ b = raw_input("activity_name:")
 print b
 '''
 
-device_name = ''
-game_name = 'NBA'
-channel_name = 'huawei'
-package_name = 'com.wyd.hero.yqlfc.cb1.zy'
-activity_name = 'com.wyd.fc.activity.SplashActivity'
+import os
+import sys
+type = sys.getfilesystemencoding()
+
+gameName = raw_input("please input gameName:", )
+channelName = raw_input("please input channelName:", )
+package_path = raw_input("package_path:")
+
+
+cmd = 'python -m atx apkparse ' + package_path
+# decode = cmd.decode('utf-8').encode(type)
+# print decode
+resultGet = os.popen(cmd).read()
+print resultGet
+dictoration = eval(resultGet)
+print dictoration
+main_activity = dictoration.get('main_activity')
+getPackagName = dictoration.get('package_name')
+print main_activity
+print getPackagName
+
+# def getDeviceID():
+#     cmd="adb devices"
+#     resultGet=os.popen(cmd).read()
+#     listStr=resultGet.split("\n")
+#     subList=listStr[1].split("\t")
+#     return subList[0]
+
+device_name = ""  # 设备名
+game_name = gameName  # 游戏名
+channel_name = channelName  # 渠道名
+package_name = getPackagName  # 游戏包名
+activity_name = main_activity  # 游戏主activity
 
 # 游戏名
 '''

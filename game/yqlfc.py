@@ -11,7 +11,13 @@ class Game(public.Methods):
     def __init__(self):
         pass
 
+    def game_triggered(self,driver):
+        driver.watcher(u"oppoR7安全警告").when(text = u"允许")\
+                                         .click(text = u"允许")
+        print driver.watcher(u"oppoR7安全警告").triggered
+
     def game_update(self,driver):
+        self.exist(driver,"game_update_01.1920x1080.png")
         driver.prepare_ime()
         sleep(30)
         driver.click(500,500)
@@ -182,7 +188,7 @@ class Game(public.Methods):
             self.images_or_none(driver,"guide_004.1920x1080.png")
             driver.click(130,495)  # 氮气
             self.images_or_none(driver,'guide_003.1920x1080.png')
-            driver.click(0.5,0.5)
+            driver.click(500,500)
             '''设置'''
             self.images_or_none(driver,"guide_005.1920x1080.png")
             driver.click(70,40)  # 设置

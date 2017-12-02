@@ -29,6 +29,26 @@ print a[-5:-1]
 # for t in threads1:
 #     t.start()
 
+import os
+import sys
+type = sys.getfilesystemencoding()
 
-coldeInfo = "ab(1)cd(1)"
-coldeInfo[1:3]
+package_path = raw_input("package_path:")
+cmd = 'python -m atx apkparse ' + package_path
+decode = cmd.decode('utf-8').encode(type)
+print decode
+resultGet = os.popen(decode).read()
+print resultGet
+dictoration = eval(resultGet)
+print dictoration
+activity_name = dictoration.get('main_activity')
+package_name = dictoration.get('package_name')
+print activity_name
+print package_name
+
+
+# cmd="adb devices"
+# resultGet=os.popen(cmd).read()
+# print resultGet
+# listStr=resultGet.split("\n")
+# subList=listStr[1].split("\t")

@@ -49,7 +49,7 @@ os.popen(cmd)
 info = open('phone.txt', 'r')
 lines = info.readlines()
 phone_brand = ''
-phone_model = ''          
+phone_model = ''
 phone_version = ''
 try:
     for i in lines:
