@@ -31,24 +31,27 @@ print a[-5:-1]
 
 import os
 import sys
-type = sys.getfilesystemencoding()
-
-package_path = raw_input("package_path:")
-cmd = 'python -m atx apkparse ' + package_path
-decode = cmd.decode('utf-8').encode(type)
-print decode
-resultGet = os.popen(decode).read()
-print resultGet
-dictoration = eval(resultGet)
-print dictoration
-activity_name = dictoration.get('main_activity')
-package_name = dictoration.get('package_name')
-print activity_name
-print package_name
-
-
-# cmd="adb devices"
-# resultGet=os.popen(cmd).read()
+# type = sys.getfilesystemencoding()
+#
+# package_path = raw_input("package_path:")
+# cmd = 'python -m atx apkparse ' + package_path
+# decode = cmd.decode('utf-8').encode(type)
+# print decode
+# resultGet = os.popen(decode).read()
 # print resultGet
-# listStr=resultGet.split("\n")
-# subList=listStr[1].split("\t")
+# dictoration = eval(resultGet)
+# print dictoration
+# activity_name = dictoration.get('main_activity')
+# package_name = dictoration.get('package_name')
+# print activity_name
+# print package_name
+
+
+gameName = raw_input("please input gameName:")   # 输入游戏名
+
+
+dict_gameName = {"一起来飞车":"yqlfc","全民枪战":""}
+
+GameName = dict_gameName.get(gameName)
+
+print GameName

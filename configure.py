@@ -16,33 +16,49 @@ import os
 import sys
 type = sys.getfilesystemencoding()
 
-gameName = raw_input("please input gameName:", )
-channelName = raw_input("please input channelName:", )
-package_path = raw_input("package_path:")
+gameName = raw_input("please input gameName:", )   # 输入游戏名
+channelName = raw_input("please input channelName:", )  # 输入渠道名
+package_path = raw_input("package_path:")  # 输入所测游戏包的路径
+
+"""获取game_name和channel_name"""
+dict_gameName = {"一起来飞车":"yqlfc","全民枪战":"crisisfire","NBA":"NBA"}
+GameName = dict_gameName.get(gameName)
+
+dict_channelName = {"华为":"huawei","4399":"f399","PPS":"pps","三星":"samsung","当乐":"DL","联通沃商店":"wolt",
+                    "搜狗":"sougou","360":"qihoo","触手":"cstv","应用宝":"qmqzhero","百度":"baidu","啪啪":"papa",
+                    "朋友玩":"yq","TT语音":"tt","美图":"meitu","安智":"anzhi","拇指玩":"mzw","电信爱游戏":"egame",
+                    "小米":"mi","新浪":"sina_wyx","叉叉助手（安卓）":"guopan","豌豆荚":"wdj","益玩":"ewan",
+                    "37玩":"sy37","VIVO步步高":"vivo","UC":"uc","OPPO":"gamecenter","魅族":"mz","联想":"lenovo",
+                    "金立":"am","乐视手机":"leshi","酷派":"kp","HTC":"joloplay","应用汇":"yyh","靠谱助手":"kaopu",
+                    "38玩":"sy38","酷狗":"kugou","斗鱼":"douyu","草花游戏":"caohua","优酷":"youku","17173":"game17173",
+                    "安趣":"anqu","唱吧":"changba","迅雷":"niux","游艺春秋":"iccgame","盟宝":"mengbao"}
+ChannelName = dict_channelName(channelName)
 
 
-cmd = 'python -m atx apkparse ' + package_path
+""" 获取package_name和activity_name"""
+cmd = 'python -m atx apkparse ' + package_path  # 执行的命令
 # decode = cmd.decode('utf-8').encode(type)
 # print decode
-resultGet = os.popen(cmd).read()
-print resultGet
-dictoration = eval(resultGet)
-print dictoration
-main_activity = dictoration.get('main_activity')
-getPackagName = dictoration.get('package_name')
-print main_activity
-print getPackagName
+resultGet = os.popen(cmd).read()  # 输出结果
+# print resultGet
+dictoration = eval(resultGet)  # 字符串转字典
+# print dictoration
+main_activity = dictoration.get('main_activity')  # 提取main_activity
+getPackagName = dictoration.get('package_name')  # 提取package_name
+# print main_activity
+# print getPackagName
 
-# def getDeviceID():
-#     cmd="adb devices"
-#     resultGet=os.popen(cmd).read()
-#     listStr=resultGet.split("\n")
-#     subList=listStr[1].split("\t")
-#     return subList[0]
+"""获取device_name"""
+cmd1 = "adb devices"
+resultGet1 = os.popen(cmd1).read()
+listStr1 = resultGet1.split("\n")
+subList1 = listStr1[1].split("\t")
+DeviceID = subList1[0]
 
-device_name = ""  # 设备名
-game_name = gameName  # 游戏名
-channel_name = channelName  # 渠道名
+
+device_name = DeviceID  # 设备名
+game_name = GameName  # 游戏名
+channel_name = ChannelName  # 渠道名
 package_name = getPackagName  # 游戏包名
 activity_name = main_activity  # 游戏主activity
 
